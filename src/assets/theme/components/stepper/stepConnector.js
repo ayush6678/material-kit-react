@@ -20,7 +20,7 @@ import colors from "assets/theme/base/colors";
 const { white } = colors;
 const { borderWidth } = borders;
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       color: "#9fc9ff",
@@ -48,3 +48,4 @@ export default {
     },
   },
 };
+export default v1

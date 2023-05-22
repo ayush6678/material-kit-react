@@ -22,7 +22,7 @@ const { transparent } = colors;
 const { lg } = boxShadows;
 const { borderRadius } = borders;
 
-export default {
+const v1= {
   styleOverrides: {
     paper: {
       backgroundColor: transparent.main,
@@ -31,3 +31,4 @@ export default {
     },
   },
 };
+export default v1

@@ -25,7 +25,7 @@ const { light, text, dark } = colors;
 const { borderRadius } = borders;
 const { size } = typography;
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       minWidth: pxToRem(160),
@@ -43,3 +43,4 @@ export default {
     },
   },
 };
+export default v1

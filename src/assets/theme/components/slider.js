@@ -26,7 +26,7 @@ const { grey, white, black, info } = colors;
 const { borderRadius, borderWidth } = borders;
 const { sliderBoxShadow } = boxShadows;
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       width: "100%",
@@ -77,3 +77,4 @@ export default {
     },
   },
 };
+export default v1

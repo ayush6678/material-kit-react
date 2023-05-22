@@ -28,7 +28,7 @@ const { black, light } = colors;
 const { size, fontWeightRegular } = typography;
 const { borderRadius } = borders;
 
-export default {
+const v1= {
   defaultProps: {
     arrow: true,
     TransitionComponent: Fade,
@@ -52,3 +52,4 @@ export default {
     },
   },
 };
+export default v1

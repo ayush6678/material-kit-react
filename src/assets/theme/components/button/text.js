@@ -23,7 +23,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 const { text, info, secondary, transparent } = colors;
 const { size } = typography;
 
-export default {
+const text1={
   base: {
     backgroundColor: transparent.main,
     minHeight: pxToRem(40),
@@ -100,3 +100,4 @@ export default {
     },
   },
 };
+export default text1;

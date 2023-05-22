@@ -12,7 +12,7 @@ import logoCT from "assets/images/logo-ct-dark.png";
 
 const date = new Date().getFullYear();
 
-export default {
+const v1= {
   brand: {
     name: "Material Kit 2",
     image: logoCT,
@@ -89,3 +89,4 @@ export default {
     </MKTypography>
   ),
 };
+export default v1

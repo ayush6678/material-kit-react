@@ -25,7 +25,7 @@ const { inputBorderColor, info, grey, transparent } = colors;
 const { borderRadius } = borders;
 const { size } = typography;
 
-export default {
+const inputOutlined={
   styleOverrides: {
     root: {
       backgroundColor: transparent.main,
@@ -64,3 +64,4 @@ export default {
     },
   },
 };
+export default inputOutlined

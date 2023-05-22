@@ -16,10 +16,11 @@ Coded by www.creative-tim.com
 // Material Kit 2 React helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       padding: `0 ${pxToRem(6)}`,
     },
   },
 };
+export default v1

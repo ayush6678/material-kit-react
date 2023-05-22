@@ -20,7 +20,7 @@ import typography from "assets/theme/base/typography";
 const { text, info } = colors;
 const { size } = typography;
 
-export default {
+const inputLabel={
   styleOverrides: {
     root: {
       fontSize: size.sm,
@@ -56,3 +56,4 @@ export default {
     },
   },
 };
+export default inputLabel

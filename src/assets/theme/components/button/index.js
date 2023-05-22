@@ -19,7 +19,7 @@ import contained from "assets/theme/components/button/contained";
 import outlined from "assets/theme/components/button/outlined";
 import text from "assets/theme/components/button/text";
 
-export default {
+const index={
   defaultProps: {
     disableRipple: false,
   },
@@ -42,3 +42,4 @@ export default {
     textSecondary: { ...text.secondary },
   },
 };
+export default index;

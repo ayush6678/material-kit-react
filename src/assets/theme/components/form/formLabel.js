@@ -17,11 +17,12 @@ Coded by www.creative-tim.com
 import colors from "assets/theme/base/colors";
 
 const { text } = colors;
-
-export default {
+const formLabel={
   styleOverrides: {
     root: {
       color: text.main,
     },
   },
 };
+
+export default formLabel

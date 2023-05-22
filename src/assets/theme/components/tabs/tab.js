@@ -25,7 +25,7 @@ const { size, fontWeightRegular } = typography;
 const { borderRadius } = borders;
 const { dark } = colors;
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       display: "flex",
@@ -65,3 +65,4 @@ export default {
     },
   },
 };
+export default v1

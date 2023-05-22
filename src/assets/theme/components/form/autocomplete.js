@@ -27,7 +27,7 @@ const { size } = typography;
 const { text, white, transparent, light, dark, gradients } = colors;
 const { borderRadius } = borders;
 
-export default {
+const autocomplete={
   styleOverrides: {
     popper: {
       boxShadow: lg,
@@ -96,3 +96,4 @@ export default {
     },
   },
 };
+export default autocomplete

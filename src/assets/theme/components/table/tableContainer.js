@@ -22,7 +22,7 @@ const { white } = colors;
 const { md } = boxShadows;
 const { borderRadius } = borders;
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       backgroundColor: white.main,
@@ -31,3 +31,4 @@ export default {
     },
   },
 };
+export default v1

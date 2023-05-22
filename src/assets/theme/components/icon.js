@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 // Material Kit 2 React helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
-export default {
+const icon={
   defaultProps: {
     baseClassName: "material-icons-round",
     fontSize: "inherit",
@@ -36,3 +36,4 @@ export default {
     },
   },
 };
+export default icon

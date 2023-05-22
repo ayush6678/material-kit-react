@@ -13,8 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-const imagesPrefix = "";
-export default [
+const v1= [
   {
     image: ``,
     name: "About Us Page",
@@ -36,3 +35,4 @@ export default [
     route: "/pages/landing-pages/author",
   },
 ];
+export default v1

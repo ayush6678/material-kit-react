@@ -21,8 +21,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 import boxShadow from "assets/theme/functions/boxShadow";
 
 const { white } = colors;
-
-export default {
+const v1= {
   styleOverrides: {
     root: {
       background: "#9fc9ff",
@@ -53,3 +52,4 @@ export default {
     },
   },
 };
+export default v1

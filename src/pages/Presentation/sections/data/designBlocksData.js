@@ -13,9 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-const imagesPrefix = null;
 
-export default [
+const v1= [
   {
     title: "Design Blocks",
     description: "A selection of 45 page sections that fit perfectly in any combination",
@@ -257,3 +256,4 @@ export default [
     ],
   },
 ];
+export default v1

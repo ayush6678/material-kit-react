@@ -24,7 +24,7 @@ import rgba from "assets/theme/functions/rgba";
 const { size, fontWeightRegular } = typography;
 const { white } = colors;
 
-export default {
+const v1= {
   styleOverrides: {
     label: {
       marginTop: `${pxToRem(8)} !important`,
@@ -45,3 +45,4 @@ export default {
     },
   },
 };
+export default v1

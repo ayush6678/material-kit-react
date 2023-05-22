@@ -21,7 +21,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 
 const { transparent } = colors;
 
-export default {
+const select={
   styleOverrides: {
     select: {
       display: "grid",
@@ -45,3 +45,4 @@ export default {
     },
   },
 };
+export default select

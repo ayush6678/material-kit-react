@@ -27,7 +27,7 @@ const { size } = typography;
 const { text, white } = colors;
 const { borderRadius } = borders;
 
-export default {
+const v1={
   defaultProps: {
     disableAutoFocusItem: true,
   },
@@ -45,3 +45,4 @@ export default {
     },
   },
 };
+export default v1

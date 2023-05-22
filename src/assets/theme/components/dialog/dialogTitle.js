@@ -21,7 +21,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 
 const { size } = typography;
 
-export default {
+const dialogTitle={
   styleOverrides: {
     root: {
       padding: pxToRem(16),
@@ -29,3 +29,4 @@ export default {
     },
   },
 };
+export default dialogTitle;

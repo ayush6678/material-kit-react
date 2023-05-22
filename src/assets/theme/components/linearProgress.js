@@ -23,7 +23,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 const { borderRadius } = borders;
 const { light } = colors;
 
-export default {
+const linearProgress={
   styleOverrides: {
     root: {
       height: pxToRem(6),
@@ -49,3 +49,4 @@ export default {
     },
   },
 };
+export default linearProgress

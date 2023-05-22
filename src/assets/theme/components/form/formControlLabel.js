@@ -23,7 +23,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 const { dark } = colors;
 const { size, fontWeightBold } = typography;
 
-export default {
+const formControlLabel={
   styleOverrides: {
     root: {
       display: "block",
@@ -46,3 +46,4 @@ export default {
     },
   },
 };
+export default formControlLabel

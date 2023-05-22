@@ -21,7 +21,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 
 const { borderRadius } = borders;
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       display: "block",
@@ -30,3 +30,4 @@ export default {
     },
   },
 };
+export default v1

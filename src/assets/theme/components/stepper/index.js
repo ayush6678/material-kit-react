@@ -26,7 +26,7 @@ const { transparent, gradients } = colors;
 const { borderRadius } = borders;
 const { colored } = boxShadows;
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       background: linearGradient(gradients.info.main, gradients.info.state),
@@ -40,3 +40,4 @@ export default {
     },
   },
 };
+export default v1

@@ -23,7 +23,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 const { borderWidth } = borders;
 const { light } = colors;
 
-export default {
+const v1= {
   styleOverrides: {
     root: {
       padding: `${pxToRem(12)} ${pxToRem(16)}`,
@@ -31,3 +31,4 @@ export default {
     },
   },
 };
+export default v1
