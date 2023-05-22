@@ -23,9 +23,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function BuiltByDevelopers() {
-  const bgImage =
-    "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
-
+  const bgImage ="https://upload.wikimedia.org/wikipedia/commons/c/c6/Sign-check-icon.png"
   return (
     <MKBox
       display="flex"
