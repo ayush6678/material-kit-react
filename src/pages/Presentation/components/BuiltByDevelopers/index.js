@@ -23,7 +23,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function BuiltByDevelopers() {
-  const bgImage ="https://upload.wikimedia.org/wikipedia/commons/c/c6/Sign-check-icon.png"
+  const bgImage = "https://upload.wikimedia.org/wikipedia/commons/c/c6/Sign-check-icon.png"
   return (
     <MKBox
       display="flex"
@@ -43,16 +43,14 @@ function BuiltByDevelopers() {
     >
       <Container>
         <Grid container item xs={12} lg={6} sx={{ ml: { xs: 0, lg: 6 } }}>
-          <MKTypography variant="h4" color="white" fontWeight="bold">
-            Built by developers
-          </MKTypography>
+          {/* <MKTypography variant="h4" color="white" fontWeight="bold">
+          Looking for expert services?
+          </MKTypography> */}
           <MKTypography variant="h1" color="white" mb={1}>
-            Complex Documentation
+            Looking for expert services?
           </MKTypography>
           <MKTypography variant="body1" color="white" opacity={0.8} mb={2}>
-            From colors, cards, typography to complex elements, you will find the full
-            documentation. Play with the utility classes and you will create unlimited combinations
-            for our components.
+            In addition to providing software services, we also offer expert services to help you manage your business and legal compliances.
           </MKTypography>
           <MKTypography
             component="a"

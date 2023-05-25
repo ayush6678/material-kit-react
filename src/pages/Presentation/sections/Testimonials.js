@@ -44,7 +44,7 @@ function Information() {
           justifyContent="center"
           sx={{ mx: "auto", textAlign: "center" }}
         >
-          <MKTypography variant="h2">Trusted by over</MKTypography>
+          <MKTypography variant="h2">Trusted by experts and businesses</MKTypography>
           <MKTypography variant="h2" color="info" textGradient mb={2}>
             1,679,477+ web developers
           </MKTypography>

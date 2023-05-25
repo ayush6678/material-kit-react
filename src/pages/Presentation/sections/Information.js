@@ -42,9 +42,10 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    All our products
                     <br />
-                    Material Kit
+                    are designed to
+                    deliver
                   </>
                 }
                 description="All the MUI components that you need in a development have been re-design with the new look."
@@ -65,35 +66,39 @@ function Information() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
+                  // icon="content_copy"
+                  title="Maximum tax
+                  savings"
+                  description="Busineses save upto 2-7% of their net GST with us every month. Individuals can save upto ₹86,500 by filing their
+                  tax returns through us."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
+                  // icon="flip_to_front"
+                  title="Unparalleled
+                  speed"
+                  description="
+                  Experience 3x faster GST filings, 5x faster invoice reconciliation and 10x faster e-waybill generation. Individuals file their tax returns in under 3 min."
                 />
               </Grid>
             </Grid>
             <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
+                  // icon="price_change"
+                  title="Accurate
+                  Compliance"
+                  description="Our products are designed and tested by in-house tax experts, ensuring every new clause, form or feature is updated and sent to you over the cloud."
                 />
               </Grid>
-              <Grid item xs={12} md={6}>
+              {/* <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="devices"
                   title="Fully Responsive"
                   description="Regardless of the screen size, the website content will naturally fit the given resolution."
                 />
-              </Grid>
+              </Grid> */}
             </Grid>
           </Grid>
         </Grid>
