@@ -48,7 +48,7 @@ function AboutUs() {
         action={{
           type: "external",
           route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          label: "Get Started",
           color: "default",
         }}
         transparent

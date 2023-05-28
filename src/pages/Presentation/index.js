@@ -29,9 +29,7 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
-import Counters from "pages/Presentation/sections/Counters";
 import Information from "pages/Presentation/sections/Information";
-import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 import Pages from "pages/Presentation/sections/Pages";
 import Testimonials from "pages/Presentation/sections/Testimonials";
 import Download from "pages/Presentation/sections/Download";
@@ -45,6 +43,7 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
+import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
 function Presentation() {
   return (
@@ -53,14 +52,14 @@ function Presentation() {
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route: "",
+          label: "Get Started",
           color: "info",
         }}
         sticky
       />
       <MKBox
-        minHeight="75vh"
+        minHeight="60vh"
         width="100%"
         sx={{
           backgroundImage: `url(${bgImage})`,
@@ -108,9 +107,78 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Counters />
+        {/* <Counters /> */}
+
+        <Container>
+          <Grid container spacing={12}>
+            <Grid item xs={12} lg={4}>
+              <CenteredBlogCard
+                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                title="Incorporation Services"
+                description="Starting your dream company was never this easy.
+                We Incorporate:
+                Private Limited Company
+                One Person Company (OPC)
+                Limited Liability Partnership (LLP)
+                Section 8 Company or NGO"
+                action={{
+                  type: "internal",
+                  route: "/sections/navigation/navbars",
+                  color: "info",
+                  label: "find out more",
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} lg={4}>
+              <CenteredBlogCard
+                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                title="Compliance Services"
+                description="
+                Choose from the various available services
+                
+                We can help you with:
+                
+                ROC Compliance Services
+                GST Compliance Services
+                Income Tax Compliances
+                Import and Export Services
+                Book Keeping Services
+                Payroll Management"
+                action={{
+                  type: "internal",
+                  route: "/sections/navigation/navtabs",
+                  color: "info",
+                  label: "find out more",
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} lg={4}>
+              <CenteredBlogCard
+                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                title="Licensing Services"
+                description="Get all Govt. licenses at one place
+
+                We can guide you through:
+                
+                Udyam/ Udyog Adhaar/ MSME
+                Importer Exporter Code (IEC)
+                GST Registration
+
+                Digital Signatures"
+                action={{
+                  type: "internal",
+                  route: "/sections/navigation/pagination",
+                  color: "info",
+                  label: "find out more",
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Container >
+
+
         <Information />
-        <DesignBlocks />
+        {/* <DesignBlocks /> */}
         <Pages />
         <Container sx={{ mt: 6 }}>
           <BuiltByDevelopers />
