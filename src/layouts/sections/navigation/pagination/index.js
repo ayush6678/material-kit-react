@@ -24,7 +24,7 @@ function Pagination() {
           description="Get your MSME registration within 5 days and enjoy a tons of subsidies and incentives."
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -40,7 +40,7 @@ function Pagination() {
           Yes you read it right! There are a lot of benefits that are available to exporters, incl. additional direct incentives from Govt. of upto ~10% of your export revenue. So get your IEC Code, Today!! "
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -57,7 +57,7 @@ function Pagination() {
           Also, if you don’t even the threshold still you can apply for GST as it is recommended so as to avail input tax credit on all your purchases and also get higher acceptability when dealing with larger enterprises, Govt. departments and others. "
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -77,7 +77,7 @@ function Pagination() {
           Apply and take part in various funding rounds and challenges especially for recognized startups."
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -93,7 +93,7 @@ function Pagination() {
           "
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -111,7 +111,7 @@ function Pagination() {
           Central License Registration"
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -129,7 +129,7 @@ function Pagination() {
           Technical support"
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -146,7 +146,7 @@ function Pagination() {
           Technical support"
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />

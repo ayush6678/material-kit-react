@@ -38,7 +38,7 @@ function Information() {
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
             <RotatingCard>
               <RotatingCardFront
-                image={bgFront}
+                // image={bgFront}
                 icon="touch_app"
                 title={
                   <>
@@ -51,7 +51,7 @@ function Information() {
                 description="All the MUI components that you need in a development have been re-design with the new look."
               />
               <RotatingCardBack
-                image={bgBack}
+                // image={bgBack}
                 title="Discover More"
                 description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
                 action={{

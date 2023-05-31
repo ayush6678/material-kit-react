@@ -32,7 +32,7 @@ function NavTabs() {
           Other applicable compliances"
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -53,7 +53,7 @@ function NavTabs() {
           Filing of application for cancellation of GST"
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />
@@ -76,7 +76,7 @@ function NavTabs() {
           Advance tax calculations and payments"
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+            route: "/sections/input-areas/forms",
             label: "Know More",
           }}
         />

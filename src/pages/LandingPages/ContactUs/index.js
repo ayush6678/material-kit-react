@@ -45,6 +45,7 @@ function ContactUs() {
             label: "Get Started",
             color: "info",
           }}
+          transparent
         />
       </MKBox>
       <Grid container spacing={3} alignItems="center">

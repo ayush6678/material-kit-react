@@ -14,6 +14,7 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
+// import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -26,25 +27,26 @@ import MKSocialButton from "components/MKSocialButton";
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
-import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
+// import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
 import Information from "pages/Presentation/sections/Information";
-import Pages from "pages/Presentation/sections/Pages";
+// import Pages from "pages/Presentation/sections/Pages";
 import Testimonials from "pages/Presentation/sections/Testimonials";
-import Download from "pages/Presentation/sections/Download";
+// import Download from "pages/Presentation/sections/Download";
 
 // Presentation page components
-import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
+// import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation.jpg";
+// import bgImage from "assets/images/bg-presentation.jpg";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-
+import image from "assets/images/AccountWale.png";
+// import { Padding } from "@mui/icons-material";
 function Presentation() {
   return (
     <>
@@ -57,12 +59,14 @@ function Presentation() {
           color: "info",
         }}
         sticky
+        transparent
       />
+      <img src={image} alt="AccountWale" width={60} style={{ position: "absolute", margin: "20px", marginLeft: "40px", marginTop: "20px" }} />
       <MKBox
         minHeight="60vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${bgImage})`,
+          // backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
@@ -98,7 +102,7 @@ function Presentation() {
       </MKBox>
       <Card
         sx={{
-          p: 2,
+          p: 10,
           mx: { xs: 2, lg: 3 },
           mt: -8,
           mb: 4,
@@ -108,12 +112,11 @@ function Presentation() {
         }}
       >
         {/* <Counters /> */}
-
         <Container>
           <Grid container spacing={12}>
             <Grid item xs={12} lg={4}>
               <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                image="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80"
                 title="Incorporation Services"
                 description="Starting your dream company was never this easy.
                 We Incorporate:
@@ -131,7 +134,7 @@ function Presentation() {
             </Grid>
             <Grid item xs={12} lg={4}>
               <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
                 title="Compliance Services"
                 description="
                 Choose from the various available services
@@ -154,7 +157,7 @@ function Presentation() {
             </Grid>
             <Grid item xs={12} lg={4}>
               <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                image="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
                 title="Licensing Services"
                 description="Get all Govt. licenses at one place
 
@@ -177,13 +180,51 @@ function Presentation() {
         </Container >
 
 
-        <Information />
-        {/* <DesignBlocks /> */}
-        <Pages />
-        <Container sx={{ mt: 6 }}>
-          <BuiltByDevelopers />
-        </Container>
         <Container>
+          <Grid container justifyContent="center" sx={{ textAlign: "center" }} py={20}>
+            
+              <MKTypography
+                variant="h3"
+                color="dark"
+                textAlign="center"
+                px={{ xs: 6, lg: 8 }}
+                mt={1}
+              >
+                100+ <br/>Satisfied Business
+              </MKTypography>
+
+ 
+              <MKTypography
+                variant="h3"
+                color="info"
+                textAlign="center"
+                px={{ xs: 6, lg: 8 }}
+                mt={1}
+              >
+                Tax Reduction
+              </MKTypography>
+
+
+              <MKTypography
+                variant="h3"
+                color="dark"
+                textAlign="center"
+                px={{ xs: 6, lg: 8 }}
+                mt={1}
+              >
+                Professional Help
+              </MKTypography>
+
+          </Grid>
+        </Container>
+        <Information />
+
+        {/* <DesignBlocks /> */}
+        {/* <Pages /> */}
+        <Container sx={{ mt: 6 }}>
+          {/* <BuiltByDevelopers /> */}
+        </Container>
+        {/* <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
@@ -226,9 +267,9 @@ function Presentation() {
               />
             </Grid>
           </Grid>
-        </Container>
+        </Container> */}
         <Testimonials />
-        <Download />
+        {/* <Download /> */}
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>

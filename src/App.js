@@ -28,6 +28,7 @@ import Presentation from "layouts/pages/presentation";
 
 // Material Kit 2 React routes
 import routes from "routes";
+import routes1 from "routes1";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -56,6 +57,7 @@ export default function App() {
       <CssBaseline />
       <Routes>
         {getRoutes(routes)}
+        {getRoutes(routes1)}
         <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>

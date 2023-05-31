@@ -46,7 +46,6 @@ function Information() {
         >
           <MKTypography variant="h2">Trusted by experts and businesses</MKTypography>
           <MKTypography variant="h2" color="info" textGradient mb={2}>
-            1,679,477+ web developers
           </MKTypography>
           <MKTypography variant="body1" color="text" mb={2}>
             Many Fortune 500 companies, startups, universities and governmental institutions love

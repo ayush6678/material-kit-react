@@ -53,10 +53,10 @@ import Navbars from "layouts/sections/navigation/navbars";
 import NavTabs from "layouts/sections/navigation/nav-tabs";
 import Pagination from "layouts/sections/navigation/pagination";
 // import Inputs from "layouts/sections/input-areas/inputs";
-// import Forms from "layouts/sections/input-areas/forms";
-// import Alerts from "layouts/sections/attention-catchers/alerts";
-// import Modals from "layouts/sections/attention-catchers/modals";
-// import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
+import Forms from "layouts/sections/input-areas/forms";
+import Alerts from "layouts/sections/attention-catchers/alerts";
+import Modals from "layouts/sections/attention-catchers/modals";
+import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
 // import Avatars from "layouts/sections/elements/avatars";
 // import Badges from "layouts/sections/elements/badges";
 // import BreadcrumbsEl from "layouts/sections/elements/breadcrumbs";
@@ -98,18 +98,18 @@ const routes = [
         // collapse: [
         //   {
         //     name: "navbars",
-        //     route: "/sections/navigation/navbars",
-        //     component: <Navbars />,
+        //     route: "/sections/attention-catchers/alerts",
+        //     component: <Alerts />,
         //   },
         //   {
         //     name: "nav tabs",
-        //     route: "/sections/navigation/nav-tabs",
-        //     component: <NavTabs />,
+        //     route: "/sections/attention-catchers/modals",
+        //     component: <Modals />,
         //   },
         //   {
         //     name: "pagination",
-        //     route: "/sections/navigation/pagination",
-        //     component: <Pagination />,
+        //     route: "/sections/attention-catchers/tooltips-popovers",
+        //     component: <TooltipsPopovers />,
         //   },
         // ],
       },
@@ -120,11 +120,11 @@ const routes = [
         component: <Pagination />,
         dropdown: false,
         // collapse: [
-        //   {
-        //     name: "inputs",
-        //     route: "/sections/input-areas/inputs",
-        //     component: <Inputs />,
-        //   },
+        // //   // {
+        // //   //   name: "inputs",
+        // //   //   route: "/sections/input-areas/inputs",
+        // //   //   component: <Inputs />,
+        // //   // },
         //   {
         //     name: "forms",
         //     route: "/sections/input-areas/forms",
@@ -274,5 +274,4 @@ const routes = [
   //   href: "https://www.github.com/creativetimofficial/material-kit-react",
   // },
 ];
-
 export default routes;

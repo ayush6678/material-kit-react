@@ -9,13 +9,14 @@ import MKTypography from "components/MKTypography";
 
 // Images
 import logoCT from "assets/images/logo-ct-dark.png";
+import image from "assets/images/AccountWale.png";
 
 const date = new Date().getFullYear();
 
 const v1= {
   brand: {
-    name: "Material Kit 2",
-    image: logoCT,
+    name: "AccountWale",
+    image: image,
     route: "/",
   },
   socials: [
@@ -26,10 +27,6 @@ const v1= {
     {
       icon: <TwitterIcon />,
       link: "https://twitter.com/creativetim",
-    },
-    {
-      icon: <GitHubIcon />,
-      link: "https://github.com/creativetimofficial",
     },
     {
       icon: <YouTubeIcon />,
@@ -74,7 +71,7 @@ const v1= {
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} Material Kit by{" "}
+      All rights reserved. Copyright &copy; {date} AccountWale 
       <MKTypography
         component="a"
         href="https://www.creative-tim.com"
@@ -83,7 +80,7 @@ const v1= {
         variant="button"
         fontWeight="regular"
       >
-        Creative Tim
+
       </MKTypography>
       .
     </MKTypography>
