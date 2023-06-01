@@ -15,13 +15,13 @@ Coded by www.creative-tim.com
 
 // Sections components
 import BaseLayout from "layouts/sections/components/BaseLayout";
-import View from "layouts/sections/components/View";
+// import View from "layouts/sections/components/View";
 
 // Forms page components
 import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
 
 // Forms page components code
-import formSimpleCode from "layouts/sections/input-areas/forms/components/FormSimple/code";
+// import formSimpleCode from "layouts/sections/input-areas/forms/components/FormSimple/code";
 
 function Forms() {
   return (

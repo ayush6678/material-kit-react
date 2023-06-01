@@ -28,10 +28,10 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // About Us page sections
-import Information from "pages/LandingPages/AboutUs/sections/Information";
+// import Information from "pages/LandingPages/AboutUs/sections/Information";
 import Team from "pages/LandingPages/AboutUs/sections/Team";
-import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
-import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
+// import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
+// import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
 
 // Routes
 import routes from "routes";
@@ -127,7 +127,7 @@ function AboutUs() {
         {/* <Newsletter /> */}
         <MKTypography variant="h2" py={3}>Location</MKTypography>
         <MKTypography variant="body" > Mumbai, MH</MKTypography>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.67292626254!2d72.71637178509145!3d19.08250200603438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1685533357226!5m2!1sen!2sin" width="100%" height="400" frameborder="0" border="0"></iframe>
+        <iframe title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.67292626254!2d72.71637178509145!3d19.08250200603438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1685533357226!5m2!1sen!2sin" width="100%" height="400" frameborder="0" border="0"></iframe>
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

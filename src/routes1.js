@@ -37,26 +37,26 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+// import Icon from "@mui/material/Icon";
 
 // @mui icons
 
 // Pages
-import AboutUs from "layouts/pages/landing-pages/about-us";
-import ContactUs from "layouts/pages/landing-pages/contact-us";
-import Author from "layouts/pages/landing-pages/author";
-import SignIn from "layouts/pages/authentication/sign-in";
+// import AboutUs from "layouts/pages/landing-pages/about-us";
+// import ContactUs from "layouts/pages/landing-pages/contact-us";
+// import Author from "layouts/pages/landing-pages/author";
+// import SignIn from "layouts/pages/authentication/sign-in";
 
 // Sections
 
-import Navbars from "layouts/sections/navigation/navbars";
-import NavTabs from "layouts/sections/navigation/nav-tabs";
-import Pagination from "layouts/sections/navigation/pagination";
+// import Navbars from "layouts/sections/navigation/navbars";
+// import NavTabs from "layouts/sections/navigation/nav-tabs";
+// import Pagination from "layouts/sections/navigation/pagination";
 import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
-import Alerts from "layouts/sections/attention-catchers/alerts";
-import Modals from "layouts/sections/attention-catchers/modals";
-import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
+// import Alerts from "layouts/sections/attention-catchers/alerts";
+// import Modals from "layouts/sections/attention-catchers/modals";
+// import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
 // import Avatars from "layouts/sections/elements/avatars";
 // import Badges from "layouts/sections/elements/badges";
 // import BreadcrumbsEl from "layouts/sections/elements/breadcrumbs";

@@ -3,7 +3,7 @@ import MKBox from "components/MKBox";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 // Sections components
 import BaseLayout from "layouts/sections/components/BaseLayout";
-import Forms from "layouts/sections/input-areas/forms";
+// import Forms from "layouts/sections/input-areas/forms";
 
 
 function Navbars() {
