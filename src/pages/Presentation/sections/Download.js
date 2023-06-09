@@ -16,17 +16,17 @@ Coded by www.creative-tim.com
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Tooltip from "@mui/material/Tooltip";
+// import Tooltip from "@mui/material/Tooltip";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
-import MKButton from "components/MKButton";
-import MKTypography from "components/MKTypography";
+// import MKButton from "components/MKButton";
+// import MKTypography from "components/MKTypography";
 import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 // Images
-import bgImage from "assets/images/shapes/waves-white.svg";
+// import bgImage from "assets/images/shapes/waves-white.svg";
 
 function Download() {
   return (
