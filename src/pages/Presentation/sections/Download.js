@@ -22,167 +22,131 @@ import Tooltip from "@mui/material/Tooltip";
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
-
+import RotatingCard from "examples/Cards/RotatingCard";
+import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
+import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 // Images
 import bgImage from "assets/images/shapes/waves-white.svg";
 
 function Download() {
   return (
-    <MKBox component="section" py={{ xs: 0, sm: 12 }}>
-      <MKBox
-        variant="gradient"
-        bgColor="dark"
-        position="relative"
-        borderRadius="xl"
-        sx={{ overflow: "hidden" }}
-      >
-        <MKBox
-          component="img"
-          src={bgImage}
-          alt="pattern-lines"
-          position="absolute"
-          top={0}
-          left={0}
-          width="100%"
-          zIndex={1}
-          opacity={0.2}
-        />
-        <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
-          <Grid container item xs={12} md={7} justifyContent="center" mx="auto" textAlign="center">
-            <MKTypography variant="h3" color="white">
-              Do you love this awesome
-            </MKTypography>
-            <MKTypography variant="h3" color="white" mb={1}>
-              UI Kit for ReactJS &amp; MUI?
-            </MKTypography>
-            <MKTypography variant="body2" color="white" mb={6}>
-              Cause if you do, it can be yours for FREE. Hit the button below to navigate to
-              Creative Tim where you can find the Design System in HTML. Start a new project or give
-              an old Bootstrap project a new look!
-            </MKTypography>
-            <MKButton
-              variant="gradient"
-              color="info"
-              size="large"
-              component="a"
-              href="https://www.creative-tim.com/product/material-kit-react"
-              sx={{ mb: 2 }}
-            >
-              Download Now
-            </MKButton>
-          </Grid>
-        </Container>
-      </MKBox>
+    <MKBox component="section" py={6} my={6}>
       <Container>
-        <Grid container item xs={6} mx="auto">
-          <MKBox textAlign="center">
-            <MKTypography variant="h3" mt={6} mb={3}>
-              Available on these technologies
-            </MKTypography>
-            <Grid container spacing={3} justifyContent="center">
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Bootstrap 5 - Most popular front-end component library">
-                  <MKBox
-                    component="a"
-                    href="https://www.creative-tim.com/product/material-kit"
-                    target="_blank"
-                  >
-                    <MKBox
-                      component="img"
-                      src=""
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    opacity={0.5}
-                    component="a"
-                    href="#"
-                    target="_blank"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <MKBox
-                      component="img"
-                      src=""
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    opacity={0.5}
-                    component="a"
-                    href="#"
-                    target="_blank"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    opacity={0.5}
-                    component="a"
-                    href="#"
-                    target="_blank"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    component="a"
-                    href="https://www.creative-tim.com/product/material-kit-react"
-                    target="_blank"
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Tooltip title="Comming soon">
-                  <MKBox
-                    opacity={0.5}
-                    component="a"
-                    href="#"
-                    target="_blank"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
-                      width="100%"
-                    />
-                  </MKBox>
-                </Tooltip>
-              </Grid>
-            </Grid>
-          </MKBox>
-        </Grid>
+        <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                // image={bgFront}
+                color="success"
+                icon="touch_app"
+                title={
+                  <>
+                    What does it means to be Compliant?
+                    <br />
+                    <br />
+
+                    <br />
+
+                  </>
+                }
+              // description="All the MUI components that you need in a development have been re-design with the new look."
+              />
+              <RotatingCardBack
+                // image={bgBack}
+                title="Discover More"
+                description="Being up to date with all regulatory and legal requirements applicable to your organization.
+
+                In our experience, most entrepreneurs are not aware of all applicable requirements which later results in hefty Govt. penalties. Thus, it is advisable to work with trusted and committed Consultants.  "
+              // action={{
+              //   type: "internal",
+              //   route: "/sections/page-sections/page-headers",
+              //   label: "start with header",
+              // }}
+              />
+            </RotatingCard>
+          </Grid>
+
+
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                // image={bgFront}
+                color="success"
+                icon="touch_app"
+                title={
+                  <>
+                    How can AccountWale simplify my bookkeeping process?
+                  </>
+                }
+              // description="All the MUI components that you need in a development have been re-design with the new look."
+              />
+              <RotatingCardBack
+                // image={bgBack}
+                title="Discover More"
+                description="Say goodbye to spreadsheets and endless paperwork! AccountWale offers a user-friendly online platform that automates your bookkeeping tasks. Simply connect your bank accounts and let our technology categorize transactions, generate financial reports, and keep you organized."
+              // action={{
+              //   type: "internal",
+              //   route: "/sections/page-sections/page-headers",
+              //   label: "start with header",
+              // }}
+              />
+            </RotatingCard>
+          </Grid>
+
+
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                // image={bgFront}
+                color="success"
+                icon="touch_app"
+                title={
+                  <>
+                    Why should I choose AccountWale over other accounting services?
+                  </>
+                }
+
+              />
+              <RotatingCardBack
+                // image={bgBack}
+                title="Discover More"
+                description="At AccountWale, we're not just number crunchers. We're financial superheroes! Our team of experts goes above and beyond to save your time, money, and sanity. With our personalized approach and cutting-edge technology, we make accounting effortless and empowering."
+              // action={{
+              //   type: "internal",
+              //   route: "/sections/page-sections/page-headers",
+              //   label: "start with header",
+              // }}
+              />
+            </RotatingCard>
+          </Grid>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                // image={bgFront}
+                color="success"
+                icon="touch_app"
+                title={
+                  <>
+                    Why should I choose AccountWale over other accounting services?
+                  </>
+                }
+
+              />
+              <RotatingCardBack
+                // image={bgBack}
+                title="Discover More"
+                description="At AccountWale, we're not just number crunchers. We're financial superheroes! Our team of experts goes above and beyond to save your time, money, and sanity. With our personalized approach and cutting-edge technology, we make accounting effortless and empowering."
+              // action={{
+              //   type: "internal",
+              //   route: "/sections/page-sections/page-headers",
+              //   label: "start with header",
+              // }}
+              />
+            </RotatingCard>
+          </Grid>
+        </Grid >
       </Container>
-    </MKBox>
+    </MKBox >
   );
 }
 

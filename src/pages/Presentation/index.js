@@ -33,7 +33,7 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import Information from "pages/Presentation/sections/Information";
 // import Pages from "pages/Presentation/sections/Pages";
 import Testimonials from "pages/Presentation/sections/Testimonials";
-// import Download from "pages/Presentation/sections/Download";
+import Download from "pages/Presentation/sections/Download";
 
 // Presentation page components
 // import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
@@ -56,7 +56,7 @@ function Presentation() {
           type: "external",
           route: "",
           label: "Get Started",
-          color: "info",
+          color: "success",
         }}
         sticky
         transparent
@@ -78,7 +78,7 @@ function Presentation() {
             <MKTypography
               variant="h1"
               color="black"
-              mt={-6}
+              mt={5}
               mb={1}
               sx={({ breakpoints, typography: { size } }) => ({
                 [breakpoints.down("md")]: {
@@ -94,6 +94,7 @@ function Presentation() {
               textAlign="center"
               px={{ xs: 6, lg: 12 }}
               mt={1}
+              mb={5}
             >
               India’s Leading Compliance Services Platform
             </MKTypography>
@@ -127,7 +128,7 @@ function Presentation() {
                 action={{
                   type: "internal",
                   route: "/sections/navigation/navbars",
-                  color: "info",
+                  color: "success",
                   label: "find out more",
                 }}
               />
@@ -150,7 +151,7 @@ function Presentation() {
                 action={{
                   type: "internal",
                   route: "/sections/navigation/navtabs",
-                  color: "info",
+                  color: "success",
                   label: "find out more",
                 }}
               />
@@ -162,16 +163,16 @@ function Presentation() {
                 description="Get all Govt. licenses at one place
 
                 We can guide you through:
-                
                 Udyam/ Udyog Adhaar/ MSME
-                Importer Exporter Code (IEC)
+                Importer Exporter Code
                 GST Registration
-
+                Startup India Scheme
+                Trademark Registration
                 Digital Signatures"
                 action={{
                   type: "internal",
                   route: "/sections/navigation/pagination",
-                  color: "info",
+                  color: "success",
                   label: "find out more",
                 }}
               />
@@ -182,38 +183,38 @@ function Presentation() {
 
         <Container>
           <Grid container justifyContent="center" sx={{ textAlign: "center" }} py={20}>
-            
-              <MKTypography
-                variant="h3"
-                color="dark"
-                textAlign="center"
-                px={{ xs: 6, lg: 8 }}
-                mt={1}
-              >
-                100+ <br/>Satisfied Business
-              </MKTypography>
 
- 
-              <MKTypography
-                variant="h3"
-                color="info"
-                textAlign="center"
-                px={{ xs: 6, lg: 8 }}
-                mt={1}
-              >
-                Tax Reduction
-              </MKTypography>
+            <MKTypography
+              variant="h3"
+              color="dark"
+              textAlign="center"
+              px={{ xs: 6, lg: 8 }}
+              mt={1}
+            >
+              100+ <br />Satisfied Business
+            </MKTypography>
 
 
-              <MKTypography
-                variant="h3"
-                color="dark"
-                textAlign="center"
-                px={{ xs: 6, lg: 8 }}
-                mt={1}
-              >
-                Professional Help
-              </MKTypography>
+            <MKTypography
+              variant="h3"
+              color="info"
+              textAlign="center"
+              px={{ xs: 6, lg: 8 }}
+              mt={1}
+            >
+              Tax Reduction
+            </MKTypography>
+
+
+            <MKTypography
+              variant="h3"
+              color="dark"
+              textAlign="center"
+              px={{ xs: 6, lg: 8 }}
+              mt={1}
+            >
+              Professional Help
+            </MKTypography>
 
           </Grid>
         </Container>
@@ -269,7 +270,7 @@ function Presentation() {
           </Grid>
         </Container> */}
         <Testimonials />
-        {/* <Download /> */}
+        <Download />
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
@@ -281,6 +282,8 @@ function Presentation() {
                   We deliver the best web products
                 </MKTypography>
               </Grid>
+
+
               <Grid
                 item
                 xs={12}
@@ -320,6 +323,9 @@ function Presentation() {
                 </MKSocialButton>
               </Grid>
             </Grid>
+            <MKTypography variant="h2" py={3}>Location</MKTypography>
+            <MKTypography variant="body" > Mumbai, MH</MKTypography>
+            <iframe title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.67292626254!2d72.71637178509145!3d19.08250200603438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1685533357226!5m2!1sen!2sin" width="100%" height="400" frameborder="0" border="0"></iframe>
           </Container>
         </MKBox>
       </Card>
