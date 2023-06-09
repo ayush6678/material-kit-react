@@ -1,9 +1,9 @@
 
 import MKBox from "components/MKBox";
-import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+// import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 // Sections components
-import BaseLayout from "layouts/sections/components/BaseLayout";
+// import BaseLayout from "layouts/sections/components/BaseLayout";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
 import { Container } from "@mui/material";
@@ -12,7 +12,7 @@ import Card from "@mui/material/Card";
 import MKTypography from "components/MKTypography";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
-import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
+// import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
 import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
 function NavTabs() {
   return (
