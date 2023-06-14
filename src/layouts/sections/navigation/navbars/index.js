@@ -17,6 +17,7 @@ function Navbars() {
       ]}
     >
       <MKBox py={6}>
+        
         <FilledInfoCard
           color="info"
           title="Private Limited Company Incorporation"
