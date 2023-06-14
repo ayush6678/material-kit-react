@@ -13,7 +13,7 @@ import MKTypography from "components/MKTypography";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
 // import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
-import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
+// import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
 import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
 import post1 from "assets/images/examples/testimonial-6-2.jpg";
 

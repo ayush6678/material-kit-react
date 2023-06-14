@@ -6,14 +6,14 @@ import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 // import BaseLayout from "layouts/sections/components/BaseLayout";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
-import { Breadcrumbs, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import MKTypography from "components/MKTypography";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
 // import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
-import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
+// import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
 import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
 import post1 from "assets/images/examples/testimonial-6-2.jpg";
 
@@ -60,10 +60,10 @@ function BreadcrumbsEL() {
         </MKTypography>
 
         <MKTypography
-        
-        m={15}
-        color="white"
-        pb={10}
+
+          m={15}
+          color="white"
+          pb={10}
         >
 
 
