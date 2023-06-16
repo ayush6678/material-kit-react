@@ -470,7 +470,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
         })}
       >
         <MKBox display="flex" justifyContent="space-between" alignItems="center">
-          <img src={image} width={40} style={{ marginRight: "20px" }} />
+          <img src={image} width={40} style={{ marginRight: "20px" }} alt="AccountWale"/>
           <MKBox
             component={Link}
             to="/"
