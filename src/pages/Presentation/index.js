@@ -103,8 +103,8 @@ function Presentation() {
       </MKBox>
       <Card
         sx={{
-          p: 10,
-          mx: { xs: 2, lg: 3 },
+          p: {lg:10},
+          mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
@@ -115,7 +115,7 @@ function Presentation() {
         {/* <Counters /> */}
         <Container>
           <Grid container spacing={12}>
-            <Grid item xs={12} lg={4}>
+            <Grid item xs={12} lg={4} >
               <CenteredBlogCard
                 image="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80"
                 title="Incorporation Services"
@@ -197,10 +197,10 @@ function Presentation() {
 
             <MKTypography
               variant="h3"
-              color="info"
+              color="success"
               textAlign="center"
               px={{ xs: 6, lg: 8 }}
-              mt={1}
+              mt={{xs:10,lg:1}}
             >
               Tax Reduction
             </MKTypography>
@@ -211,7 +211,7 @@ function Presentation() {
               color="dark"
               textAlign="center"
               px={{ xs: 6, lg: 8 }}
-              mt={1}
+              mt={{xs:10,lg:1}}
             >
               Professional Help
             </MKTypography>
