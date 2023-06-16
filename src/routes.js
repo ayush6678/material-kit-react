@@ -45,7 +45,7 @@ import Icon from "@mui/material/Icon";
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
-import SignIn from "layouts/pages/authentication/sign-in";
+// import SignIn from "layouts/pages/authentication/sign-in";
 
 // Sections
 
@@ -62,8 +62,8 @@ import Pagination from "layouts/sections/navigation/pagination";
 // import BreadcrumbsEl from "layouts/sections/elements/breadcrumbs";
 // import Buttons from "layouts/sections/elements/buttons";~
 // import Dropdowns from "layouts/sections/elements/dropdowns";
-// import ProgressBars from "layouts/sections/elements/progress-bars";
-// import Toggles from "layouts/sections/elements/toggles";
+import ProgressBars from "layouts/sections/elements/progress-bars";
+import Toggles from "layouts/sections/elements/toggles";
 // import Typography from "layouts/sections/elements/typography";
 
 const routes = [
@@ -206,65 +206,40 @@ const routes = [
   {
     name: "About Us",
     icon: <Icon>dashboard</Icon>,
-    columns: 1,
-    rowsPerColumn: 2,
     collapse: [
+
+
       {
-        name: "landing pages",
-        collapse: [
-          {
-            name: "about us",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
-          },
-          {
-            name: "contact us",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
-          },
-          {
-            name: "author",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
-          },
-        ],
+        name: "about us",
+        route: "/pages/landing-pages/about-us",
+        component: <AboutUs />,
       },
       {
-        name: "account",
-        collapse: [
-          {
-            name: "sign in",
-            route: "/pages/authentication/sign-in",
-            component: <SignIn />,
-          },
-        ],
+        name: "contact us",
+        route: "/pages/landing-pages/contact-us",
+        component: <ContactUs />,
+      },
+      {
+        name: "author",
+        route: "/pages/landing-pages/author",
+        component: <Author />,
       },
     ],
   },
 
   {
-    name: "Contact Us",
+    name: "Other Services",
     icon: <Icon>article</Icon>,
     collapse: [
       {
-        name: "getting started",
-        description: "All about overview, quick start, license and contents",
-        href: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
+        name: "Book Keeping Services",
+        route: "/sections/elements/toggles",
+        component: <Toggles />,
       },
       {
-        name: "foundation",
-        description: "See our colors, icons and typography",
-        href: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
-      },
-      {
-        name: "components",
-        description: "Explore our collection of fully designed components",
-        href: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
-      },
-      {
-        name: "plugins",
-        description: "Check how you can integrate our plugins",
-        href: "https://www.creative-tim.com/learning-lab/react/datepicker/material-kit/",
+                name: "Payroll Management",
+                route: "/sections/elements/progress-bars",
+                component: <ProgressBars />,
       },
     ],
   },

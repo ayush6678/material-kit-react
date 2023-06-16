@@ -45,23 +45,23 @@ import footerRoutes from "footer.routes";
 // Images
 // import bgImage from "assets/images/bg-presentation.jpg";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-import image from "assets/images/AccountWale.png";
+// import image from "assets/images/AccountWale.png";
 // import { Padding } from "@mui/icons-material";
 function Presentation() {
   return (
     <>
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "external",
-          route: "",
-          label: "Get Started",
-          color: "success",
-        }}
+        // action={{
+        //   type: "external",
+        //   route: "",
+        //   label: "Get Started",
+        //   color: "success",
+        // }}
         sticky
         transparent
       />
-      <img src={image} alt="AccountWale" width={60} style={{ position: "absolute", margin: "20px", marginLeft: "40px", marginTop: "20px" }} />
+      {/* <img src={image} alt="AccountWale" width={60} style={{ position: "absolute", margin: "20px", marginLeft: "40px", marginTop: "20px" }} /> */}
       <MKBox
         minHeight="60vh"
         width="100%"
