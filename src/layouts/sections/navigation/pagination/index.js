@@ -24,12 +24,6 @@ function Pagination() {
 
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "Get Started",
-          color: "success",
-        }}
         transparent
         light
       />
@@ -60,8 +54,10 @@ function Pagination() {
           Licensing Services
         </MKTypography>
         <MKTypography color="white"
-
-          m={15}
+          mt={{ xs: 0 }}
+          m={{ xs: 6, lg: 15 }}
+          mb={{ xs: 14 }}
+          textAlign="center"
         >
           Register your business for various licenses
 
@@ -79,7 +75,7 @@ function Pagination() {
       <Card
         sx={{
           p: 2,
-          mx: { xs: 2, lg: 3 },
+          mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
@@ -90,8 +86,8 @@ function Pagination() {
           <Grid container spacing={2}>
 
 
-            <Grid container item xs={12} spacing={2} m={10} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -99,7 +95,7 @@ function Pagination() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Udyam Adhaar/ Udyog Adhaar/ MSME Registration"
                   description="Get your MSME registration within 5 days and enjoy a tons of subsidies and incentives.
@@ -107,7 +103,7 @@ function Pagination() {
                   "
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -120,16 +116,16 @@ function Pagination() {
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>                
+              <BackgroundBlogCard
+                image={post1}
+                title=""
+                description=""
+                action={{}}
+              />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
                    Importer Exporter Code (IEC)
 
@@ -139,7 +135,7 @@ function Pagination() {
                   Yes you read it right! There are a lot of benefits that are available to exporters, incl. additional direct incentives from Govt. of upto ~10% of your export revenue. So get your IEC Code, Today!! "
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -151,16 +147,16 @@ function Pagination() {
               </Grid>
             </Grid>
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>                
+              <BackgroundBlogCard
+                image={post1}
+                title=""
+                description=""
+                action={{}}
+              />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
                   Goods and Service Tax (GST) Registration
 
@@ -170,7 +166,7 @@ function Pagination() {
                   Also, if you don’t even the threshold still you can apply for GST as it is recommended so as to avail input tax credit on all your purchases and also get higher acceptability when dealing with larger enterprises, Govt. departments and others. "
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -183,16 +179,16 @@ function Pagination() {
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>               
+               <BackgroundBlogCard
+                image={post1}
+                title=""
+                description=""
+                action={{}}
+              />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
 Trademark Application
 "
@@ -201,7 +197,7 @@ Trademark Application
                   "
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -213,16 +209,16 @@ Trademark Application
               </Grid>
             </Grid>
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>                
+              <BackgroundBlogCard
+                image={post1}
+                title=""
+                description=""
+                action={{}}
+              />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
 FSSAI Registration
 "
@@ -233,7 +229,7 @@ FSSAI Registration
                   Central License Registration"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -245,16 +241,16 @@ FSSAI Registration
               </Grid>
             </Grid>
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>               
+               <BackgroundBlogCard
+                image={post1}
+                title=""
+                description=""
+                action={{}}
+              />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
 Digital Signature Certificate (DSC) Class 3 Signature
 "
@@ -265,7 +261,7 @@ Digital Signature Certificate (DSC) Class 3 Signature
                   Technical support"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -279,16 +275,16 @@ Digital Signature Certificate (DSC) Class 3 Signature
 
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>                
+              <BackgroundBlogCard
+                image={post1}
+                title=""
+                description=""
+                action={{}}
+              />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
 Digital Signature Certificate (DSC) Class 3 Signature with Encryption (Combo)
 "
@@ -299,7 +295,7 @@ Digital Signature Certificate (DSC) Class 3 Signature with Encryption (Combo)
                   Technical support"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -311,16 +307,16 @@ Digital Signature Certificate (DSC) Class 3 Signature with Encryption (Combo)
               </Grid>
             </Grid>
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>               
+               <BackgroundBlogCard
+                image={post1}
+                title=""
+                description=""
+                action={{}}
+              />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
 Digital Signature Certificate (DSC) Class DGFT
 "
@@ -331,7 +327,7 @@ Digital Signature Certificate (DSC) Class DGFT
                   Technical support"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -350,6 +346,7 @@ Digital Signature Certificate (DSC) Class DGFT
 
             <MKTypography
               variant="h2"
+              textAlign="center"
             >Frequently Asked Questions(FAQ):</MKTypography>
             <Download />
           </Grid>

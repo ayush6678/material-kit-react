@@ -24,12 +24,6 @@ function NavTabs() {
 
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "Get Started",
-          color: "success",
-        }}
         transparent
         light
       />
@@ -60,8 +54,10 @@ function NavTabs() {
           Compliance Services
         </MKTypography>
         <MKTypography color="white"
-
-          m={15}
+          mt={{ xs: 0 }}
+          m={{ xs: 6, lg: 15 }}
+          mb={{ xs: 14 }}
+          textAlign="center"
         >
           Get your business compliant and avoid any late fees or penalties
 
@@ -77,7 +73,7 @@ function NavTabs() {
       <Card
         sx={{
           p: 2,
-          mx: { xs: 2, lg: 3 },
+          mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
@@ -88,8 +84,8 @@ function NavTabs() {
           <Grid container spacing={2}>
 
 
-            <Grid container item xs={12} spacing={2} m={10} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -97,7 +93,7 @@ function NavTabs() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
                    ROC compliance services"
                   description="If you operate a Company/ LLP, you will be required to perform certain compliances depending upon the scenarios, which will include:
@@ -112,7 +108,7 @@ function NavTabs() {
                      Other applicable compliances"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -125,8 +121,8 @@ function NavTabs() {
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -134,7 +130,7 @@ function NavTabs() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
                    GST compliance services"
                   description="Under GST, we provide the following services:
@@ -147,7 +143,7 @@ function NavTabs() {
                   Filing of application for cancellation of GST"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -159,8 +155,8 @@ function NavTabs() {
               </Grid>
             </Grid>
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -168,7 +164,7 @@ function NavTabs() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
                    Income Tax compliance services
                    "
@@ -184,7 +180,7 @@ function NavTabs() {
                   Advance tax calculations and payments"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -198,6 +194,8 @@ function NavTabs() {
 
             <MKTypography
               variant="h2"
+              textAlign="center"
+              mt={5}
             >Frequently Asked Questions(FAQ):</MKTypography>
             <Download />
           </Grid>

@@ -84,7 +84,7 @@ function Navbars() {
         <Container>
 
 
-          <Grid container spacing={2}>
+          <Grid container spacing={2} alignItems="center">
 
             <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
               <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>

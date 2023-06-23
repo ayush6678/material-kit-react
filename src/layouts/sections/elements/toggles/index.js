@@ -40,12 +40,6 @@ function Toggles() {
       <MKBox position="fixed" top="0.5rem" width="100%">
         <DefaultNavbar
           routes={routes}
-          action={{
-            type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-react",
-            label: "Get Started",
-            color: "success",
-          }}
           transparent
         />
 
@@ -54,13 +48,14 @@ function Toggles() {
       <Grid container spacing={3} alignItems="center">
         <Grid item xs={12} lg={6}>
           <MKBox
-            display={{ xs: "none", lg: "flex" }}
+            display={{ xs: "flex", lg: "flex" }}
             width="calc(100% - 2rem)"
             height="calc(100vh - 2rem)"
             borderRadius="lg"
-            ml={9}
-            mt={9}
-            sx={{ backgroundImage: `url(https://images.unsplash.com/photo-1617957796155-72d8717ac882?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)` }}
+            mx={{ xs:'auto',lg:9}}
+            mt={14}
+            style={{backgroundColor:"green"}}
+            // sx={{ backgroundImage: `url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-green-web-color-solid-color-background.jpg)` }}
           >
             <MKTypography variant="h2" color="white" m={3}>Book Keeping Services
               <br />

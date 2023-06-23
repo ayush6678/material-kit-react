@@ -23,12 +23,6 @@ function BreadcrumbsEL() {
 
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "Get Started",
-          color: "success",
-        }}
         transparent
         light
       />
@@ -50,6 +44,8 @@ function BreadcrumbsEL() {
         variant="h1"
         color="white"
         mt={20}
+        mx={2}
+        textAlign="center"
         sx={({ breakpoints, typography: { size } }) => ({
           [breakpoints.down("md")]: {
             fontSize: size["3xl"],
@@ -61,9 +57,14 @@ function BreadcrumbsEL() {
 
         <MKTypography
 
-          m={15}
+
           color="white"
           pb={10}
+
+          mt={{ xs: 0 }}
+          m={{ xs: 3, lg: 15 }}
+          mb={{ xs: 7 }}
+          textAlign="center"
         >
 
 
@@ -84,7 +85,7 @@ function BreadcrumbsEL() {
       <Card
         sx={{
           p: 2,
-          mx: { xs: 2, lg: 3 },
+          mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
@@ -95,8 +96,9 @@ function BreadcrumbsEL() {
           <Grid container spacing={2}>
 
 
-            <Grid container item xs={12} spacing={2} m={10} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+
+          <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -104,7 +106,8 @@ function BreadcrumbsEL() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+
                 <FilledInfoCard title="
                    ITR for Salaried Individuals
 
@@ -117,7 +120,7 @@ function BreadcrumbsEL() {
                   Tax Planning"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -130,8 +133,8 @@ function BreadcrumbsEL() {
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -139,18 +142,15 @@ function BreadcrumbsEL() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
-                <FilledInfoCard title="ITR with Capital Gain Income
-
-"
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+                <FilledInfoCard title="ITR with Capital Gain Income"
                   description="Inclusions:
-
                   Filing of ITR -1/ITR-2
                   Preparation of Computation
                   Tax Planning"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -162,8 +162,8 @@ function BreadcrumbsEL() {
               </Grid>
             </Grid>
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -171,7 +171,7 @@ function BreadcrumbsEL() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
 ITR with income under Presumptive Taxation Scheme (ITR-4)
 
@@ -185,7 +185,7 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
                   Tax Planning"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -198,8 +198,8 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -207,7 +207,7 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
                ITR for Companies/LLP
                "
@@ -219,7 +219,7 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
                   "
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -233,8 +233,8 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
 
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -242,7 +242,7 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
  ITR of individuals having business Income
 
@@ -255,7 +255,7 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
                   Tax Planning"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -270,8 +270,8 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
 
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -279,7 +279,7 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
                    
                    Filing of TDS Returns
@@ -291,7 +291,7 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
                   Tax Payment Facilitation"
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
@@ -306,8 +306,8 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
 
 
 
-            <Grid container item xs={12} spacing={2} m={10} mt={1} p={5} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={3}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -315,7 +315,7 @@ ITR with income under Presumptive Taxation Scheme (ITR-4)
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
                 <FilledInfoCard title="
 Responding to Notices/Orders
 
@@ -329,7 +329,7 @@ Responding to Notices/Orders
                   "
                 />
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",

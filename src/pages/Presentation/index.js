@@ -103,7 +103,7 @@ function Presentation() {
       </MKBox>
       <Card
         sx={{
-          p: {lg:10},
+          p: { lg: 10 },
           mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
@@ -113,6 +113,50 @@ function Presentation() {
         }}
       >
         {/* <Counters /> */}
+
+        <Information />
+
+
+
+
+        <Container>
+          <Grid container justifyContent="center" sx={{ textAlign: "center" }} py={20}>
+
+            <MKTypography
+              variant="h3"
+              color="dark"
+              textAlign="center"
+              px={{ xs: 6, lg: 8 }}
+              mt={1}
+            >
+              100+ <br />Satisfied Business
+            </MKTypography>
+
+
+            <MKTypography
+              variant="h3"
+              color="success"
+              textAlign="center"
+              px={{ xs: 6, lg: 8 }}
+              mt={{ xs: 10, lg: 1 }}
+            >
+              Tax Reduction
+            </MKTypography>
+
+
+            <MKTypography
+              variant="h3"
+              color="dark"
+              textAlign="center"
+              px={{ xs: 6, lg: 8 }}
+              mt={{ xs: 10, lg: 1 }}
+            >
+              Professional Help
+            </MKTypography>
+
+          </Grid>
+        </Container>
+
         <Container>
           <Grid container spacing={12}>
             <Grid item xs={12} lg={4} >
@@ -179,46 +223,6 @@ function Presentation() {
             </Grid>
           </Grid>
         </Container >
-
-
-        <Container>
-          <Grid container justifyContent="center" sx={{ textAlign: "center" }} py={20}>
-
-            <MKTypography
-              variant="h3"
-              color="dark"
-              textAlign="center"
-              px={{ xs: 6, lg: 8 }}
-              mt={1}
-            >
-              100+ <br />Satisfied Business
-            </MKTypography>
-
-
-            <MKTypography
-              variant="h3"
-              color="success"
-              textAlign="center"
-              px={{ xs: 6, lg: 8 }}
-              mt={{xs:10,lg:1}}
-            >
-              Tax Reduction
-            </MKTypography>
-
-
-            <MKTypography
-              variant="h3"
-              color="dark"
-              textAlign="center"
-              px={{ xs: 6, lg: 8 }}
-              mt={{xs:10,lg:1}}
-            >
-              Professional Help
-            </MKTypography>
-
-          </Grid>
-        </Container>
-        <Information />
 
         {/* <DesignBlocks /> */}
         {/* <Pages /> */}
