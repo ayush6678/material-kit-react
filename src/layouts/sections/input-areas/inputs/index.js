@@ -92,8 +92,8 @@ function Inputs() {
         <Container>
           <Grid container spacing={2}>
 
-          <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -101,7 +101,7 @@ function Inputs() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Annual Company Compliance (Comprehensive)"
                   description="
@@ -129,8 +129,8 @@ function Inputs() {
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -138,7 +138,7 @@ function Inputs() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    
 Annual Company Compliance (Lite)"
@@ -162,8 +162,8 @@ Annual Company Compliance (Lite)"
               </Grid>
             </Grid>
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -171,7 +171,7 @@ Annual Company Compliance (Lite)"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                   Annual LLP Compliance
 
@@ -196,8 +196,8 @@ Annual Company Compliance (Lite)"
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -205,7 +205,37 @@ Annual Company Compliance (Lite)"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
+                <FilledInfoCard title="
+                DPT-3 Service
+                   "
+                  description="
+                  Ensure seamless compliance with DPT-3 filing requirements using our expert services. Stay updated on DPT-3 due dates and avoid penalties with our efficient filing assistance."
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4} lg={4}>
+                <FilledInfoCard title="Starting at ₹749/- only"
+                  action={{
+                    type: "internal",
+                    route: "/pages/blogs/author",
+                    color: "info",
+                    label: "read more",
+                  }}
+                />
+              </Grid>
+            </Grid>
+
+
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
+                <BackgroundBlogCard
+                  image={post1}
+                  title=""
+                  description=""
+                  action={{}}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Changing Name of your Company/ LLP"
                   description="Want to change your company’s name to better position your brand? It now takes only up to 5 working days to complete the process.
@@ -231,8 +261,8 @@ Annual Company Compliance (Lite)"
 
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -240,7 +270,7 @@ Annual Company Compliance (Lite)"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Changing Address of your Company/ LLP (within same State)"
                   description="Shifting your workplace, need assistance with updation of MCA records? Now takes only up to 5 working days to complete the process.
@@ -264,8 +294,8 @@ Annual Company Compliance (Lite)"
 
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -273,7 +303,7 @@ Annual Company Compliance (Lite)"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    
 Changing Address of your Company/ LLP (another State/ RoC)"
@@ -298,8 +328,8 @@ Changing Address of your Company/ LLP (another State/ RoC)"
 
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -307,7 +337,7 @@ Changing Address of your Company/ LLP (another State/ RoC)"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Change in Objects (MOA)
                    "
@@ -334,8 +364,8 @@ Changing Address of your Company/ LLP (another State/ RoC)"
 
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -343,7 +373,7 @@ Changing Address of your Company/ LLP (another State/ RoC)"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    
 Appointment/ Resignation of Director"
@@ -368,8 +398,8 @@ Appointment/ Resignation of Director"
 
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -377,7 +407,7 @@ Appointment/ Resignation of Director"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                   
 Alteration of Share Capital"
@@ -404,8 +434,8 @@ Alteration of Share Capital"
 
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -413,7 +443,7 @@ Alteration of Share Capital"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Transfer of Shares"
                   description="If you’re looking to transfer your equity shares and bring in new partners in the business, here’s how we will assist you:
@@ -438,8 +468,8 @@ Alteration of Share Capital"
 
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -447,7 +477,7 @@ Alteration of Share Capital"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Closure of Company (Under Fast Track Exit)"
                   description="If your Company has been incorporated atleast a year ago or it has been inoperational for more than a year and you’re no longer looking to run the Company. MCA has provided a Fast Track Exit mode to such businesses and here’s how we will assist you:
@@ -470,8 +500,8 @@ Alteration of Share Capital"
 
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -479,7 +509,7 @@ Alteration of Share Capital"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Dormant Company (Applying for Inactive status)"
                   description="If your Company has been inoperational since two years ago or it has been inoperational since it’s incoporation and you might want to restart business at a later point then you can apply for inactive status which remains for 5 years. Here’s how we will assist you:
@@ -501,8 +531,8 @@ Alteration of Share Capital"
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -510,7 +540,7 @@ Alteration of Share Capital"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                   Change in Partners of LLP"
                   description="
@@ -536,8 +566,8 @@ Alteration of Share Capital"
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -545,7 +575,7 @@ Alteration of Share Capital"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    INC-20A (Business Commencement form) "
                   description="Every Company has to mandatorily file Form INC-20A within 180 days of the Incorporation of a Company.
@@ -568,8 +598,8 @@ Alteration of Share Capital"
             </Grid>
 
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -577,7 +607,7 @@ Alteration of Share Capital"
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Director KYC (DIR3 KYC) "
                   description="Directors of a Company/ LLP are required to furnish their KYC annually between 1st April and 30th September. Non-filing of such form in time may result in a penalty of Rs.5,000/-. "

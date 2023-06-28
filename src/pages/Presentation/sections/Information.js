@@ -32,27 +32,58 @@ import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 function Information() {
   return (
-    <MKBox component="section" py={6} my={6}>
+    <MKBox component="section" py={0} my={2}>
       <Container>
+        <Grid item  sx={{ mx: "auto" }} display={{ lg: 'none' }} mb={6}>
+          <RotatingCard>
+            <RotatingCardFront
+              // image={bgFront}
+              color="success"
+              icon="touch_app"
+              title={
+                <>
+                  Book Keeping
+                  <br />
+                  Service
+                </>
+              }
+                description={<>All the MUI components that you need in a development have been re-design with the new look</>}
+            />
+            <RotatingCardBack
+              // image={bgBack}
+              title="Discover More"
+              description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+              color="success"
+              action={{
+                type: "internal",
+                route: "/sections/page-sections/page-headers",
+                label: "start with header",
+              }}
+            />
+          </RotatingCard>
+        </Grid>
         <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }} >
-          <Grid item xs={12} lg={4} sx={{ mx: "auto" }} >
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }} display={{xs:"none",lg:"flex"}}>
             <RotatingCard>
               <RotatingCardFront
                 // image={bgFront}
                 icon="touch_app"
+              color="success"
+
                 title={
                   <>
-                    All our products
+                    Book Keeping
                     <br />
-                    are designed to
-                    deliver
+                    Service
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                  description={<>All the MUI components that you need in a development have been re-design with the new look</>}
               />
               <RotatingCardBack
                 // image={bgBack}
                 title="Discover More"
+              color="success"
+
                 description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
                 action={{
                   type: "internal",

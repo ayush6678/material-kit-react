@@ -13,7 +13,7 @@ import image from "assets/images/AccountWale.png";
 
 const date = new Date().getFullYear();
 
-const v1= {
+const v1 = {
   brand: {
     name: "AccountWale",
     image: image,
@@ -35,43 +35,61 @@ const v1= {
   ],
   menus: [
     {
-      name: "company",
+      name: "Income Tax",
       items: [
-        { name: "about us", href: "https://www.creative-tim.com/presentation" },
-        { name: "freebies", href: "https://www.creative-tim.com/templates/free" },
-        { name: "premium tools", href: "https://www.creative-tim.com/templates/premium" },
-        { name: "blog", href: "https://www.creative-tim.com/blog" },
+        { name: "E-payment of Taxes", href: "https://www.creative-tim.com/presentation" },
+        { name: "Income Tax Assessee Login", href: "https://www.creative-tim.com/templates/free" },
+        { name: "Verify PAN (from Name & DOB)", href: "https://www.creative-tim.com/templates/premium" },
+        { name: "Status of Tax Refund", href: "https://www.creative-tim.com/blog" },
+        { name: "ITR-V Receipt Status", href: "https://www.creative-tim.com/presentation" },
+        { name: "Know Your AO", href: "https://www.creative-tim.com/templates/free" },
+        { name: "Online New PAN Application/ Correction of PAN", href: "https://www.creative-tim.com/templates/premium" },
+        { name: "TAN Login", href: "https://www.creative-tim.com/blog" },
+        { name: "OLTAS Challan Status", href: "https://www.creative-tim.com/presentation" },
+        { name: "Verify Form 16A", href: "https://www.creative-tim.com/templates/free" },
+        { name: "Verify Form 16", href: "https://www.creative-tim.com/templates/premium" },
+        { name: "Know TAN", href: "https://www.creative-tim.com/blog" },
+        { name: "Online TAN Application", href: "https://www.creative-tim.com/presentation" },
+        { name: "Online TAN Correction", href: "https://www.creative-tim.com/templates/free" },
       ],
     },
     {
-      name: "resources",
+      name: "GST",
       items: [
-        { name: "illustrations", href: "https://iradesign.io/" },
-        { name: "bits & snippets", href: "https://www.creative-tim.com/bits" },
-        { name: "affiliate program", href: "https://www.creative-tim.com/affiliates/new" },
+        { name: "Registration", href: "https://iradesign.io/" },
+        { name: "Payments", href: "https://www.creative-tim.com/bits" },
+        { name: "User Services", href: "https://www.creative-tim.com/affiliates/new" },
+        { name: "e-Way Bill System", href: "https://www.creative-tim.com/bits" },
+        { name: "Refunds", href: "https://www.creative-tim.com/bits" },
+        { name: "Payments", href: "https://www.creative-tim.com/bits" },
+        { name: "Track Application Status", href: "https://www.creative-tim.com/bits" },
+      
       ],
     },
     {
-      name: "help & support",
+      name: "Quick Links",
       items: [
-        { name: "contact us", href: "https://www.creative-tim.com/contact-us" },
-        { name: "knowledge center", href: "https://www.creative-tim.com/knowledge-center" },
-        { name: "custom development", href: "https://services.creative-tim.com/" },
-        { name: "sponsorships", href: "https://www.creative-tim.com/sponsorships" },
+        { name: "Indian Courts", href: "https://www.creative-tim.com/contact-us" },
+        { name: "Download Aadhaar", href: "https://www.creative-tim.com/knowledge-center" },
+        { name: "File online RTI Application", href: "https://services.creative-tim.com/" },
+        { name: "E-filing of Copyright Apllication", href: "https://www.creative-tim.com/sponsorships" },
       ],
     },
     {
-      name: "legal",
+      name: "Others",
       items: [
-        { name: "terms & conditions", href: "https://www.creative-tim.com/terms" },
-        { name: "privacy policy", href: "https://www.creative-tim.com/privacy" },
-        { name: "licenses (EULA)", href: "https://www.creative-tim.com/license" },
+        { name: "ICSI", href: "https://www.creative-tim.com/terms" },
+        { name: "ICAI", href: "https://www.creative-tim.com/privacy" },
+        { name: "ICWAI", href: "https://www.creative-tim.com/license" },
+        { name: "Property Registration", href: "https://www.creative-tim.com/license" },
+        { name: "Provident Fund", href: "https://www.creative-tim.com/license" },
+
       ],
     },
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} AccountWale 
+      All rights reserved. Copyright &copy; {date} AccountWale
       <MKTypography
         component="a"
         href="https://www.creative-tim.com"

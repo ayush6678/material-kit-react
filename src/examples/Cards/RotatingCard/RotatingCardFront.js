@@ -29,7 +29,7 @@ function RotatingCardFront({ color, image, icon, title, description }) {
       display="flex"
       justifyContent="center"
       alignContent="center"
-      borderRadius="lg"
+      // borderRadius="lg"
       coloredShadow={color}
       width="100%"
       position="relative"

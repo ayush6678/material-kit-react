@@ -22,7 +22,7 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 import MuiLink from "@mui/material/Link";
-import Icon from "@mui/material/Icon";
+// import Icon from "@mui/material/Icon";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -49,12 +49,12 @@ function BackgroundBlogCard({ image, title, description, action }) {
     <Card
       sx={{
         backgroundImage: ({ palette: { black }, functions: { linearGradient, rgba } }) =>
-          `${linearGradient(rgba(black.main, 0.5), rgba(black.main, 0.5))}, url(${image})`,
+          `url(${image})`,
         backgroundSize: "cover",
       }}
     >
       <MKBox p={3}>
-        <MKBox minHeight="20.625rem" my="auto" py={3}>
+        <MKBox minHeight="14.625rem" my="auto" py={3}>
           <MKTypography
             variant="h2"
             color="white"
@@ -81,7 +81,7 @@ function BackgroundBlogCard({ image, title, description, action }) {
               sx={cardActionStyles}
             >
               {action.label}
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              {/* <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon> */}
             </MKTypography>
           ) : (
             <MKTypography
@@ -96,7 +96,7 @@ function BackgroundBlogCard({ image, title, description, action }) {
               sx={cardActionStyles}
             >
               {action.label}
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              {/* <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon> */}
             </MKTypography>
           )}
         </MKBox>

@@ -1,19 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -47,9 +31,17 @@ import footerRoutes from "footer.routes";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 // import image from "assets/images/AccountWale.png";
 // import { Padding } from "@mui/icons-material";
+import MessageBox from "./mssg";
 function Presentation() {
+
   return (
-    <>
+    <div
+      style={{
+        // backgroundSize: "cover",
+        // backgroundPosition: "top",
+        backgroundImage: `url(https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80)`,
+      }}
+    >
       <DefaultNavbar
         routes={routes}
         // action={{
@@ -61,12 +53,14 @@ function Presentation() {
         sticky
         transparent
       />
+      <MessageBox />
       {/* <img src={image} alt="AccountWale" width={60} style={{ position: "absolute", margin: "20px", marginLeft: "40px", marginTop: "20px" }} /> */}
       <MKBox
         minHeight="60vh"
         width="100%"
         sx={{
-          // backgroundImage: `url(${bgImage})`,
+          // backgroundImage: `url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)`,
+          // backgroundColor:"#d6ffda",
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
@@ -102,6 +96,7 @@ function Presentation() {
         </Container>
       </MKBox>
       <Card
+
         sx={{
           p: { lg: 10 },
           mx: { xs: 0, lg: 3 },
@@ -336,7 +331,7 @@ function Presentation() {
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox>
-    </>
+    </div>
   );
 }
 
