@@ -11,7 +11,12 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 // import ProgressBars from "layouts/sections/elements/progress-bars";
 // import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
-
+import PCL from "pages/Services/Incorporation/PCL";
+import OPC from "pages/Services/Incorporation/OPC";
+import LLPIncorporation from "pages/Services/Incorporation/LLPI";
+import PI from "pages/Services/Incorporation/PI";
+import SP from "pages/Services/Incorporation/SP";
+import S8 from "pages/Services/Incorporation/S8";
 const routes1 = [
     {
         name: "inputs",
@@ -47,6 +52,36 @@ const routes1 = [
         name: "dropdowns",
         route: "/sections/elements/dropdowns",
         component: <Dropdowns />,
+    },
+    {
+        name: "PCL",
+        route: "/pages/Services/Incorporation/PCL.js",
+        component: <PCL />,
+    },
+    {
+        name: "OPC",
+        route: "/pages/Services/Incorporation/OPC.js",
+        component: <OPC />,
+    },
+    {
+        name: "LLPIncorporation",
+        route: "/pages/Services/Incorporation/LLPIncorporation.js",
+        component: <LLPIncorporation />,
+    },
+    {
+        name: "PI",
+        route: "pages/Services/Incorporation/PI",
+        component: <PI />
+    },
+    {
+        name: "SP",
+        route: "pages/Services/Incorporation/SP",
+        component: <SP />
+    },
+    {
+        name: "S8",
+        route: "pages/Services/Incorporation/S8",
+        component: <S8 />
     },
     // {
     //     name: "progress bars",

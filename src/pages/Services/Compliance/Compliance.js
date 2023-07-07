@@ -6,7 +6,7 @@ import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 // import BaseLayout from "layouts/sections/components/BaseLayout";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
-import { Container } from "@mui/material";
+import { Button, Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import MKTypography from "components/MKTypography";
@@ -83,20 +83,19 @@ function Complaince() {
         <Container>
           <Grid container spacing={2}>
 
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
-                <BackgroundBlogCard
-                  image={"https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
-                <FilledInfoCard title="
+              <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+                <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
+                  <BackgroundBlogCard
+                    image={"https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"}
+                    title=""
+                    description=""
+                    action={{}}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
+                  <FilledInfoCard title="
                    ROC compliance services"
-                  description="If you operate a Company/ LLP, you will be required to perform certain compliances depending upon the scenarios, which will include:
+                    description="If you operate a Company/ LLP, you will be required to perform certain compliances depending upon the scenarios, which will include:
 
                      Filing of Mandatory Company Annual Returns 
                      Filing of Mandatory LLP Annual Return 
@@ -105,23 +104,22 @@ function Complaince() {
                      Appointment/ Resignation of Director
                      Change in Share Capital or Change in Shareholding
                      "
-                />
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4} lg={4}>
+                  <FilledInfoCard title="Starting at ₹749/- only"
+                    action={{
+                      type: "internal",
+                      route: "/sections/input-areas/inputs",
+                      color: "info",
+                      label: "read more",
+                    }}
+                  />
+                </Grid>
               </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/sections/input-areas/inputs",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
 
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -129,7 +127,7 @@ function Complaince() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    GST compliance services"
                   description="Under GST, we provide the following services:
@@ -154,8 +152,8 @@ function Complaince() {
               </Grid>
             </Grid>
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs:0,lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{xs:3,lg:0}} mb={{xs:-7,lg:0}}>
+            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
                   image={post1}
                   title=""
@@ -163,7 +161,7 @@ function Complaince() {
                   action={{}}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{xs:-7}}>
+              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
                 <FilledInfoCard title="
                    Income Tax compliance services
                    "

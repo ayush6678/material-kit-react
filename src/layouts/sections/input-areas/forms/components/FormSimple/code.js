@@ -1,4 +1,4 @@
-const formSimpleCode = `import { useState } from "react";
+onst formSimpleCode = `import { useState } from "react";
 
 // @mui material components
 import Container from "@mui/material/Container";
