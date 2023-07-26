@@ -5,7 +5,7 @@ import Card from "@mui/material/Card";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
+import Typography from "@mui/material/Typography";
 import MKSocialButton from "components/MKSocialButton";
 
 // Material Kit 2 React examples
@@ -32,7 +32,74 @@ import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 // import image from "assets/images/AccountWale.png";
 // import { Padding } from "@mui/icons-material";
 import MessageBox from "./mssg";
+import { useState } from "react";
 function Presentation() {
+
+
+  const ContactButton = () => {
+    const [isVisible, setIsVisible] = useState(true);
+
+    const redirectToWhatsApp = () => {
+      window.location.href = 'https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER';
+    };
+
+    const removeButton = () => {
+      setIsVisible(false);
+    };
+
+    return (
+      <>
+        {isVisible && (
+          <div
+            style={{
+              position: 'fixed',
+              bottom: '20px',
+              right: '20px',
+              borderRadius: '50%',
+              width: '100px',
+              height: '100px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+              zIndex: '9999',
+            }}
+            onClick={redirectToWhatsApp}
+
+          >
+            <div style={{ marginBottom: '10px' }}>
+              <img
+                src="https://img.icons8.com/?size=512&id=16712&format=png"
+                alt="WhatsApp Icon"
+                style={{ width: '50px', height: '50px' }}
+              />
+            </div>
+            <div style={{ fontSize: '14px', fontWeight: 'bold' }}>Message Us</div>
+            <div
+              style={{
+                position: 'absolute',
+                top: '5px',
+                right: '5px',
+                width: '20px',
+                height: '20px',
+                borderRadius: '50%',
+                backgroundColor: '#000000',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                cursor: 'pointer',
+              }}
+              onClick={removeButton}
+            >
+              <span style={{ color: '#FFFFFF', fontSize: '12px' }}>x</span>
+            </div>
+          </div>
+        )}
+      </>
+    );
+  };
+
 
   return (
     <div
@@ -42,6 +109,7 @@ function Presentation() {
         backgroundImage: `url(https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80)`,
       }}
     >
+      <ContactButton />
       <DefaultNavbar
         routes={routes}
         // action={{
@@ -69,7 +137,7 @@ function Presentation() {
       >
         <Container>
           <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
-            <MKTypography
+            <Typography
               variant="h1"
               color="black"
               mt={5}
@@ -81,8 +149,8 @@ function Presentation() {
               })}
             >
               Save money. Save time.{" "}
-            </MKTypography>
-            <MKTypography
+            </Typography>
+            <Typography
               variant="body1"
               color="black"
               textAlign="center"
@@ -91,7 +159,7 @@ function Presentation() {
               mb={5}
             >
               India’s Leading Compliance Services Platform
-            </MKTypography>
+            </Typography>
           </Grid>
         </Container>
       </MKBox>
@@ -117,7 +185,7 @@ function Presentation() {
         <Container>
           <Grid container justifyContent="center" sx={{ textAlign: "center" }} py={20}>
 
-            <MKTypography
+            <Typography
               variant="h3"
               color="dark"
               textAlign="center"
@@ -125,10 +193,10 @@ function Presentation() {
               mt={1}
             >
               100+ <br />Satisfied Business
-            </MKTypography>
+            </Typography>
 
 
-            <MKTypography
+            <Typography
               variant="h3"
               color="success"
               textAlign="center"
@@ -136,10 +204,10 @@ function Presentation() {
               mt={{ xs: 10, lg: 1 }}
             >
               Tax Reduction
-            </MKTypography>
+            </Typography>
 
 
-            <MKTypography
+            <Typography
               variant="h3"
               color="dark"
               textAlign="center"
@@ -147,7 +215,7 @@ function Presentation() {
               mt={{ xs: 10, lg: 1 }}
             >
               Professional Help
-            </MKTypography>
+            </Typography>
 
           </Grid>
         </Container>
@@ -274,12 +342,12 @@ function Presentation() {
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
-                <MKTypography variant="h4" fontWeight="bold" mb={0.5}>
+                <Typography variant="h4" fontWeight="bold" mb={0.5}>
                   Thank you for your support!
-                </MKTypography>
-                <MKTypography variant="body1" color="text">
+                </Typography>
+                <Typography variant="body1" color="text">
                   We deliver the best web products
-                </MKTypography>
+                </Typography>
               </Grid>
 
 
@@ -322,8 +390,8 @@ function Presentation() {
                 </MKSocialButton>
               </Grid>
             </Grid>
-            <MKTypography variant="h2" py={3}>Location</MKTypography>
-            <MKTypography variant="body" > Mumbai, MH</MKTypography>
+            <Typography variant="h2" py={3}>Location</Typography>
+            <Typography variant="body" > Mumbai, MH</Typography>
             <iframe title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.67292626254!2d72.71637178509145!3d19.08250200603438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1685533357226!5m2!1sen!2sin" width="100%" height="400" frameborder="0" border="0"></iframe>
           </Container>
         </MKBox>

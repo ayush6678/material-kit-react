@@ -1,19 +1,3 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// react-router components
 import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props
@@ -40,9 +24,9 @@ function BackgroundBlogCard({ image, title, description, action }) {
     },
 
     "&:hover .material-icons, &:focus .material-icons, &:hover .material-icons-round, &:focus .material-icons-round":
-      {
-        transform: `translateX(6px)`,
-      },
+    {
+      transform: `translateX(6px)`,
+    },
   };
 
   return (
@@ -51,6 +35,8 @@ function BackgroundBlogCard({ image, title, description, action }) {
         backgroundImage: ({ palette: { black }, functions: { linearGradient, rgba } }) =>
           `url(${image})`,
         backgroundSize: "cover",
+        backgroundPosition: "center center"
+
       }}
     >
       <MKBox p={3}>

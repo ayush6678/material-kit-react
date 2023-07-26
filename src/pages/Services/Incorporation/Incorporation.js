@@ -1,9 +1,6 @@
 
 import MKBox from "components/MKBox";
-// import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
-// Sections components
-// import BaseLayout from "layouts/sections/components/BaseLayout";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
 import { Container } from "@mui/material";
@@ -12,13 +9,13 @@ import Card from "@mui/material/Card";
 import MKTypography from "components/MKTypography";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
-// import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
-// import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
 import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
-import post1 from "assets/images/examples/testimonial-6-2.jpg";
 import Download from "pages/Presentation/sections/Download";
 
 function Incorporation() {
+
+
+
   return (
     <>
 
@@ -65,8 +62,6 @@ function Incorporation() {
 
         </MKTypography>
 
-
-
       </MKBox>
 
 
@@ -87,7 +82,7 @@ function Incorporation() {
             <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
               <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
-                  image={"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"}
+                  image={"https://camantra.com/wp-content/uploads/2020/09/pexels-negative-space-34092.jpg"}
                   title=""
                   description=""
                   action={{}}
@@ -116,7 +111,7 @@ function Incorporation() {
             <Grid container item xs={12} spacing={2} mx={{ xs: 1, lg: 10 }} mt={{ xs: 1, lg: 0 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
               <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
-                  image={post1}
+                  image={"https://camantra.com/wp-content/uploads/2020/08/pexels-pixabay-327540-1536x1022.jpg"}
                   title=""
                   description=""
                   action={{}}
@@ -146,7 +141,7 @@ function Incorporation() {
             <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
               <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }} >
                 <BackgroundBlogCard
-                  image={post1}
+                  image={"https://blog.deasra.in/wp-content/uploads/2020/05/LLP-Incorporation-in-Pune.jpg"}
                   title=""
                   description=""
                   action={{}}
@@ -175,7 +170,7 @@ function Incorporation() {
             <Grid container item xs={12} spacing={2} mx={{ xs: 1, lg: 10 }} mt={{ xs: 1, lg: 0 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
               <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
-                  image={post1}
+                  image={"https://img.freepik.com/free-vector/interaction-departments-online-service-platform-business-teamwork-idea-partnership-departments-cooperation-online-collaboration-flat-vector-illustration_613284-2721.jpg?w=740&t=st=1688760805~exp=1688761405~hmac=ab49b84767e99395807cace5043790f1dc778e6985a8a087d2bf8a6f2c6fff63"}
                   title=""
                   description=""
                   action={{}}
@@ -204,7 +199,7 @@ function Incorporation() {
             <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
               <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
-                  image={post1}
+                  image={"https://media.gettyimages.com/id/1313471168/photo/kids-shoe-designer-observing-and-choosing-the-sole-of-shoe-so-she-can-start-with-the-next.jpg?s=612x612&w=0&k=20&c=BXReYAVGXNxlnnc2vvHrOLCQ6J1uVvjzNmg80h9-AtQ="}
                   title=""
                   description=""
                   action={{}}
@@ -229,15 +224,10 @@ function Incorporation() {
               </Grid>
             </Grid>
 
-
-
-
-
-
             <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
               <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
                 <BackgroundBlogCard
-                  image={post1}
+                  image={"https://blog.saginfotech.com/wp-content/uploads/2019/08/registration-section-8-company.jpg"}
                   title=""
                   description=""
                   action={{}}

@@ -118,7 +118,7 @@ function Avatars() {
                   <FilledInfoCard title="Starting at ₹749/- only"
                     action={{
                       type: "internal",
-                      route: "/sections/input-areas/forms",
+                      route: "/pages/Services/Compliance/GST/GAS",
                       color: "info",
                       label: "read more",
                     }}
@@ -183,7 +183,7 @@ Monthly/ Quarterly returns (GSTR-1 and GSTR-3B)
                   <FilledInfoCard title="Starting at ₹749/- only"
                     action={{
                       type: "internal",
-                      route: "/pages/blogs/author",
+                      route: "/pages/Services/Compliance/GST/GSTR",
                       color: "info",
                       label: "read more",
                     }}
@@ -214,7 +214,7 @@ Monthly/ Quarterly returns (GSTR-1 and GSTR-3B)
                   <FilledInfoCard title="Starting at ₹749/- only"
                     action={{
                       type: "internal",
-                      route: "/sections/input-areas/inputs",
+                      route: "/pages/Services/Compliance/GST/QRC",
                       color: "info",
                       label: "read more",
                     }}
@@ -246,7 +246,7 @@ Monthly/ Quarterly returns (GSTR-1 and GSTR-3B)
                   <FilledInfoCard title="Starting at ₹749/- only"
                     action={{
                       type: "internal",
-                      route: "/sections/input-areas/inputs",
+                      route: "/pages/Services/Compliance/GST/ARC",
                       color: "info",
                       label: "read more",
                     }}
@@ -280,7 +280,7 @@ Monthly/ Quarterly returns (GSTR-1 and GSTR-3B)
                   <FilledInfoCard title="Starting at ₹749/- only"
                     action={{
                       type: "internal",
-                      route: "/sections/input-areas/inputs",
+                      route: "/pages/Services/Compliance/GST/LUT",
                       color: "info",
                       label: "read more",
                     }}
@@ -318,7 +318,7 @@ Monthly/ Quarterly returns (GSTR-1 and GSTR-3B)
                   <FilledInfoCard title="Starting at ₹749/- only"
                     action={{
                       type: "internal",
-                      route: "/sections/input-areas/inputs",
+                      route: "/pages/Services/Compliance/GST/COA",
                       color: "info",
                       label: "read more",
                     }}
@@ -351,7 +351,7 @@ Monthly/ Quarterly returns (GSTR-1 and GSTR-3B)
                   <FilledInfoCard title="Starting at ₹749/- only"
                     action={{
                       type: "internal",
-                      route: "/sections/input-areas/inputs",
+                      route: "/pages/Services/Compliance/GST/CAN",
                       color: "info",
                       label: "read more",
                     }}
@@ -383,7 +383,7 @@ Monthly/ Quarterly returns (GSTR-1 and GSTR-3B)
                   <FilledInfoCard title="Starting at ₹749/- only"
                     action={{
                       type: "internal",
-                      route: "/sections/input-areas/inputs",
+                      route: "/pages/Services/Compliance/GST/REVOK",
                       color: "info",
                       label: "read more",
                     }}

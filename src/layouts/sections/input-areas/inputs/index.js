@@ -120,7 +120,7 @@ function Inputs() {
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/forms",
+                    route: "/pages/Services/Compliance/ACC",
                     color: "info",
                     label: "read more",
                   }}
@@ -154,7 +154,7 @@ Annual Company Compliance (Lite)"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/pages/blogs/author",
+                    route: "/pages/Services/Compliance/ACCL",
                     color: "info",
                     label: "read more",
                   }}
@@ -187,7 +187,7 @@ Annual Company Compliance (Lite)"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/pages/blogs/author",
+                    route: "/pages/Services/Compliance/LLP",
                     color: "info",
                     label: "read more",
                   }}
@@ -217,7 +217,7 @@ Annual Company Compliance (Lite)"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/pages/blogs/author",
+                    route: "/pages/Services/Compliance/DPT3",
                     color: "info",
                     label: "read more",
                   }}
@@ -251,7 +251,7 @@ Annual Company Compliance (Lite)"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/CNC",
                     color: "info",
                     label: "read more",
                   }}
@@ -283,7 +283,7 @@ Annual Company Compliance (Lite)"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/CAC",
                     color: "info",
                     label: "read more",
                   }}
@@ -317,7 +317,7 @@ Changing Address of your Company/ LLP (another State/ RoC)"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/CADN",
                     color: "info",
                     label: "read more",
                   }}
@@ -354,7 +354,7 @@ Changing Address of your Company/ LLP (another State/ RoC)"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/MOA",
                     color: "info",
                     label: "read more",
                   }}
@@ -388,7 +388,7 @@ Appointment/ Resignation of Director"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/ARD",
                     color: "info",
                     label: "read more",
                   }}
@@ -424,7 +424,7 @@ Alteration of Share Capital"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/ARC",
                     color: "info",
                     label: "read more",
                   }}
@@ -458,7 +458,7 @@ Alteration of Share Capital"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/TS",
                     color: "info",
                     label: "read more",
                   }}
@@ -490,7 +490,7 @@ Alteration of Share Capital"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/COC",
                     color: "info",
                     label: "read more",
                   }}
@@ -522,7 +522,7 @@ Alteration of Share Capital"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/DC",
                     color: "info",
                     label: "read more",
                   }}
@@ -557,7 +557,7 @@ Alteration of Share Capital"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/CPLLP",
                     color: "info",
                     label: "read more",
                   }}
@@ -589,7 +589,7 @@ Alteration of Share Capital"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/INC",
                     color: "info",
                     label: "read more",
                   }}
@@ -617,7 +617,7 @@ Alteration of Share Capital"
                 <FilledInfoCard title="Starting at ₹749/- only"
                   action={{
                     type: "internal",
-                    route: "/sections/input-areas/inputs",
+                    route: "/pages/Services/Compliance/DKYC",
                     color: "info",
                     label: "read more",
                   }}
