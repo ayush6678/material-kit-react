@@ -1,145 +1,108 @@
-import Grid from "@mui/material/Grid";
+import BaseLayout from "layouts/sections/components/BaseLayout";
+import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
 
-// Material Kit 2 React components
-import MKBox from "components/MKBox";
-import MKInput from "components/MKInput";
-import MKButton from "components/MKButton";
-import MKTypography from "components/MKTypography";
-
-// Material Kit 2 React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
-
-// Routes
-import routes from "routes";
-import footerRoutes from "footer.routes";
-
-function VirtualCFO() {
+function VirtualCFOServices() {
   return (
-    <>
-      <MKBox position="fixed" top="0.5rem" width="100%">
-        <DefaultNavbar
-          routes={routes}
-          transparent
-        />
+    <BaseLayout
+      title="Virtual CFO Services"
+      breadcrumb={[
+        { label: "Services", route: "/sections/input-areas/forms" },
+        { label: "Virtual CFO Services" },
+      ]}
+    >
+      <section className="virtual-cfo-section">
+        <div className="content">
+          <p>
+            Virtual CFO (Chief Financial Officer) services offer businesses access to financial expertise and strategic financial management without the need for a full-time CFO. A virtual CFO serves as an essential partner, providing financial insights, budgeting, forecasting, and strategic planning to help businesses achieve their financial goals.
+          </p>
 
+          <h3>Virtual CFO Services</h3>
 
-      </MKBox>
-      <Grid container spacing={3} alignItems="center">
-        <Grid item xs={12} lg={6}>
-          <MKBox
-            display={{ xs: "flex", lg: "flex" }}
-            width="calc(100% - 2rem)"
-            height="calc(100vh - 2rem)"
-            borderRadius="lg"
-            mx={{ xs:'auto',lg:9}}
-            mt={14}
-            style={{backgroundColor:"green"}}
-            sx={{ backgroundImage: `url(https://images.unsplash.com/photo-1617957796155-72d8717ac882?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)` }}
-          >
-            <MKTypography variant="h2" color="white" m={3}>Virtual CFO Services
-              <br />
-              <MKTypography variant="body1" color="white" mt={5} mb={3}>STARTING AT ₹1,999/- PER MONTH</MKTypography>
-              <MKTypography variant="body1" color="white" ml={3}>Includes<br />
-                <ul>
-                  <li>Provident Fund Returns</li>
-                  <li>ESI Returns</li>
-                  <li>TDS Returns</li>
-                  <li>Pay Slips Management</li>
-                  <li>Professional Tax Payments</li>
-                </ul>
-              </MKTypography>
+          <p>
+            Our virtual CFO services are designed to support businesses in making informed financial decisions and optimizing their financial performance. Our team of experienced financial experts will work closely with you to understand your business's financial needs and provide tailored solutions to improve profitability, cash flow, and overall financial efficiency.
+          </p>
 
+          <div className="form-area">
+            <FormSimple />
+          </div>
 
+          <h3>Key Services Offered</h3>
 
-            </MKTypography>
-          </MKBox>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={10}
-          md={7}
-          lg={6}
-          xl={4}
-          ml={{ xs: "auto", lg: 6 }}
-          mr={{ xs: "auto", lg: 6 }}
-        >
-          <MKBox
-            bgColor="white"
-            borderRadius="xl"
-            shadow="lg"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            mt={{ xs: 20, sm: 18, md: 20 }}
-            mb={{ xs: 20, sm: 18, md: 20 }}
-            mx={3}
-          >
-            <MKBox
-              variant="gradient"
-              bgColor="success"
-              coloredShadow="info"
-              borderRadius="lg"
-              p={2}
-              mx={2}
-              mt={-3}
-            >
-              <MKTypography variant="h3" color="white">
-                Contact us
-              </MKTypography>
-            </MKBox>
-            <MKBox p={3}>
-              <MKTypography variant="body2" color="text" mb={3}>
-                For further questions, fill the following contact form
-              </MKTypography>
-              <MKBox width="100%" component="form" method="post" autoComplete="off">
-                <Grid container spacing={3}>
-                  <Grid item xs={12} md={6}>
-                    <MKInput
-                      variant="standard"
-                      label="Full Name"
-                      InputLabelProps={{ shrink: true }}
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <MKInput
-                      type="email"
-                      variant="standard"
-                      label="Email"
-                      InputLabelProps={{ shrink: true }}
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
+          <ul>
+            <li>Financial Analysis and Reporting: Regular analysis of financial data to provide insights into your business's financial health and performance.</li>
+            <li>Budgeting and Forecasting: Developing comprehensive budgets and financial forecasts to assist with business planning and decision-making.</li>
+            <li>Cash Flow Management: Implementing strategies to optimize cash flow and working capital management.</li>
+            <li>Financial Strategy: Assisting with long-term financial strategy, including growth planning and risk management.</li>
+            <li>Profitability Improvement: Identifying opportunities to enhance profitability and cost optimization.</li>
+            <li>Financial Process Improvement: Streamlining financial processes and implementing best practices.</li>
+            <li>Investment Analysis: Evaluating investment opportunities and capital allocation.</li>
+            <li>Financial Compliance: Ensuring compliance with accounting standards and regulatory requirements.</li>
+          </ul>
 
-                    <MKInput
-                      variant="standard"
-                      label="What can we help you?"
-                      placeholder="Describe your problem"
-                      InputLabelProps={{ shrink: true }}
-                      multiline
-                      fullWidth
-                      rows={6}
-                    />
-                  </Grid>
-                </Grid>
-                <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
-                  <MKButton type="submit" variant="gradient" color="success">
-                    Send Message
-                  </MKButton>
-                </Grid>
-              </MKBox>
-            </MKBox>
-          </MKBox>
-        </Grid>
-      </Grid>
-      <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
-      </MKBox>
-    </>
+          <h3>Benefits of Virtual CFO Services</h3>
+
+          <ul>
+            <li>Cost-Effective: Access professional financial expertise without the costs associated with a full-time CFO.</li>
+            <li>Strategic Insights: Make data-driven financial decisions with the guidance of experienced financial experts.</li>
+            <li>Focus on Core Business: Delegate financial management tasks and concentrate on core business operations.</li>
+            <li>Flexible Support: Choose services based on your specific needs, scaling up or down as required.</li>
+            <li>Growth Support: Receive valuable financial guidance to support business growth and expansion.</li>
+            <li>Customized Solutions: Get personalized financial solutions tailored to your business's unique requirements.</li>
+            <li>Confidentiality: Ensure the confidentiality and security of your financial information.</li>
+          </ul>
+
+          <h3>Get Started with Virtual CFO Services</h3>
+
+          <p>
+            To get started with our virtual CFO services, simply fill out the form below, and our team will get in touch with you to discuss your specific financial needs and provide a customized virtual CFO solution for your business.
+          </p>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .virtual-cfo-section {
+          background-color: #f0f4ff;
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        h2,
+        h3,
+        h4 {
+          color: #1f58c3;
+        }
+
+        h3 {
+          margin-top: 30px;
+        }
+
+        ul {
+          margin-top: 10px;
+        }
+
+        ul li {
+          margin-bottom: 8px;
+        }
+
+        p {
+          color: #333;
+        }
+
+        .form-area {
+          border-radius: 5px;
+          margin-top: 30px;
+          background-color: white;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+      `}</style>
+    </BaseLayout>
   );
 }
 
-export default VirtualCFO;
+export default VirtualCFOServices;

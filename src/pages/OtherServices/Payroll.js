@@ -1,145 +1,107 @@
-import Grid from "@mui/material/Grid";
+import BaseLayout from "layouts/sections/components/BaseLayout";
+import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
 
-// Material Kit 2 React components
-import MKBox from "components/MKBox";
-import MKInput from "components/MKInput";
-import MKButton from "components/MKButton";
-import MKTypography from "components/MKTypography";
-
-// Material Kit 2 React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
-
-// Routes
-import routes from "routes";
-import footerRoutes from "footer.routes";
-
-function Payroll() {
+function PayrollServices() {
   return (
-    <>
-      <MKBox position="fixed" top="0.5rem" width="100%">
-        <DefaultNavbar
-          routes={routes}
-          transparent
-        />
+    <BaseLayout
+      title="Payroll Services"
+      breadcrumb={[
+        { label: "Services", route: "/sections/input-areas/forms" },
+        { label: "Payroll Services" },
+      ]}
+    >
+      <section className="payroll-section">
+        <div className="content">
+          <p>
+            Payroll management is a critical aspect of any business, involving the administration of employees' financial records, salaries, wages, deductions, and taxes. Accurate and timely payroll processing ensures employee satisfaction and compliance with tax regulations. Our payroll services are designed to streamline the payroll process and help businesses efficiently manage their employee compensation.
+          </p>
 
+          <h3>Payroll Services</h3>
 
-      </MKBox>
-      <Grid container spacing={3} alignItems="center">
-        <Grid item xs={12} lg={6}>
-          <MKBox
-            display={{ xs: "flex", lg: "flex" }}
-            width="calc(100% - 2rem)"
-            height="calc(100vh - 2rem)"
-            borderRadius="lg"
-            mx={{ xs:'auto',lg:9}}
-            mt={14}
-            style={{backgroundColor:"green"}}
-            sx={{ backgroundImage: `url(https://images.unsplash.com/photo-1617957796155-72d8717ac882?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)` }}
-          >
-            <MKTypography variant="h2" color="white" m={3}>Payroll Services
-              <br />
-              <MKTypography variant="body1" color="white" mt={5} mb={3}>STARTING AT ₹1,999/- PER MONTH</MKTypography>
-              <MKTypography variant="body1" color="white" ml={3}>Includes<br />
-                <ul>
-                  <li>Provident Fund Returns</li>
-                  <li>ESI Returns</li>
-                  <li>TDS Returns</li>
-                  <li>Pay Slips Management</li>
-                  <li>Professional Tax Payments</li>
-                </ul>
-              </MKTypography>
+          <p>
+            With our professional payroll services, you can focus on your core business activities while leaving the complexities of payroll administration to us. Our experienced team will handle various payroll tasks, including calculating salaries, processing wages, managing deductions and benefits, and generating payroll reports. We ensure that your employees are paid accurately and on time while complying with relevant payroll regulations.
+          </p>
 
+          <div className="form-area">
+            <FormSimple />
+          </div>
 
+          <h3>Key Features of Our Payroll Services</h3>
 
-            </MKTypography>
-          </MKBox>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={10}
-          md={7}
-          lg={6}
-          xl={4}
-          ml={{ xs: "auto", lg: 6 }}
-          mr={{ xs: "auto", lg: 6 }}
-        >
-          <MKBox
-            bgColor="white"
-            borderRadius="xl"
-            shadow="lg"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            mt={{ xs: 20, sm: 18, md: 20 }}
-            mb={{ xs: 20, sm: 18, md: 20 }}
-            mx={3}
-          >
-            <MKBox
-              variant="gradient"
-              bgColor="success"
-              coloredShadow="info"
-              borderRadius="lg"
-              p={2}
-              mx={2}
-              mt={-3}
-            >
-              <MKTypography variant="h3" color="white">
-                Contact us
-              </MKTypography>
-            </MKBox>
-            <MKBox p={3}>
-              <MKTypography variant="body2" color="text" mb={3}>
-                For further questions, fill the following contact form
-              </MKTypography>
-              <MKBox width="100%" component="form" method="post" autoComplete="off">
-                <Grid container spacing={3}>
-                  <Grid item xs={12} md={6}>
-                    <MKInput
-                      variant="standard"
-                      label="Full Name"
-                      InputLabelProps={{ shrink: true }}
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <MKInput
-                      type="email"
-                      variant="standard"
-                      label="Email"
-                      InputLabelProps={{ shrink: true }}
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
+          <ul>
+            <li>Calculation of employee salaries and wages</li>
+            <li>Payroll processing and disbursement</li>
+            <li>Management of employee deductions and benefits</li>
+            <li>Tax withholding and filing</li>
+            <li>Preparation and distribution of pay stubs</li>
+            <li>Compliance with payroll regulations and labor laws</li>
+            <li>Generation of payroll reports and analytics</li>
+            <li>Handling payroll inquiries and support</li>
+          </ul>
 
-                    <MKInput
-                      variant="standard"
-                      label="What can we help you?"
-                      placeholder="Describe your problem"
-                      InputLabelProps={{ shrink: true }}
-                      multiline
-                      fullWidth
-                      rows={6}
-                    />
-                  </Grid>
-                </Grid>
-                <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
-                  <MKButton type="submit" variant="gradient" color="success">
-                    Send Message
-                  </MKButton>
-                </Grid>
-              </MKBox>
-            </MKBox>
-          </MKBox>
-        </Grid>
-      </Grid>
-      <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
-      </MKBox>
-    </>
+          <h3>Benefits of Our Payroll Services</h3>
+
+          <ul>
+            <li>Time Savings: Outsource payroll processing to us and save time spent on complex payroll calculations and tax filings.</li>
+            <li>Accuracy and Compliance: Ensure accurate payroll calculations and compliance with tax and labor regulations.</li>
+            <li>Employee Satisfaction: Timely and accurate payroll disbursement enhances employee satisfaction and morale.</li>
+            <li>Data Security: We prioritize data security and confidentiality, ensuring the protection of sensitive payroll information.</li>
+            <li>Cost-Effective: Avoid the costs associated with hiring and training in-house payroll staff.</li>
+            <li>Expert Advice: Our payroll experts can provide guidance on payroll-related matters and help resolve payroll queries.</li>
+          </ul>
+
+          <h3>Get Started with Our Payroll Services</h3>
+
+          <p>
+            To get started with our payroll services, simply fill out the form below, and our team will get in touch with you to discuss your specific payroll requirements and provide a tailored payroll solution for your business.
+          </p>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .payroll-section {
+          background-color: #f0f4ff;
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        h2,
+        h3,
+        h4 {
+          color: #1f58c3;
+        }
+
+        h3 {
+          margin-top: 30px;
+        }
+
+        ul {
+          margin-top: 10px;
+        }
+
+        ul li {
+          margin-bottom: 8px;
+        }
+
+        p {
+          color: #333;
+        }
+
+        .form-area {
+          border-radius: 5px;
+          margin-top: 30px;
+          background-color: white;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+      `}</style>
+    </BaseLayout>
   );
 }
 
-export default Payroll;
+export default PayrollServices;

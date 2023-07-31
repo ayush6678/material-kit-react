@@ -1,9 +1,7 @@
-// import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import Typography from "@mui/material/Typography";
 import MKSocialButton from "components/MKSocialButton";
@@ -112,14 +110,14 @@ function Presentation() {
       <ContactButton />
       <DefaultNavbar
         routes={routes}
-        // action={{
-        //   type: "external",
-        //   route: "",
-        //   label: "Get Started",
-        //   color: "success",
-        // }}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        center
         sticky
-        transparent
       />
       <MessageBox />
       {/* <img src={image} alt="AccountWale" width={60} style={{ position: "absolute", margin: "20px", marginLeft: "40px", marginTop: "20px" }} /> */}

@@ -437,12 +437,12 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   return (
     <Container sx={sticky ? { position: "sticky", top: 0, zIndex: 10 } : null}>
       <MKBox
-        py={1}
-        px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 }}
-        my={relative ? 0 : 2}
-        mx={relative ? 0 : 3}
+        py={1.6}
+        px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 3 }}
+        // my={relative ? 0 : 2}
+        // mx={relative ? 0 : 3}
         width={relative ? "100%" : "calc(100% - 48px)"}
-        borderRadius="xl"
+        borderRadius="2px"
         shadow={transparent ? "none" : "md"}
         color={light ? "white" : "dark"}
         position={relative ? "relative" : "absolute"}
@@ -454,7 +454,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
         })}
       >
         <MKBox display="flex" justifyContent="space-between" alignItems="center">
-          <img src={image} width={40} style={{ marginRight: "20px" }} alt="AccountWale"/>
+          <img src={image} width={40} style={{ marginRight: "20px" }} alt="AccountWale" />
           <MKBox
             component={Link}
             to="/"

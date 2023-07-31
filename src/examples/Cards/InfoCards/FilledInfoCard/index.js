@@ -74,7 +74,7 @@ function FilledInfoCard({ variant, color, icon, title, description, action }) {
       <MKBox pt={{ xs: 3, md: 0 }} pl={{ xs: 0, md: 2 }} lineHeight={1}>
         <MKTypography
           display="block"
-          variant="5"
+          variant="h4"
           color={variant === "contained" || color === "light" ? "dark" : "white"}
           fontWeight="bold"
           mb={1}
@@ -84,7 +84,7 @@ function FilledInfoCard({ variant, color, icon, title, description, action }) {
         <MKTypography
           display="block"
           variant="body2"
-          color={variant === "contained" || color === "light" ? "text" : "white"}
+          color={variant === "contained" || color === "light" ? "black" : "white"}
           mb={2}
         >
           {description}

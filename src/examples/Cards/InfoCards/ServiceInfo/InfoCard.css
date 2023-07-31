@@ -1,0 +1,67 @@
+/* InfoCard.css */
+.info-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 16px;
+    margin: 10px;
+
+    @media (min-width: 768px) {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+}
+
+.info-card-image {
+    flex: 1;
+    max-width: 200px;
+}
+
+.info-card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info-card-content {
+    flex: 2;
+    padding: 0 20px;
+}
+
+.info-card-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-card-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.info-card-content span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    /* Change to your preferred price color */
+}
+
+/* Responsive styles */
+
+
+@media (max-width: 768px) {
+    .info-card {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .info-card-image {
+        margin-bottom: 10px;
+    }
+}

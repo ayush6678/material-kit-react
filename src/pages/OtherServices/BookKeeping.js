@@ -1,166 +1,106 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
+import BaseLayout from "layouts/sections/components/BaseLayout";
+import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// Sections components
-import Grid from "@mui/material/Grid";
-
-// Material Kit 2 React components
-import MKBox from "components/MKBox";
-import MKInput from "components/MKInput";
-import MKButton from "components/MKButton";
-import MKTypography from "components/MKTypography";
-
-// Material Kit 2 React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
-
-// Routes
-import routes from "routes";
-import footerRoutes from "footer.routes";
-
-// Image
-// import bgImage from "assets/images/illustrations/illustration-reset.jpg";
-
-
-function BookKeeping() {
+function BookkeepingService() {
   return (
-    <>
-      <MKBox position="fixed" top="0.5rem" width="100%">
-        <DefaultNavbar
-          routes={routes}
-          transparent
-        />
+    <BaseLayout
+      title="Bookkeeping Service"
+      breadcrumb={[
+        { label: "Services", route: "/sections/input-areas/forms" },
+        { label: "Bookkeeping Service" },
+      ]}
+    >
+      <section className="bookkeeping-section">
+        <div className="content">
+          <p>
+            Bookkeeping is an essential aspect of maintaining accurate financial records for your business. It involves recording and organizing financial transactions, which provides a clear and comprehensive view of your business's financial health. Bookkeeping services are designed to help businesses manage their financial data efficiently and ensure compliance with relevant regulations.
+          </p>
 
+          <h3>Bookkeeping Service</h3>
 
-      </MKBox>
-      <Grid container spacing={3} alignItems="center">
-        <Grid item xs={12} lg={6}>
-          <MKBox
-            display={{ xs: "flex", lg: "flex" }}
-            width="calc(100% - 2rem)"
-            height="calc(100vh - 2rem)"
-            borderRadius="lg"
-            mx={{ xs:'auto',lg:9}}
-            mt={14}
-            style={{backgroundColor:"green"}}
-            // sx={{ backgroundImage: `url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-green-web-color-solid-color-background.jpg)` }}
-          >
-            <MKTypography variant="h2" color="white" m={3}>Book Keeping Services
-              <br />
-              <MKTypography variant="body1" color="white" mt={5} mb={3}>STARTING AT ₹2,999/- PER MONTH</MKTypography>
-              <MKTypography variant="body1" color="white" ml={3}>Includes<br />
-                <ul>
-                  <li>Accounting of all transactions</li>
-                  <li>GST Returns</li>
-                  <li>TDS Returns</li>
-                  <li>Annual ROC compliances</li>
-                  <li>Income Tax Return</li>
-                  <li>Payroll Processing</li>
-                </ul>
-              </MKTypography>
+          <p>
+            Our professional bookkeeping service offers comprehensive assistance in managing your financial records. Our experienced team will handle various bookkeeping tasks, including recording income and expenses, managing accounts payable and receivable, reconciling bank statements, and generating financial reports. With our reliable bookkeeping service, you can focus on core business operations while ensuring your financial data is accurate and up-to-date.
+          </p>
 
+          <div className="form-area">
+            <FormSimple />
+          </div>
 
+          <h3>Key Features of Our Bookkeeping Service</h3>
 
-            </MKTypography>
-          </MKBox>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={10}
-          md={7}
-          lg={6}
-          xl={4}
-          ml={{ xs: "auto", lg: 6 }}
-          mr={{ xs: "auto", lg: 6 }}
-        >
-          <MKBox
-            bgColor="white"
-            borderRadius="xl"
-            shadow="lg"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            mt={{ xs: 20, sm: 18, md: 20 }}
-            mb={{ xs: 20, sm: 18, md: 20 }}
-            mx={3}
-          >
-            <MKBox
-              variant="gradient"
-              bgColor="success"
-              coloredShadow="info"
-              borderRadius="lg"
-              p={2}
-              mx={2}
-              mt={-3}
-            >
-              <MKTypography variant="h3" color="white">
-                Contact us
-              </MKTypography>
-            </MKBox>
-            <MKBox p={3}>
-              <MKTypography variant="body2" color="text" mb={3}>
-                For further questions, fill the following contact form
-              </MKTypography>
-              <MKBox width="100%" component="form" method="post" autoComplete="off">
-                <Grid container spacing={3}>
-                  <Grid item xs={12} md={6}>
-                    <MKInput
-                      variant="standard"
-                      label="Full Name"
-                      InputLabelProps={{ shrink: true }}
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <MKInput
-                      type="email"
-                      variant="standard"
-                      label="Email"
-                      InputLabelProps={{ shrink: true }}
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    
-                    <MKInput
-                      variant="standard"
-                      label="What can we help you?"
-                      placeholder="Describe your problem"
-                      InputLabelProps={{ shrink: true }}
-                      multiline
-                      fullWidth
-                      rows={6}
-                    />
-                  </Grid>
-                </Grid>
-                <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
-                  <MKButton type="submit" variant="gradient" color="success">
-                    Send Message
-                  </MKButton>
-                </Grid>
-              </MKBox>
-            </MKBox>
-          </MKBox>
-        </Grid>
-      </Grid>
-      <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
-      </MKBox>
-    </>
+          <ul>
+            <li>Recording and categorizing financial transactions</li>
+            <li>Managing accounts payable and accounts receivable</li>
+            <li>Bank and credit card reconciliation</li>
+            <li>Preparation of financial statements (income statement, balance sheet, cash flow statement)</li>
+            <li>Monitoring and tracking expenses</li>
+            <li>Generating customized financial reports</li>
+            <li>Ensuring compliance with accounting standards and regulations</li>
+            <li>Accurate and timely record-keeping</li>
+          </ul>
+
+          <h3>Benefits of Our Bookkeeping Service</h3>
+
+          <ul>
+            <li>Time and Cost Savings: Outsource your bookkeeping tasks to us and save time and money spent on hiring and training in-house bookkeeping staff.</li>
+            <li>Financial Visibility: Get a clear and real-time view of your business's financial performance, allowing you to make informed decisions.</li>
+            <li>Compliance and Accuracy: Stay compliant with financial reporting regulations and ensure accurate and error-free financial records.</li>
+            <li>Focus on Core Business: Free up your time and resources to focus on growing your business while we take care of bookkeeping.</li>
+            <li>Expert Guidance: Our team of experienced professionals can provide financial insights and guidance to improve your business's financial health.</li>
+          </ul>
+
+          <h3>Get Started with Our Bookkeeping Service</h3>
+
+          <p>
+            To get started with our bookkeeping service, simply fill out the form below, and our team will get in touch with you to discuss your specific requirements and provide a customized bookkeeping solution for your business.
+          </p>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .bookkeeping-section {
+          background-color: #f0f4ff;
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        h2,
+        h3,
+        h4 {
+          color: #1f58c3;
+        }
+
+        h3 {
+          margin-top: 30px;
+        }
+
+        ul {
+          margin-top: 10px;
+        }
+
+        ul li {
+          margin-bottom: 8px;
+        }
+
+        p {
+          color: #333;
+        }
+
+        .form-area {
+          border-radius: 5px;
+          margin-top: 30px;
+          background-color: white;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+      `}</style>
+    </BaseLayout>
   );
 }
 
-export default BookKeeping;
+export default BookkeepingService;
