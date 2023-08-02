@@ -25,7 +25,9 @@ const MessageBox = () => {
             <div className="message-box">
                 <div className="message-box-content">
                     <button className="close-button" onClick={handleClose}>
-                        <span>&times;</span>
+                        {/* <span>&times;</span>
+                         */}
+                         close
                     </button>
                     <FormSimple />
                 </div>

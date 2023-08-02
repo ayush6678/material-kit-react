@@ -26,6 +26,7 @@
     text-align: center;
 }
 
+
 .close-button {
     position: absolute;
     top: 10px;
@@ -43,6 +44,6 @@
 @media only screen and (max-width: 600px) {
     .message-box {
         width: 300px;
-        height:650px;
+        height: 650px;
     }
 }

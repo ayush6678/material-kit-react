@@ -10,6 +10,8 @@ const Info = ({ imageLink, title, description, price, redirectUrl }) => {
             <div className="info-card-content">
                 <h2>{title}</h2>
                 <p>{description}</p>
+            </div>
+            <div className='pricing'>
                 <span>Starting at ₹{price}</span>
             </div>
         </a>

@@ -1,22 +1,16 @@
 
 import MKBox from "components/MKBox";
 // import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 // Sections components
 // import BaseLayout from "layouts/sections/components/BaseLayout";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
-import { Container } from "@mui/material";
-import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import MKTypography from "components/MKTypography";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
 // import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
-// import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
-import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
-import post1 from "assets/images/examples/testimonial-6-2.jpg";
-
+import Info from "examples/Cards/InfoCards/ServiceInfo/Info";
 function Inputs() {
   return (
     <>
@@ -88,547 +82,177 @@ function Inputs() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-
-        <Container>
-          <Grid container spacing={2}>
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   Annual Company Compliance (Comprehensive)"
-                  description="
-                  Includes RoC services for all year curated for all small and medium-sized companies. Key inclusions:
+        <Info
+          imageLink=""
+          title="Annual Company Compliance (Comprehensive)"
+          description="Includes RoC services for all year curated for all small and medium-sized companies. Key inclusions:
                   
-                  Issuance of share certificates
-                  Filing of business commencement form (INC-20A)
-                  Annual returns filing (AOC-4 and MGT-7)
-                  Preparation of statutory registers
-                  Preparation of minute books and copies of resolutions
-                  Filing of auditor appointment (ADT-1)
-                  Filing of Director KYC (DIR-3 KYC)"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/ACC",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
+          Issuance of share certificates
+          Filing of business commencement form (INC-20A)
+          Annual returns filing (AOC-4 and MGT-7)
+          Preparation of statutory registers
+          Preparation of minute books and copies of resolutions
+          Filing of auditor appointment (ADT-1)
+          Filing of Director KYC (DIR-3 KYC)"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/ACC"
+        />
+        <Info
+          imageLink=""
+          title="Annual Company Compliance (Lite)"
+          description="Includes RoC compliances only for which essential filings are required. Inclusions:
+          Annual returns filing (AOC-4 and MGT-7)
+          Filing of auditor appointment (ADT-1)
+          Filing of Director KYC (DIR-3 KYC)"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/ACCL"
+        />
 
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   
-Annual Company Compliance (Lite)"
-                  description="
-                  Includes RoC compliances only for which essential filings are required. Inclusions:
+        <Info
+          imageLink=""
+          title="Annual LLP Compliance"
+          description="Includes RoC compliances for any LLP. Inclusions:
                   
-                  Annual returns filing (AOC-4 and MGT-7)
-                  Filing of auditor appointment (ADT-1)
-                  Filing of Director KYC (DIR-3 KYC)"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/ACCL",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
+          Annual returns filing (Form-8 and Form-11)
+          Filing of Director KYC (DIR-3 KYC)"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/LLP"
+        />
 
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                  Annual LLP Compliance
+        <Info
+          imageLink=""
+          title="DPT-3 Service"
+          description="Ensure seamless compliance with DPT-3 filing requirements using our expert services. Stay updated on DPT-3 due dates and avoid penalties with our efficient filing assistance."
+          price="799"
+          redirectUrl="/pages/Services/Compliance/DPT3"
+        />
+        <Info
+          imageLink=""
+          title="Changing Name of your Company/ LLP"
+          description="Want to change your company’s name to better position your brand? It now takes only up to 5 working days to complete the process.
+          Name approval application (RUN)
+          Preparation of necessary documents and completing compliances as per Secretarial standards.
+          Filing of INC24 and MGT14 forms / Form-3 and Form-5 with MCA
+          Applying for new PAN and TAN
+          Issue of new Certificate of Incorporation"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/CNC"
+        />
+        <Info
+          imageLink=""
+          title="Changing Address of your Company/ LLP (within same State)"
+          description="Shifting your workplace, need assistance with updation of MCA records? Now takes only up to 5 working days to complete the process.
+          Preparation of necessary documents and completing compliances as per Secretarial standards.
+          Filing of INC-22 and MGT-14/ Form-15 forms with MCA"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/CAC"
+        />
+        <Info
+          imageLink=""
+          title="Changing Address of your Company/ LLP (another State/ RoC)"
+          description="Shifting your workplace, need assistance with updation of MCA records? Now takes only up to 30 working days to complete the process.
+          Preparation of necessary documents and completing compliances as per Secretarial standards.
+          Filing of INC-23 and MGT-14/ Form-15 forms with MCA"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/CADN"
+        />
+        <Info
+          imageLink=""
+          title="Change in Objects (MOA)"
+          description="Are you starting another line of business, or changing your current line of business? You know that you need to change your present MoA. Key inclusions:
+          Drafting of revised MOA
+          Preparation of necessary documents and completing compliances as per Secretarial standards
+          Filing of MGT-14 form with MCA
+          Obtaining alteration Certificate from ROC"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/MOA"
+        />
+        <Info
+          imageLink=""
+          title="Appointment/ Resignation of Director"
+          description="Are you adding another director to manage the operations of the Company or one director has to resign? Both can happen with a one day process. Key inclusions:
+          Preparation of necessary documents and completing compliances as per Secretarial standards
+          Attaining new DIN through DIR 3 form
+          Filing of DIR-11/ DIR-12 form with MCA"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/ARD"
+        />
+        <Info
+          imageLink=""
+          title="Alteration of Share Capital"
+          description="If the size of your company has grown and now planning to pump in more funds and thus require a change in share capital? Key inclusions:
+          Preparation of necessary documents and completing compliances as per Secretarial standards
+          Drafting the revised MOA
+          Filing of SH-7 and MGT-14 forms with MCA
+          Filing of PAS-3 for allotment of shares"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/ARC"
+        />
 
-                   "
-                  description="
-                  Includes RoC compliances for any LLP. Inclusions:
-                  
-                  Annual returns filing (Form-8 and Form-11)
-                  Filing of Director KYC (DIR-3 KYC)"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/LLP",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
+        <Info
+          imageLink=""
+          title="Transfer of Shares"
+          description="If you’re looking to transfer your equity shares and bring in new partners in the business, here’s how we will assist you:
+          Preparation of necessary documents and completing compliances as per Secretarial standards
+          Preparation of SH-4 form
+          Preparation of Share transfer deed
+          Issuance of new share certificates"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/TS"
+        />
+        <Info
+          imageLink=""
+          title="Closure of Company (Under Fast Track Exit)"
+          description="If your Company has been incorporated atleast a year ago or it has been inoperational for more than a year and you’re no longer looking to run the Company. MCA has provided a Fast Track Exit mode to such businesses and here’s how we will assist you:
+          Preparation of necessary documents and completing compliances as per Secretarial standards
+          Filing of MGT-14 and STK-2 Form"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/COC"
+        />
+        <Info
+          imageLink=""
+          title="Dormant Company (Applying for Inactive status)"
+          description="If your Company has been inoperational since two years ago or it has been inoperational since it’s incoporation and you might want to restart business at a later point then you can apply for inactive status which remains for 5 years. Here’s how we will assist you:
+          Preparation of necessary documents and completing compliances as per Secretarial standards
+          Filing of MGT-14 and MSC-1 Form"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/DC"
+        />
+        <Info
+          imageLink=""
+          title="Change in Partners of LLP"
+          description="If you’re looking to transfer your equity shares and bring in new partners in the business, here’s how we will assist you:
+          Preparation of necessary documents and completing compliances as per Secretarial standards
+          Preparation of new LLP deed
+          Attaining new DIN through DIR 3 form
+          Filing of Form-3 and Form-4 with MCA"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/CPLLP"
+        />
+        <Info
+          imageLink=""
+          title="INC-20A (Business Commencement form)"
+          description="Every Company has to mandatorily file Form INC-20A within 180 days of the Incorporation of a Company.
+          Also you need an active current bank account in the name of the Company and the shareholders must have transferred their respective paid up capital to the Company.
+          Failing to file INC-20A may result in hefty penalties. So file soon!"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/INC"
+        />
+        <Info
+          imageLink=""
+          title="Director KYC (DIR3 KYC)"
+          description="Directors of a Company/ LLP are required to furnish their KYC annually between 1st April and 30th September. Non-filing of such form in time may result in a penalty of Rs.5,000/-"
+          price="799"
+          redirectUrl="/pages/Services/Compliance/DKYC"
+        />
+        {/* <Info
+          imageLink=""
+          title=""
+          description=""
+          price="799"
+          redirectUrl=""
+        /> */}
 
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                DPT-3 Service
-                   "
-                  description="
-                  Ensure seamless compliance with DPT-3 filing requirements using our expert services. Stay updated on DPT-3 due dates and avoid penalties with our efficient filing assistance."
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/DPT3",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   Changing Name of your Company/ LLP"
-                  description="Want to change your company’s name to better position your brand? It now takes only up to 5 working days to complete the process.
-
-                  Name approval application (RUN)
-                  Preparation of necessary documents and completing compliances as per Secretarial standards.
-                  Filing of INC24 and MGT14 forms / Form-3 and Form-5 with MCA
-                  Applying for new PAN and TAN
-                  Issue of new Certificate of Incorporation"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/CNC",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   Changing Address of your Company/ LLP (within same State)"
-                  description="Shifting your workplace, need assistance with updation of MCA records? Now takes only up to 5 working days to complete the process.
-
-                  Preparation of necessary documents and completing compliances as per Secretarial standards.
-                  Filing of INC-22 and MGT-14/ Form-15 forms with MCA"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/CAC",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   
-Changing Address of your Company/ LLP (another State/ RoC)"
-                  description="Shifting your workplace, need assistance with updation of MCA records? Now takes only up to 30 working days to complete the process.
-
-                  Preparation of necessary documents and completing compliances as per Secretarial standards.
-                  Filing of INC-23 and MGT-14/ Form-15 forms with MCA"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/CADN",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   Change in Objects (MOA)
-                   "
-                  description="
-                  Are you starting another line of business, or changing your current line of business? You know that you need to change your present MoA. Key inclusions:
-                  
-                  Drafting of revised MOA
-                  Preparation of necessary documents and completing compliances as per Secretarial standards
-                  Filing of MGT-14 form with MCA
-                  Obtaining alteration Certificate from ROC"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/MOA",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   
-Appointment/ Resignation of Director"
-                  description="Are you adding another director to manage the operations of the Company or one director has to resign? Both can happen with a one day process. Key inclusions:
-
-                  Preparation of necessary documents and completing compliances as per Secretarial standards
-                  Attaining new DIN through DIR 3 form
-                  Filing of DIR-11/ DIR-12 form with MCA"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/ARD",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                  
-Alteration of Share Capital"
-                  description="
-                  If the size of your company has grown and now planning to pump in more funds and thus require a change in share capital? Key inclusions:
-                  
-                  Preparation of necessary documents and completing compliances as per Secretarial standards
-                  Drafting the revised MOA
-                  Filing of SH-7 and MGT-14 forms with MCA
-                  Filing of PAS-3 for allotment of shares"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/ARC",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   Transfer of Shares"
-                  description="If you’re looking to transfer your equity shares and bring in new partners in the business, here’s how we will assist you:
-
-                  Preparation of necessary documents and completing compliances as per Secretarial standards
-                  Preparation of SH-4 form
-                  Preparation of Share transfer deed
-                  Issuance of new share certificates"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/TS",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   Closure of Company (Under Fast Track Exit)"
-                  description="If your Company has been incorporated atleast a year ago or it has been inoperational for more than a year and you’re no longer looking to run the Company. MCA has provided a Fast Track Exit mode to such businesses and here’s how we will assist you:
-
-                  Preparation of necessary documents and completing compliances as per Secretarial standards
-                  Filing of MGT-14 and STK-2 Form"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/COC",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   Dormant Company (Applying for Inactive status)"
-                  description="If your Company has been inoperational since two years ago or it has been inoperational since it’s incoporation and you might want to restart business at a later point then you can apply for inactive status which remains for 5 years. Here’s how we will assist you:
-
-                  Preparation of necessary documents and completing compliances as per Secretarial standards
-                  Filing of MGT-14 and MSC-1 Form"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/DC",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                  Change in Partners of LLP"
-                  description="
-                  If you’re looking to transfer your equity shares and bring in new partners in the business, here’s how we will assist you:
-                  
-                  Preparation of necessary documents and completing compliances as per Secretarial standards
-                  Preparation of new LLP deed
-                  Attaining new DIN through DIR 3 form
-                  Filing of Form-3 and Form-4 with MCA
-                  "
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/CPLLP",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   INC-20A (Business Commencement form) "
-                  description="Every Company has to mandatorily file Form INC-20A within 180 days of the Incorporation of a Company.
-
-                  Also you need an active current bank account in the name of the Company and the shareholders must have transferred their respective paid up capital to the Company.
-                  
-                  Failing to file INC-20A may result in hefty penalties. So file soon!"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/INC",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-            <Grid container item xs={12} spacing={2} m={{ xs: 1, lg: 10 }} p={{ xs: 0, lg: 5 }} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: 3, lg: 0 }} mb={{ xs: -7, lg: 0 }}>
-                <BackgroundBlogCard
-                  image={post1}
-                  title=""
-                  description=""
-                  action={{}}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={5} mb={{ xs: -7 }}>
-                <FilledInfoCard title="
-                   Director KYC (DIR3 KYC) "
-                  description="Directors of a Company/ LLP are required to furnish their KYC annually between 1st April and 30th September. Non-filing of such form in time may result in a penalty of Rs.5,000/-. "
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <FilledInfoCard title="Starting at ₹749/- only"
-                  action={{
-                    type: "internal",
-                    route: "/pages/Services/Compliance/DKYC",
-                    color: "info",
-                    label: "read more",
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-
-
-          </Grid>
-        </Container>
       </Card >
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
