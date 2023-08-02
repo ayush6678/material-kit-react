@@ -119,7 +119,7 @@ function Presentation() {
         center
         sticky
       />
-      <MessageBox />
+      {/* <MessageBox /> */}
       {/* <img src={image} alt="AccountWale" width={60} style={{ position: "absolute", margin: "20px", marginLeft: "40px", marginTop: "20px" }} /> */}
       <MKBox
         minHeight="60vh"
