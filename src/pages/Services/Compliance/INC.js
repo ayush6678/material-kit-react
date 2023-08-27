@@ -1,117 +1,136 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function INC() {
+  const documentList = [
+    { name: 'Declaration by Director' },
+    { name: 'Copy of Board Resolution' },
+    { name: 'Proof of Registered Office Address' },
+    { name: 'Copy of Certificate of Incorporation' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the purpose of the INC-20A form (Business Commencement form)?',
+      answer: 'A1: The INC-20A form is used to declare that the company has commenced its business activities...'
+    },
+    {
+      question: 'Q2: When should the INC-20A form be filed?',
+      answer: 'A2: The form must be filed within 180 days of the date of incorporation of the company...'
+    },
+    {
+      question: 'Q3: What documents are required for filing the INC-20A form?',
+      answer: 'A3: Documents such as a declaration by a director, board resolution, proof of office address, and COI...'
+    },
+    {
+      question: 'Q4: Are there any consequences of not filing the INC-20A form?',
+      answer: 'A4: Non-filing can lead to penalties, and the Registrar may initiate the process of striking off the company...'
+    },
+    {
+      question: 'Q5: Is it mandatory for all newly incorporated companies to file INC-20A?',
+      answer: 'A5: Yes, all companies incorporated after the commencement of the Companies (Amendment) Act, 2019 are required to file...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="INC-20A (Business Commencement form)"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Business Commencement (INC-20A)" },
-      ]}
-    >
-      <section className="commencement-section">
-        <div className="content">
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <p>
-            Get assistance with filing form INC-20A and commencing your company's business operations.
-          </p>
+      <div className="container">
+        <header>
+          <h1>INC-20A (Business Commencement Form)</h1>
+          <p className="headline">Declare the commencement of business activities for your company</p>
+        </header>
 
-          <h3>What We Offer</h3>
+        <div className='list'>
 
-          <ul>
-            <li>Drafting and filing e-form INC-20A</li>
-            <li>Updating business operations records</li>
-            <li>Filing declaration of commencement (INC-21)</li>
-            <li>Managing regulatory process</li>
-          </ul>
-
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About INC-20A Form</h2>
+            <p>
+              The INC-20A form, also known as the Business Commencement form, is used to declare that a newly incorporated
+              company has commenced its business activities. This form ensures compliance with regulatory requirements
+              and avoids potential penalties.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
-          </div>  
-
-          <h3>Documents Required</h3>
-
-          <ul>
-            <li>Certified copy of MoA and AoA</li>
-            <li>Declaration by directors</li>
-            <li>Proof of registered office address</li>
-            <li>Optional attachment(s)</li>  
-          </ul>
-
-          <h3>FAQs</h3>
-
-          <div className="faq-section">
-            <h4>When should INC-20A be filed?</h4>
-            <p>INC-20A should be filed within 180 days of company incorporation before commencing operations.</p>
           </div>
-
-          <div className="faq-section">
-            <h4>Is there any filing fee for INC-20A?</h4>
-            <p>No, there is no filing fee payable on e-form INC-20A.</p>
-          </div>
-
         </div>
-      </section>
 
-      <style jsx>{`
-        
-        .commencement-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
-        
-        h3 {
-          margin-top: 30px;
-        }
-        
-        ul {
-          margin-top: 10px; 
-        }
-        
-        li {
-          margin-bottom: 8px;
-        }
-        
-        p {
-          color: #333;
-        }
-        
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-        
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px; 
-        }
-        
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-        
-      `}</style>
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-    </BaseLayout>
-  );  
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of INC-20A Form</h2>
+          <ul>
+            <li> Regulatory Compliance: Filing the INC-20A form ensures compliance with business commencement requirements.</li>
+            <li> Commencement Declaration: The form declares the company's commencement of business activities.</li>
+            <li> Avoid Penalties: Timely filing avoids penalties and potential consequences of non-compliance.</li>
+            <li> Legal Requirement: It is mandatory for companies incorporated after specific amendment acts.</li>
+            <li> Proof of Commencement: The form serves as legal proof of the company's commencement of operations.</li>
+          </ul>
+        </section>
+
+        <section className="inc20a-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Filing INC-20A Form Process</h2>
+          <ul>
+            <li> Declaration by Director: Obtain a declaration from a director confirming business commencement.</li>
+            <li> Board Resolution: Prepare a board resolution confirming business commencement.</li>
+            <li> Registered Office Proof: Provide proof of the registered office address of the company.</li>
+            <li> Certificate of Incorporation: Attach a copy of the Certificate of Incorporation.</li>
+            <li> Form Submission: Fill and submit the INC-20A form along with required documents.</li>
+            <li> Registrar Approval: Registrar reviews the form and approves business commencement.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Consequences of Non-filing</h2>
+          <p>
+            Failure to file the INC-20A form within the stipulated time can lead to penalties. Additionally, the Registrar
+            may initiate the process of striking off the company's name from the register.
+          </p>
+        </section>
+
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
+  );
 }
 
 export default INC;

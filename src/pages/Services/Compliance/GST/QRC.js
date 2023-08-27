@@ -1,141 +1,134 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function QRC() {
+  const documentList = [
+    { name: 'Summary of Outward Supplies and Inward Supplies Attracting Reverse Charge' },
+    { name: 'Consolidated Statement of Advances Received and Advances Adjusted' },
+    { name: 'Consolidated Statement of Tax Paid' },
+    { name: 'Payment Details' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is Quarterly Returns under Composition Scheme (GSTR-4)?',
+      answer: 'A1: GSTR-4 is a quarterly return that composition scheme taxpayers file to report their outward supplies...'
+    },
+    {
+      question: 'Q2: When is GSTR-4 due for filing?',
+      answer: 'A2: GSTR-4 is due on the 18th of the month following the end of the quarter...'
+    },
+    {
+      question: 'Q3: What documents are required for filing GSTR-4?',
+      answer: 'A3: Documents such as summary of outward supplies and inward supplies attracting reverse charge, consolidated statement...'
+    },
+    {
+      question: 'Q4: Are there any penalties for non-filing or late filing of GSTR-4?',
+      answer: 'A4: Yes, non-filing or late filing can lead to penalties and disruptions in the composition scheme benefits...'
+    },
+    {
+      question: 'Q5: Who is eligible to file GSTR-4 under the composition scheme?',
+      answer: 'A5: Small businesses with a turnover within the specified limit and opted for the composition scheme can file GSTR-4...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Quarterly Returns under Composition Scheme (GSTR-4)"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Composition Scheme Returns" },
-      ]}
-    >
-      <section className="gst-section">
-        <div className="content">
-          <p>
-            Quarterly Returns under Composition Scheme (GSTR-4) are the returns filed by businesses opting for the composition scheme under Goods and Services Tax (GST). The composition scheme is a simplified taxation scheme for small businesses, allowing them to pay tax at a lower rate based on their turnover.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>GSTR-4: Quarterly Composition Scheme Return</h3>
+      <div className="container">
+        <header>
+          <h1>Quarterly Returns under Composition Scheme (GSTR-4)</h1>
+          <p className="headline">Report your composition scheme transactions and comply with GST regulations</p>
+        </header>
 
-          <p>
-            GSTR-4 is a quarterly return that composition scheme taxpayers need to file. It includes a summary of outward supplies, inward supplies attracting reverse charge, tax liability, and payment of tax. The return provides details of sales, purchases, and tax liability for the specific quarter under the composition scheme.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About GSTR-4 Returns</h2>
+            <p>
+              GSTR-4 is a quarterly return filed by composition scheme taxpayers to report their outward supplies,
+              inward supplies attracting reverse charge, and summary of tax payments. This return is designed for small businesses
+              availing the composition scheme.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Sales and purchase invoices</li>
-            <li>Details of any inward supplies attracting reverse charge</li>
-            <li>Payment receipts and challans</li>
-            <li>Records of tax paid under the composition scheme</li>
-            <li>Any other relevant supporting documents</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. What is GSTR-4?</h4>
-            <p>
-              GSTR-4 is a quarterly return that needs to be filed by taxpayers opting for the composition scheme under GST. It captures a summary of outward supplies, inward supplies attracting reverse charge, tax liability, and payment of tax for the specific quarter under the composition scheme.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. Who can file GSTR-4?</h4>
-            <p>
-              GSTR-4 can be filed by businesses registered under the composition scheme of GST. The composition scheme is available for small businesses with an annual turnover below a specified threshold. However, certain businesses are not eligible for the composition scheme, such as service providers, e-commerce operators, and manufacturers of notified goods.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. When should GSTR-4 be filed?</h4>
-            <p>
-              GSTR-4 should be filed on a quarterly basis. The due date for filing GSTR-4 is typically the 18th day of the month following the end of the quarter. For example, the return for the April-June quarter is due on July 18th. It is important to check the specific due dates for each quarter as they may vary.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. What are the benefits of the composition scheme?</h4>
-            <p>
-              The composition scheme offers several benefits to eligible taxpayers, including:
-            </p>
-            <ul>
-              <li>Lower tax rates based on turnover</li>
-              <li>Simplified compliance and reduced paperwork</li>
-              <li>Quarterly filing of returns</li>
-              <li>Less frequent tax payments</li>
-              <li>Relief from maintaining detailed records</li>
-            </ul>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. Can I claim input tax credit under the composition scheme?</h4>
-            <p>
-              No, businesses registered under the composition scheme are not eligible to claim input tax credit. Under the composition scheme, taxpayers pay tax at a lower rate based on their turnover but cannot avail input tax credit on their purchases. It is important to evaluate the pros and cons of the composition scheme before opting for it.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .gst-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of GSTR-4 Returns</h2>
+          <ul>
+            <li> Composition Scheme Compliance: GSTR-4 helps composition scheme taxpayers comply with GST regulations.</li>
+            <li> Outward Supplies Reporting: Businesses report their outward supplies and inward supplies attracting reverse charge.</li>
+            <li> Tax Payment Summary: The return provides a consolidated statement of tax paid during the quarter.</li>
+            <li> Penalty Avoidance: Timely filing helps avoid penalties and disruptions in composition scheme benefits.</li>
+            <li> Simplified Filing: GSTR-4 is a simplified return designed for businesses under the composition scheme.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="gstr4-returns-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Filing GSTR-4 Process</h2>
+          <ul>
+            <li> Data Compilation: Gather details of outward supplies, inward supplies attracting reverse charge, advances received, and tax paid.</li>
+            <li> Return Filling: Fill the GSTR-4 form accurately with the required details.</li>
+            <li> Document Attachment: Attach supporting invoices and documents as necessary.</li>
+            <li> Tax Payment: Calculate the tax liability and pay the tax due, if any.</li>
+            <li> Online Submission: Submit the return through the GST portal by the due date.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Penalties for Non-Filing</h2>
+          <p>
+            Non-filing or late filing of GSTR-4 can lead to penalties and disruptions in the benefits of the composition scheme.
+            Businesses failing to comply with the filing requirements may also face legal actions.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

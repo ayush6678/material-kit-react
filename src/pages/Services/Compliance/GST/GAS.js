@@ -1,141 +1,134 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function GAS() {
+  const documentList = [
+    { name: 'Application Form for Amnesty' },
+    { name: 'Declaration of Unreported Transactions' },
+    { name: 'Proof of Payment of Dues' },
+    { name: 'Undertaking for Compliance Going Forward' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the GST Amnesty Scheme 2021?',
+      answer: 'A1: The GST Amnesty Scheme allows taxpayers to declare unreported transactions, clear dues, and ensure compliance...'
+    },
+    {
+      question: 'Q2: When is the deadline for availing the GST Amnesty Scheme?',
+      answer: 'A2: The deadline varies, but the scheme provides a limited period for taxpayers to avail of the benefits...'
+    },
+    {
+      question: 'Q3: What documents are required for availing the GST Amnesty Scheme?',
+      answer: 'A3: Documents such as application form for amnesty, declaration of unreported transactions, proof of payment, and compliance undertaking...'
+    },
+    {
+      question: 'Q4: Are there any consequences of not availing the GST Amnesty Scheme?',
+      answer: 'A4: Non-availment can lead to penalties, interest, and potential legal actions for tax non-compliance...'
+    },
+    {
+      question: 'Q5: Can all taxpayers avail the benefits of the GST Amnesty Scheme?',
+      answer: 'A5: The scheme may have eligibility criteria based on specific conditions set by the tax authorities...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="GST Amnesty Scheme 2021"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "GST Amnesty Scheme" },
-      ]}
-    >
-      <section className="gst-section">
-        <div className="content">
-          <p>
-            The GST Amnesty Scheme 2021 is a program designed to provide relief and benefits to taxpayers who have not complied with the Goods and Services Tax (GST) regulations. It offers an opportunity to rectify non-compliance, clear past dues, and reduce penalties.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>Benefits of GST Amnesty Scheme</h3>
+      <div className="container">
+        <header>
+          <h1>GST Amnesty Scheme 2021</h1>
+          <p className="headline">Declare unreported transactions and ensure GST compliance</p>
+        </header>
 
-          <p>
-            The GST Amnesty Scheme 2021 offers the following benefits to eligible taxpayers:
-          </p>
+        <div className='list'>
 
-          <ul>
-            <li>Waiver or reduction of penalties for non-compliance</li>
-            <li>Opportunity to clear past GST dues</li>
-            <li>Rectification of errors and omissions in GST filings</li>
-            <li>Prevention of legal action or prosecution</li>
-            <li>Peace of mind and compliance with GST regulations</li>
-          </ul>
-
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About GST Amnesty Scheme</h2>
+            <p>
+              The GST Amnesty Scheme allows taxpayers to come forward and declare previously unreported transactions, clear dues,
+              and ensure compliance with GST regulations. This scheme provides an opportunity to rectify past mistakes and avoid penalties.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Copy of GST registration certificate</li>
-            <li>Copy of past GST returns and financial statements</li>
-            <li>Details of any pending GST notices or proceedings</li>
-            <li>Any other relevant supporting documents</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. What is the GST Amnesty Scheme 2021?</h4>
-            <p>
-              The GST Amnesty Scheme 2021 is a program initiated by the government to provide relief to taxpayers who have not complied with GST regulations. It offers an opportunity to rectify non-compliance, clear past dues, and reduce penalties.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. Who is eligible for the GST Amnesty Scheme?</h4>
-            <p>
-              The eligibility criteria for the GST Amnesty Scheme may vary based on the specific guidelines issued by the government. Generally, taxpayers who have not complied with GST regulations or have pending dues are eligible to participate in the scheme. It is advisable to consult a tax professional for detailed guidance.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. How can I apply for the GST Amnesty Scheme?</h4>
-            <p>
-              The application process for the GST Amnesty Scheme is typically done through an online portal or designated tax authorities. You may need to provide the necessary documents and information related to your non-compliance or pending dues. It is recommended to consult a tax professional or visit the official GST portal for specific instructions.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. What are the benefits of participating in the GST Amnesty Scheme?</h4>
-            <p>
-              Participating in the GST Amnesty Scheme offers benefits such as penalty waiver or reduction, the opportunity to clear past GST dues, rectification of errors or omissions in GST filings, and avoidance of legal action or prosecution. It helps taxpayers rectify non-compliance and achieve compliance with GST regulations.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. Is the GST Amnesty Scheme a one-time opportunity?</h4>
-            <p>
-              The GST Amnesty Scheme is introduced by the government periodically. The availability and duration of the scheme may vary. It is essential to stay updated with the latest announcements and notifications from the government or tax authorities to know about any future opportunities for amnesty or compliance relief.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .gst-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of GST Amnesty Scheme</h2>
+          <ul>
+            <li> Tax Compliance: The scheme enables taxpayers to rectify past non-compliance and ensure GST payment and reporting.</li>
+            <li> Penalty Relief: Availing the scheme can lead to reduced or waived penalties and interest on outstanding dues.</li>
+            <li> Rectification Opportunity: Taxpayers can correct errors, declare unreported transactions, and clear dues.</li>
+            <li> Legal Safeguard: The scheme provides protection from potential legal actions for non-compliance.</li>
+            <li> Limited Period Benefit: The scheme is available for a specific period, offering taxpayers an opportunity to avail its benefits.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="gst-amnesty-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Availing GST Amnesty Scheme Process</h2>
+          <ul>
+            <li> Application Form: Fill the application form for availing the GST Amnesty Scheme.</li>
+            <li> Declaration of Transactions: Declare unreported transactions and assess dues accurately.</li>
+            <li> Proof of Payment: Provide proof of payment of dues declared under the scheme.</li>
+            <li> Compliance Undertaking: Undertake to comply with GST regulations going forward.</li>
+            <li> Application Submission: Submit the complete application along with required documents.</li>
+            <li> Authorities Review: Authorities review the application and documents for accuracy.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Consequences of Non-Availment</h2>
+          <p>
+            Failure to avail the GST Amnesty Scheme can result in penalties, interest, and potential legal actions for tax non-compliance.
+            Unreported transactions may be subject to scrutiny and investigation by tax authorities.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

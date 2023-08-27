@@ -1,122 +1,129 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function LLP() {
+  const documentList = [
+    { name: 'Financial Statements' },
+    { name: 'Statement of Account and Solvency' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is Annual LLP Compliance?',
+      answer: 'A1: Annual LLP Compliance involves fulfilling legal requirements...'
+    },
+    {
+      question: 'Q2: When is the deadline for Annual LLP Compliance?',
+      answer: 'A2: The deadline varies based on the financial year and jurisdiction of the LLP...'
+    },
+    {
+      question: 'Q3: What are the consequences of non-compliance with annual requirements?',
+      answer: 'A3: Non-compliance can result in penalties, legal actions, and removal from the LLP Register...'
+    },
+    {
+      question: 'Q4: Is Annual LLP Compliance necessary for all LLPs?',
+      answer: 'A4: Yes, all registered LLPs are required to fulfill annual compliance obligations...'
+    },
+    {
+      question: 'Q5: What is the purpose of filing a Statement of Account and Solvency?',
+      answer: 'A5: The statement provides financial information and verifies the LLP\'s solvency position...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Annual LLP Compliance"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "LLP Compliance" },
-      ]}
-    >
-      <section className="compliance-section">
-        <div className="content">
-          <p>
-            Ensure your LLP meets all compliance requirements under LLP Act with our annual compliance services.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>What We Offer</h3>
+      <div className="container">
+        <header>
+          <h1>Annual LLP (Limited Liability Partnership) Compliance</h1>
+          <p className="headline">Ensure legal adherence and financial transparency</p>
+        </header>
 
-          <ul>
-            <li>Filing LLP annual return (Form 11)</li>
-            <li>Updating partner and LLP details</li>
-            <li>Statutory registers maintenance</li>
-            <li>Accounting and audit compliance</li> 
-          </ul>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Annual LLP Compliance</h2>
+            <p>
+              Annual LLP Compliance involves fulfilling legal and financial obligations to maintain the LLP's legal standing.
+              This includes submitting financial statements and a statement of account and solvency. Compliance ensures transparency,
+              accountability, and adherence to LLP regulations.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Required Documents</h3>
-
-          <ul>
-            <li>KYC documents of partners</li>
-            <li>LLP agreement and changes</li>
-            <li>LLP PAN and TAN</li>
-            <li>Previous year Form 11 and Form 8</li>
-          </ul>
-
-          <h3>FAQs</h3>
-            
-          <div className="faq-section">
-            <h4>1. What filings are required annually?</h4>
-            <p>
-              An LLP must file the annual return (Form 11) and annual accounts with ROC each financial year.
-            </p>
-          </div>
-            
-          <div className="faq-section">
-            <h4>2. Is audit required for LLPs?</h4>
-            <p>
-              Audit is mandatory for LLPs meeting certain turnover or contribution thresholds as per LLP Rules.
-            </p>
-          </div>
-            
-          <div className="faq-section">
-            <h4>3. What are the late filing penalties?</h4>
-            <p>
-              Delay in filing Form 8/11 attracts additional fees up to Rs. 5000/-. Further penalties may apply for continuing non-compliance.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .compliance-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;  
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;  
-        }
-        
-        h3 {
-          margin-top: 30px;
-        }
-        
-        ul {
-          margin-top: 10px;
-        }
-        
-        li {
-          margin-bottom: 8px;
-        }
-        
-        p {
-          color: #333;
-        }
-        
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-        
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-        
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of Annual LLP Compliance</h2>
+          <ul>
+            <li> Legal Adherence: Compliance ensures the LLP operates within the legal framework.</li>
+            <li> Financial Transparency: Submission of financial documents provides a clear view of the LLP's finances.</li>
+            <li> Accountability: Compliance promotes transparency and accountability among LLP partners.</li>
+            <li> Avoiding Penalties: Fulfilling obligations on time helps avoid penalties and legal actions.</li>
+            <li> Business Reputation: Compliant LLPs build trust and credibility with stakeholders.</li>
+          </ul>
+        </section>
+
+        <section className="compliance-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Compliance Process</h2>
+          <ul>
+            <li> Financial Statements: Prepare accurate financial statements, including balance sheets and profit and loss statements.</li>
+            <li> Statement of Account and Solvency: File the statement with the relevant regulatory authority.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Consequences of Non-Compliance</h2>
+          <p>
+            Failure to fulfill annual compliance requirements can lead to financial penalties, legal actions,
+            and removal from the LLP Register. It can also affect the LLP's reputation and business operations.
+          </p>
+        </section>
+
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

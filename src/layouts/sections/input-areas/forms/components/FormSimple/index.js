@@ -2,21 +2,25 @@ import "./style.css";
 
 function FormSimple() {
     return (
-        <div className="form">
-            <h2>Get A Callback from US!</h2>
-            <p>Name:</p>
-            <input id="name" placeholder="Full Name"></input>
-            <p>Phone Number:</p>
-            <input id="phno" placeholder="Phone Number"></input>
-            <p>E-Mail ID:</p>
-            <input id="email" placeholder="E-Mail ID"></input>
-            <p>Your Message:</p>
-            <textarea id="ta"></textarea><br />
-            <div className="button">
-                <button>Submit</button>
-            </div>
+        <section className="form-section">
+            <div className="form-container">
+                <form>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" id="name" name="name" required />
 
-        </div>
+                    <label htmlFor="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required />
+
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label htmlFor="message">Message</label>
+                    <textarea type="email" id="email" name="email" required />
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
     );
 }
 

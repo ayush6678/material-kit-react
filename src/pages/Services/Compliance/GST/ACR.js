@@ -1,135 +1,134 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
-function ACR() {
+function ARC() {
+  const documentList = [
+    { name: 'Summary of Outward Supplies and Inward Supplies' },
+    { name: 'Summary of Input Tax Credit (ITC) Availed' },
+    { name: 'Details of Tax Paid' },
+    { name: 'Reconciliation Statement' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is Annual Consolidated Return (GSTR-9)?',
+      answer: 'A1: GSTR-9 is an annual return that registered taxpayers file to provide a consolidated summary of their GST transactions...'
+    },
+    {
+      question: 'Q2: When is GSTR-9 due for filing?',
+      answer: 'A2: GSTR-9 is due on or before the 31st of December following the end of the financial year...'
+    },
+    {
+      question: 'Q3: What documents are required for filing GSTR-9?',
+      answer: 'A3: Documents such as summary of outward supplies and inward supplies, summary of input tax credit availed, details of tax paid...'
+    },
+    {
+      question: 'Q4: Are there any penalties for non-filing or late filing of GSTR-9?',
+      answer: 'A4: Yes, non-filing or late filing can lead to penalties and legal actions. Businesses may face disruptions in input tax credit claims...'
+    },
+    {
+      question: 'Q5: Who is required to file GSTR-9?',
+      answer: 'A5: All registered taxpayers who are not composition scheme holders, Input Service Distributors, or Non-Resident Taxable Persons...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Annual Consolidated Return (GSTR-9)"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Annual Consolidated Return" },
-      ]}
-    >
-      <section className="gst-section">
-        <div className="content">
-          <p>
-            The Annual Consolidated Return (GSTR-9) is an annual return filed by regular taxpayers under Goods and Services Tax (GST). It provides a consolidated summary of outward supplies, inward supplies, and tax liabilities for the entire financial year.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>GSTR-9: Annual Consolidated Return</h3>
+      <div className="container">
+        <header>
+          <h1>Annual Consolidated Return (GSTR-9)</h1>
+          <p className="headline">Provide a consolidated summary of your GST transactions and comply with annual reporting</p>
+        </header>
 
-          <p>
-            GSTR-9 is an annual return that captures the summarized details of all the monthly/quarterly returns filed during the financial year. It includes information about the taxpayer's outward supplies, inward supplies attracting reverse charge, input tax credit availed, and tax payable. GSTR-9 helps ensure compliance with GST regulations and provides a comprehensive view of the taxpayer's activities for the year.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About GSTR-9 Return</h2>
+            <p>
+              GSTR-9 is an annual return filed by registered taxpayers to provide a consolidated summary of their GST transactions,
+              including outward supplies, inward supplies, input tax credit availed, and tax paid during the financial year.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Monthly/quarterly returns (GSTR-1, GSTR-3B, etc.) filed during the financial year</li>
-            <li>Sales and purchase invoices</li>
-            <li>Details of any amendments or revisions made to the returns</li>
-            <li>Records of tax paid and input tax credit availed</li>
-            <li>Any other relevant supporting documents</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. What is GSTR-9?</h4>
-            <p>
-              GSTR-9 is the Annual Consolidated Return filed by regular taxpayers under GST. It provides a summarized view of the taxpayer's outward supplies, inward supplies, input tax credit availed, and tax payable for the entire financial year.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. Who needs to file GSTR-9?</h4>
-            <p>
-              Regular taxpayers registered under GST, including businesses and individuals, are required to file GSTR-9. However, specific entities such as Input Service Distributors, Casual Taxable Persons, Non-Resident Taxable Persons, and persons paying TDS under Section 51 of the CGST Act have separate annual returns to be filed.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. When should GSTR-9 be filed?</h4>
-            <p>
-              GSTR-9 should be filed annually, covering the entire financial year. The due date for filing GSTR-9 is typically on or before December 31st of the subsequent financial year. It is important to check the specific due date for each year, as there may be extensions or changes announced by the tax authorities.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. What is the penalty for late or non-filing of GSTR-9?</h4>
-            <p>
-              Failure to file GSTR-9 by the due date may attract late filing penalties and interest charges. The late fee is usually specified as a fixed amount per day of delay, subject to a maximum cap. Non-filing or delayed filing can also result in compliance notices, tax demands, and legal implications. It is essential to file GSTR-9 within the prescribed timeline to avoid penalties.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. Can I revise GSTR-9 after filing?</h4>
-            <p>
-              No, once GSTR-9 is filed, it cannot be revised. GSTR-9 is an annual consolidated return that provides a summarized view of the taxpayer's activities for the financial year. However, if any errors or omissions are identified after filing, they can be rectified in subsequent returns or through other applicable procedures as per the GST laws and regulations.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .gst-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of GSTR-9 Return</h2>
+          <ul>
+            <li> Annual Reporting: GSTR-9 provides a consolidated summary of GST transactions for the entire financial year.</li>
+            <li> Transaction Reconciliation: Businesses can reconcile outward supplies, input tax credit, and tax paid with the annual return.</li>
+            <li> Compliance with Law: Filing GSTR-9 ensures compliance with annual reporting requirements under the GST regime.</li>
+            <li> Input Tax Credit Reconciliation: Taxpayers can match input tax credit availed and utilized throughout the year.</li>
+            <li> Avoid Penalties: Timely filing helps avoid penalties, legal actions, and disruptions in input tax credit claims.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="gstr9-return-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Filing GSTR-9 Process</h2>
+          <ul>
+            <li> Data Compilation: Gather details of outward supplies, inward supplies, input tax credit availed, and tax paid.</li>
+            <li> Return Filling: Fill the GSTR-9 form with accurate and complete details.</li>
+            <li> Document Attachment: Attach supporting documents and reconciliation statement.</li>
+            <li> Verification: Verify the information provided in the return.</li>
+            <li> Online Submission: Submit the return through the GST portal by the due date.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Penalties for Non-Filing</h2>
+          <p>
+            Non-filing or late filing of GSTR-9 can lead to penalties, legal actions, and disruptions in input tax credit claims.
+            Businesses failing to comply with the annual reporting requirements may also face legal consequences.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 
-export default ACR;
+export default ARC;

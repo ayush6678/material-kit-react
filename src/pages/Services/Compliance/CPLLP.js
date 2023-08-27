@@ -1,116 +1,135 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function CPLLP() {
+  const documentList = [
+    { name: 'Partnership Deed Amendment' },
+    { name: 'Form for Intimation of Change' },
+    { name: 'Consent of Incoming Partner' },
+    { name: 'Consent of Outgoing Partner' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the process for changing partners of an LLP?',
+      answer: 'A1: The process involves amending the Partnership Deed, obtaining consents from incoming and outgoing partners...'
+    },
+    {
+      question: 'Q2: How long does it take to complete the process of changing partners?',
+      answer: 'A2: The duration varies due to documentation, approvals required, and processing time by RoC...'
+    },
+    {
+      question: 'Q3: Can any partner be replaced with a new partner?',
+      answer: 'A3: Yes, partners can be replaced by following the proper legal procedures and obtaining necessary consents...'
+    },
+    {
+      question: 'Q4: What are the implications for the LLP after changing partners?',
+      answer: 'A4: The LLPs ownership structure changes, and the incoming partner assumes rights, duties, and liabilities...'
+    },
+    {
+      question: 'Q5: Are there any compliance requirements after changing partners?',
+      answer: 'A5: Yes, the LLP must update its records, submit necessary forms to RoC, and ensure proper compliance...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Change in Partners of LLP"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "LLP Partner Change" },
-      ]}
-    >
-      <section className="llppartner-section">
-        <div className="content">
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <p>
-            Get end-to-end assistance with induction or removal of partners in your LLP as per LLP Act requirements.
-          </p>
+      <div className="container">
+        <header>
+          <h1>Change in Partners of LLP</h1>
+          <p className="headline">Modify the partners of your LLP with proper documentation</p>
+        </header>
 
-          <h3>What We Offer</h3>
+        <div className='list'>
 
-          <ul>
-            <li>Examining LLP agreement clauses</li>
-            <li>Filing Forms 4, 17, 18, etc.</li>
-            <li>Updating partner records with ROC</li>
-            <li>Managing process and documentation</li>
-          </ul>
-
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Change in Partners of LLP</h2>
+            <p>
+              Changing partners of an LLP involves amending the Partnership Deed, obtaining consents from incoming and
+              outgoing partners, and adhering to regulatory guidelines. This process allows for a change in the LLP's
+              ownership structure while complying with legal requirements.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Documents Required</h3>
-
-          <ul>
-            <li>Consent letter from incoming/outgoing partners</li>
-            <li>KYC documents of new partners</li>
-            <li>Form 4 for induction of partners</li>
-            <li>Latest copy of LLP Agreement</li>
-          </ul>
-
-          <h3>FAQs</h3>
-
-          <div className="faq-section">
-            <h4>What forms are required for change in LLP partners?</h4>
-            <p>Forms 4, 17 and 18 need to be filed with ROC for partner induction and removal.</p>
-          </div>
-
-          <div className="faq-section">
-            <h4>When does the partner change come into effect?</h4>
-            <p>The change comes into effect once relevant forms are filed and approved by ROC.</p>
-          </div>
-
         </div>
-      </section>
 
-      <style jsx>{`
-        
-        .llppartner-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
-        
-        h3 {
-          margin-top: 30px;
-        }
-        
-        ul {
-          margin-top: 10px;
-        }
-        
-        li {
-          margin-bottom: 8px;
-        }
-        
-        p {
-          color: #333;
-        }
-        
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-        
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-        
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-        
-      `}</style>
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-    </BaseLayout>
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of Changing Partners of LLP</h2>
+          <ul>
+            <li> Ownership Modification: Changing partners allows modification of the LLP's ownership structure.</li>
+            <li> Regulatory Compliance: The process adheres to regulatory guidelines for changing partners of LLP.</li>
+            <li> Replacement Procedure: Partners can be replaced following legal procedures and obtaining consents.</li>
+            <li> Rights and Liabilities: Incoming partners assume rights, duties, and liabilities of the outgoing partners.</li>
+            <li> Record and Compliance Update: The LLP must update its records and ensure compliance with legal norms.</li>
+          </ul>
+        </section>
+
+        <section className="partners-change-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Changing Partners of LLP Process</h2>
+          <ul>
+            <li> Partnership Deed Amendment: Amend the Partnership Deed to reflect the change in partners.</li>
+            <li> Consent from Partners: Obtain consent from incoming and outgoing partners for the change.</li>
+            <li> Intimation to RoC: Submit Form for Intimation of Change to the Registrar of Companies.</li>
+            <li> Update LLP Agreement: Update the LLP Agreement with details of the new partner.</li>
+            <li> Partner's Rights and Liabilities: Incoming partner assumes rights and responsibilities.</li>
+            <li> Compliance and Record Update: Update LLP records and comply with regulatory requirements.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Implications and Compliance after Partner Change</h2>
+          <p>
+            Changing partners alters the LLP's structure. The incoming partner assumes rights and responsibilities.
+            The LLP must update its records, LLP Agreement, and submit necessary forms to RoC to ensure compliance.
+          </p>
+        </section>
+
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

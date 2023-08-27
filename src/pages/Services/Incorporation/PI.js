@@ -1,134 +1,135 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function PI() {
+  const documentList = [
+    { name: 'Partnership Agreement' },
+    { name: 'Partner Details' },
+    { name: 'Business Plan' },
+    { name: 'Financial Projections' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What are the advantages of forming a traditional Partnership?',
+      answer: 'A1: Forming a partnership offers shared responsibilities, flexibility in management...'
+    },
+    {
+      question: 'Q2: How long does the Partnership incorporation process typically take?',
+      answer: 'A2: The duration varies, but it generally takes a few weeks to formalize...'
+    },
+    {
+      question: 'Q3: How many partners are required to form a Partnership?',
+      answer: 'A3: A traditional partnership can be formed with a minimum of two partners...'
+    },
+    {
+      question: 'Q4: What is the role of each partner in a Partnership?',
+      answer: 'A4: Partners share responsibilities, decision-making, and profits as per the partnership agreement...'
+    },
+    {
+      question: 'Q5: Can a Partnership be converted to a different business structure?',
+      answer: 'A5: Yes, partnerships can often be converted to LLPs or companies with proper procedures...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Partnership Incorporation"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Partnership" },
-      ]}
-    >
-      <section className="partnership-section">
-        <div className="content">
-          <p>
-            Partnership is a business structure where two or more individuals come together to carry out a business with a shared objective. It is a popular form of business organization that offers flexibility and shared responsibilities among partners.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>Pricing</h3>
+      <div className="container">
+        <header>
+          <h1>Partnership Incorporation</h1>
+          <p className="headline">Your journey to collaborative business ownership</p>
+        </header>
 
-          <p>
-            Our partnership incorporation services come with flexible pricing options. Please contact us for detailed pricing information tailored to your specific requirements.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Partnership Incorporation</h2>
+            <p>
+              Partnership Incorporation involves establishing a collaborative business entity where two or more individuals
+              come together to share responsibilities and profits. This form of business allows partners to leverage their
+              combined skills and resources for mutual success.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Partnership deed</li>
-            <li>Copy of identity proof (PAN card, Aadhaar card, etc.) for partners</li>
-            <li>Copy of address proof (Utility bill, passport, etc.) for partners</li>
-            <li>Passport-size photograph of partners</li>
-            <li>Address proof of the partnership office</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. What is a Partnership?</h4>
-            <p>
-              A Partnership is a business structure where two or more individuals come together to carry out a business. It is based on a partnership agreement or deed that outlines the rights, responsibilities, and profit-sharing arrangements among partners.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. What are the benefits of forming a Partnership?</h4>
-            <p>
-              Forming a Partnership offers benefits such as shared responsibilities, flexibility in decision-making, ease of formation, and shared profits and losses among partners. It allows partners to pool their resources, skills, and expertise to operate a business together.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. Is a partnership a separate legal entity?</h4>
-            <p>
-              No, a partnership is not a separate legal entity distinct from its partners. The partners are jointly and severally liable for the debts and obligations of the partnership. However, a partnership can have a separate name and operate under that name.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. Can a partnership be converted into a different business structure?</h4>
-            <p>
-              Yes, a partnership can be converted into a different business structure, such as a Private Limited Company or a Limited Liability Partnership (LLP). The conversion process involves legal procedures, compliance with regulations, and the consent of all partners.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. Are there any statutory requirements for a partnership?</h4>
-            <p>
-              While there are no specific statutory requirements for registering a partnership, it is advisable to draft a partnership agreement or deed that outlines the rights, responsibilities, profit-sharing arrangements, and other terms agreed upon by the partners. It is recommended to consult a professional for legal and tax compliance.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .partnership-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Advantages of Partnership Incorporation</h2>
+          <ul>
+            <li> Shared Responsibilities: Partners divide business tasks and decisions according to their skills.</li>
+            <li> Flexibility: Partnerships offer operational flexibility and informal management structures.</li>
+            <li> Shared Profits: Profits are distributed among partners as per the partnership agreement.</li>
+            <li> Combined Resources: Partners pool resources and expertise for business growth.</li>
+            <li> Collaboration: Partners can brainstorm and collaborate to innovate and solve challenges.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="incorporation-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Incorporation Process</h2>
+          <ul>
+            <li> Choose Partners: Identify individuals with complementary skills and shared business goals.</li>
+            <li> Draft Partnership Agreement: Define roles, responsibilities, profit-sharing, and exit strategies.</li>
+            <li> Business Plan: Prepare a detailed business plan outlining objectives, strategies, and financial projections.</li>
+            <li> Registration: Depending on local regulations, register the partnership with the appropriate authority.</li>
+            <li> Operational Launch: Implement the partnership agreement and begin business operations.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Partner Roles and Responsibilities</h2>
+          <p>
+            Partners collectively contribute to business activities and decisions. Each partner's responsibilities and
+            rights are outlined in the partnership agreement. Open communication and collaboration among partners are crucial
+            for the partnership's success.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

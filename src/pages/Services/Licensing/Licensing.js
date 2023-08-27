@@ -55,18 +55,8 @@ function Licensing() {
           textAlign="center"
         >
           Register your business for various licenses
-
-
-
-
         </MKTypography>
-
-
-
       </MKBox>
-
-
-
       <Card
         sx={{
           p: 2,
@@ -81,7 +71,7 @@ function Licensing() {
           title="Udyam Adhaar/ Udyog Adhaar/ MSME Registration"
           description="Get your MSME registration within 5 days and enjoy a tons of subsidies and incentives."
           price="799"
-          redirectUrl="/sections/input-areas/inputs"
+          redirectUrl="TA"
         />
         <Info
           imageLink=""
@@ -89,7 +79,7 @@ function Licensing() {
           description="It is mandatory to obtain an Importer Exporter Code for any business who wishes to either import or export services or goods.  However, for service exports it is not mandatory unless the exporter wants to claim benefits under the Foreign Trade Policy.
           Yes you read it right! There are a lot of benefits that are available to exporters, incl. additional direct incentives from Govt. of upto ~10% of your export revenue. So get your IEC Code, Today!!"
           price="799"
-          redirectUrl="/sections/elements/avatars"
+          redirectUrl="/pages/Services/Licensing/IEC"
         />
         <Info
           imageLink=""
@@ -97,28 +87,28 @@ function Licensing() {
           description="If you’re a business, selling goods and providing services within the state of your established premises having revenue of more than ₹20 Lakhs annually or providing goods or services outside your state, then it is mandatory for you to obtain a GST registration.
           Also, if you don’t even the threshold still you can apply for GST as it is recommended so as to avail input tax credit on all your purchases and also get higher acceptability when dealing with larger enterprises, Govt. departments and others."
           price="799"
-          redirectUrl="/sections/elements/breadcrumbs"
+          redirectUrl="/pages/Services/Licensing/GSTR1"
         />
         <Info
           imageLink=""
           title="Trademark Application"
           description="You can now legally protect your Brand Name and Logo from copycats. Register your Trademark today!"
           price="799"
-          redirectUrl="/sections/elements/breadcrumbs"
+          redirectUrl="/pages/Services/Licensing/TA"
         />
         <Info
           imageLink=""
           title="Shop and Establishment Registration Service"
           description="Get your Shop and Establishment Registration done with ease using our professional registration services. Stay compliant and focus on growing your business."
           price="799"
-          redirectUrl="/sections/elements/breadcrumbs"
+          redirectUrl="/pages/Services/Licensing/SERS"
         />
         <Info
           imageLink=""
           title="Legal Entity Identification (LEI) Number Registration"
           description="Get your Legal Entity Identification (LEI) Number Registration done with ease using our professional registration services. Stay compliant and focus on growing your business."
           price="799"
-          redirectUrl="/sections/elements/breadcrumbs"
+          redirectUrl="/pages/Services/Licensing/LEI"
         />
         <Info
           imageLink=""
@@ -128,7 +118,7 @@ function Licensing() {
           State License Registration
           Central License Registration"
           price="799"
-          redirectUrl="/sections/elements/breadcrumbs"
+          redirectUrl="/pages/Services/Licensing/FSSAI"
         />
         <Info
           imageLink=""
@@ -138,7 +128,7 @@ function Licensing() {
           Physical token delivered to your address
           Technical support"
           price="799"
-          redirectUrl="/sections/elements/breadcrumbs"
+          redirectUrl="/pages/Services/Licensing/DSC"
         />
         <Info
           imageLink=""
@@ -148,7 +138,7 @@ function Licensing() {
           Physical token delivered to your address
           Technical support"
           price="799"
-          redirectUrl="/sections/elements/breadcrumbs"
+          redirectUrl="/pages/Services/Licensing/DSCC"
         />
 
         <Info
@@ -159,7 +149,7 @@ function Licensing() {
           Physical token delivered to your address
           Technical support"
           price="799"
-          redirectUrl="/sections/elements/breadcrumbs"
+          redirectUrl="/pages/Services/Licensing/DGFT"
         />
         {/* <Info
           imageLink=""

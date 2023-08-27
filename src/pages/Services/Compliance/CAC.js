@@ -1,114 +1,132 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function CAC() {
+  const documentList = [
+    { name: 'Board Resolution' },
+    { name: 'New Address Proof' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the process for changing the address of a Company/LLP within the same state?',
+      answer: 'A1: The process involves obtaining board approval, updating official documents...'
+    },
+    {
+      question: 'Q2: How long does it take to change the company/LLP address?',
+      answer: 'A2: The duration varies depending on government processing time and document verification...'
+    },
+    {
+      question: 'Q3: Can any address be chosen for the company/LLP within the state?',
+      answer: 'A3: The new address must be a valid address within the same state and adhere to regulations...'
+    },
+    {
+      question: 'Q4: Do all existing documents need to be updated with the new address?',
+      answer: 'A4: Only certain official documents like the Certificate of Incorporation need to be updated...'
+    },
+    {
+      question: 'Q5: Are there any legal implications of changing the company/LLP address?',
+      answer: 'A5: Changing the address is a procedural step and does not affect legal standing or operations...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Changing Address of your Company/LLP (within same State)"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Address Change" },
-      ]} 
-    >
-      <section className="addresschange-section">
-        <div className="content">
-          
-          <p>
-            Get assistance to change the registered address of your company/LLP within the same state due to office relocation or other reasons.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>What We Offer</h3>
+      <div className="container">
+        <header>
+          <h1>Changing Address of your Company/LLP (within same State)</h1>
+          <p className="headline">Update your business address within the same state</p>
+        </header>
 
-          <ul>
-            <li>Drafting board resolution for address change</li>
-            <li>Obtaining NOC from new property owner</li>
-            <li>Filing of address change forms with ROC</li>
-            <li>Updating address with other regulatory authorities</li>
-          </ul>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Changing Company/LLP Address</h2>
+            <p>
+              Changing the address of your Company/LLP within the same state involves a formal process that includes obtaining
+              board approval, updating official documents, and verifying the new address. This ensures accurate records and
+              communication with relevant authorities.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Documents Required</h3>
-
-          <ul>
-            <li>Identity and address proof of directors/partners</li>
-            <li>Rent agreement or NOC from new property owner</li>
-            <li>Electricity/water bill of new address</li>
-            <li>Digitally signed board resolution</li>
-          </ul>
-
-          <h3>FAQs</h3>
-
-          <div className="faq-section">
-            <h4>What forms need to be filed for address change?</h4>
-            <p>INC-22 must be filed by company and Form 18 by LLP with ROC for change in registered address.</p>
-          </div>
-
-          <div className="faq-section">
-            <h4>Is physical verification required for new address?</h4>
-            <p>ROC may conduct physical verification of the new registered office address within 30 days of FORM filing.</p>
-          </div>
-
         </div>
-      </section>
 
-      <style jsx>{`
-        .addresschange-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-        }
-        
-        .content {
-          max-width: 800px;
-          margin: 0 auto; 
-        }
-        
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
-        
-        h3 {
-          margin-top: 30px;
-        }
-        
-        ul {
-          margin-top: 10px; 
-        }
-        
-        li {
-          margin-bottom: 8px;
-        }
-        
-        p {
-          color: #333;
-        }
-        
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-        
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-        
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-    </BaseLayout>
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of Changing Company/LLP Address</h2>
+          <ul>
+            <li> Compliance with Records: Updating the address ensures accurate official records.</li>
+            <li> Effective Communication: Accurate address supports effective communication with authorities and stakeholders.</li>
+            <li> Regulatory Adherence: The new address must adhere to regulatory requirements within the same state.</li>
+            <li> Local Operations: An updated address reflects the current location of the company/LLP's operations.</li>
+            <li> Business Continuity: Address change does not affect legal standing or business operations.</li>
+          </ul>
+        </section>
+
+        <section className="change-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Address Change Process</h2>
+          <ul>
+            <li> Board Resolution: Obtain board approval for changing the company/LLP address.</li>
+            <li> New Address Proof: Collect valid address proof documents for the new address.</li>
+            <li> Document Submission: File the necessary documents for updating the address.</li>
+            <li> Verification: The government authorities verify the new address details.</li>
+            <li> Updated Documents: Update official documents like the Certificate of Incorporation with the new address.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Legal Implications of Address Change</h2>
+          <p>
+            Changing the address is a procedural step and does not affect the legal standing or operations of the company/LLP.
+            Only certain official documents need to be updated with the new address, while others remain valid.
+          </p>
+        </section>
+
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

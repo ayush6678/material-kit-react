@@ -1,116 +1,128 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function DPT3() {
+  const documentList = [
+    { name: 'DPT-3 Form' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is DPT-3 Filing?',
+      answer: 'A1: DPT-3 Filing is the process of submitting details of outstanding loans and deposits...'
+    },
+    {
+      question: 'Q2: When is the deadline for DPT-3 Filing?',
+      answer: 'A2: The deadline for DPT-3 Filing is usually by the end of the financial year...'
+    },
+    {
+      question: 'Q3: What are the consequences of not filing DPT-3 on time?',
+      answer: 'A3: Non-filing or late filing can result in financial penalties and legal actions...'
+    },
+    {
+      question: 'Q4: Is DPT-3 Filing applicable to all companies?',
+      answer: 'A4: Yes, most companies that have accepted deposits are required to file DPT-3...'
+    },
+    {
+      question: 'Q5: What information is required for DPT-3 Filing?',
+      answer: 'A5: The DPT-3 Form requires details of outstanding loans, deposits, and certain financial information...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="DPT-3 Filing"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "DPT-3 Filing" },
-      ]}
-    >
-      <section className="dpt3-section">
-        <div className="content">
-          <p>
-            File Director and Promoter details in DPT-3 form with MCA as per Companies Act requirements.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>What We Offer</h3>
+      <div className="container">
+        <header>
+          <h1>DPT-3 Filing</h1>
+          <p className="headline">Report outstanding loans and deposits to regulatory authorities</p>
+        </header>
 
-          <ul>
-            <li>Obtaining Digital Signatures</li>
-            <li>DPT-3 form preparation</li>
-            <li>Uploading documents on MCA portal</li>
-            <li>Filing of e-form with MCA</li>
-          </ul>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About DPT-3 Filing</h2>
+            <p>
+              DPT-3 Filing is the process of submitting details of outstanding loans, deposits, and certain financial transactions
+              to regulatory authorities. This filing ensures transparency and compliance with company law regulations.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Documents Required</h3>
-
-          <ul>
-            <li>PAN card of directors and promoters</li>
-            <li>Digital signatures of directors</li>
-            <li>Latest shareholding pattern</li>
-            <li>KYC documents of directors and promoters</li>
-          </ul>
-
-          <h3>FAQs</h3>
-
-          <div className="faq-section">
-            <h4>What details are covered in DPT-3?</h4>
-            <p>It includes particulars of directors, promoters, shareholding interest and compliance status.</p>
-          </div>
-
-          <div className="faq-section">
-            <h4>When does DPT-3 need to be filed?</h4>
-            <p>Within 30 days of appointment of a director/manager or any change in directors/promoters.</p>
-          </div>
-
-          <div className="faq-section">
-            <h4>What is the fee for filing DPT-3?</h4>
-            <p>No filing fee is required for DPT-3 e-form.</p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .dpt3-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of DPT-3 Filing</h2>
+          <ul>
+            <li> Regulatory Compliance: Filing DPT-3 ensures compliance with company law requirements.</li>
+            <li> Transparency: Authorities receive accurate information about outstanding loans and deposits.</li>
+            <li> Avoiding Penalties: Timely filing helps avoid penalties and legal actions for non-compliance.</li>
+            <li> Data Accuracy: The filing process ensures accurate reporting of financial transactions.</li>
+            <li> Legal Standing: Compliance contributes to the company's legal standing and reputation.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="filing-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Filing Process</h2>
+          <ul>
+            <li> DPT-3 Form: Complete the DPT-3 Form with accurate details of outstanding loans and deposits.</li>
+            <li> Financial Information: Provide necessary financial information as required by the form.</li>
+            <li> Submission: File the DPT-3 Form with the regulatory authority within the stipulated deadline.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;  
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Consequences of Non-Filing</h2>
+          <p>
+            Failure to file DPT-3 or filing it late can result in financial penalties, legal actions,
+            and a negative impact on the company's compliance record and reputation.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;  
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

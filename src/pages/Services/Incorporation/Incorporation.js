@@ -114,13 +114,7 @@ function Incorporation() {
           price="799"
           redirectUrl="/pages/Services/Incorporation/S8"
         />
-        {/* <Info
-          imageLink=""
-          title=""
-          description=""
-          price="799"
-          redirectUrl=""
-        /> */}
+
 
         <MKTypography
           variant="h2"

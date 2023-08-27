@@ -1,140 +1,133 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function CAN() {
+  const documentList = [
+    { name: 'Copy of GST Registration Certificate' },
+    { name: 'Copy of PAN Card' },
+    { name: 'Copy of ID and Address Proof' },
+    { name: 'Authorization Letter' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the process for Cancellation of GST Registration?',
+      answer: 'A1: GST registration cancellation involves applying for the deregistration of a GSTIN when a business ceases its operations...'
+    },
+    {
+      question: 'Q2: When should the cancellation be applied?',
+      answer: 'A2: Cancellation should be applied within 30 days of the business ceasing operations or becoming ineligible for GST registration...'
+    },
+    {
+      question: 'Q3: What documents are required for GST registration cancellation?',
+      answer: 'A3: Documents such as copy of GST registration certificate, PAN card, ID and address proof, and authorization letter...'
+    },
+    {
+      question: 'Q4: Are there any consequences of not cancelling GST registration?',
+      answer: 'A4: Failure to cancel GST registration may result in continued compliance obligations and liabilities, including filing returns and taxes...'
+    },
+    {
+      question: 'Q5: Who can apply for GST registration cancellation?',
+      answer: 'A5: Authorized individuals, such as business owners, directors, or designated representatives, can initiate the cancellation process...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Cancellation of GST Registration"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Cancellation of GST Registration" },
-      ]}
-    >
-      <section className="cancellation-section">
-        <div className="content">
-          <p>
-            If you wish to cancel your Goods and Services Tax (GST) registration, you can initiate a request for cancellation. This may be required if your business operations have ceased, you no longer meet the GST registration criteria, or you are closing down your business.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>Cancellation of GST Registration</h3>
+      <div className="container">
+        <header>
+          <h1>Cancellation of GST Registration</h1>
+          <p className="headline">Deregister your GSTIN when your business ceases operations or becomes ineligible for GST</p>
+        </header>
 
-          <p>
-            To cancel your GST registration, you will need to fill out a cancellation form or submit a request with the appropriate tax authorities. The process and requirements for cancellation may vary depending on your jurisdiction. It is important to comply with the guidelines and procedures set by the tax authorities to ensure a smooth cancellation process.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About GST Registration Cancellation</h2>
+            <p>
+              GST registration cancellation is the process of applying for the deregistration of a GSTIN when a business ceases its operations
+              or becomes ineligible for GST. It's essential to cancel registration to avoid ongoing compliance obligations and liabilities.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Copy of GST registration certificate</li>
-            <li>Proof of cessation of business operations (if applicable)</li>
-            <li>Financial statements and audit reports (if applicable)</li>
-            <li>Any other documents as specified by the tax authorities</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. Why would I need to cancel my GST registration?</h4>
-            <p>
-              There are several reasons why you might need to cancel your GST registration, including:
-            </p>
-            <ul>
-              <li>Cessation of business operations</li>
-              <li>No longer meeting the GST registration criteria</li>
-              <li>Closing down your business</li>
-              <li>Change in business structure or ownership</li>
-              <li>Transfer of business or merger/acquisition</li>
-            </ul>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. How can I cancel my GST registration?</h4>
-            <p>
-              The process to cancel your GST registration may vary depending on your jurisdiction. Generally, you will need to fill out a cancellation form or submit a request online or offline with the appropriate tax authorities. It is recommended to visit the official GST portal or contact the tax authorities for specific instructions and guidelines on cancellation procedures.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. What is the timeline for GST registration cancellation?</h4>
-            <p>
-              The timeline for GST registration cancellation may vary depending on the tax authorities and the specific circumstances. It typically takes a few weeks to process the cancellation request and issue the cancellation certificate. It is important to initiate the cancellation process well in advance to avoid any non-compliance penalties or obligations.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. Are there any implications or liabilities after GST registration cancellation?</h4>
-            <p>
-              After the cancellation of your GST registration, you will no longer be required to comply with the GST laws and file GST returns. However, you may still be liable for any pending tax payments, returns, or compliance obligations up until the date of cancellation. It is advisable to consult with a tax professional to ensure proper closure of your GST-related liabilities and obligations.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. Can I reapply for GST registration after cancellation?</h4>
-            <p>
-              Yes, if you need to restart your business or meet the GST registration criteria again in the future, you can reapply for GST registration after cancellation. The process for reapplication may be similar to the initial registration process, and you will need to provide the necessary documents and fulfill the requirements specified by the tax authorities.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .cancellation-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of Cancellation</h2>
+          <ul>
+            <li> Compliance Relief: Cancellation relieves businesses from ongoing GST compliance obligations and returns filing.</li>
+            <li> Avoid Penalties: Cancellation prevents penalties for non-compliance after a business ceases operations or becomes ineligible.</li>
+            <li> Legal Clarity: Deregistration provides legal clarity and closure for businesses that are no longer active.</li>
+            <li> Tax Savings: Businesses can avoid payment of taxes once they have ceased operations and deregistered from GST.</li>
+            <li> Reputational Benefits: Cancellation ensures accurate records and prevents wrongful usage of the GSTIN.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="gst-cancellation-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Cancellation Process</h2>
+          <ul>
+            <li> Document Preparation: Gather required documents such as GST registration certificate, PAN card, ID and address proof.</li>
+            <li> Cancellation Application: Fill the GST registration cancellation form with accurate and complete details.</li>
+            <li> Document Submission: Attach the required documents along with the cancellation application.</li>
+            <li> Verification: Verify the information provided in the cancellation application.</li>
+            <li> Authority Submission: Submit the cancellation application through the GST portal for approval.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Consequences of Non-Cancellation</h2>
+          <p>
+            Failure to cancel GST registration may result in continued compliance obligations, filing returns, and payment of taxes.
+            It's crucial to cancel registration once a business ceases operations or becomes ineligible for GST.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

@@ -47,7 +47,7 @@ function Information() {
                   Service
                 </>
               }
-                description={<>All the MUI components that you need in a development have been re-design with the new look</>}
+                description={<>Unlock financial clarity and success with our expert bookkeeping service, your essential partner for efficient and accurate financial management.</>}
             />
             <RotatingCardBack
               // image={bgBack}
@@ -77,7 +77,7 @@ function Information() {
                     Service
                   </>
                 }
-                  description={<>All the MUI components that you need in a development have been re-design with the new look</>}
+                  description={<>Unlock financial clarity and success with our expert bookkeeping service, your essential partner for efficient and accurate financial management.</>}
               />
               <RotatingCardBack
                 // image={bgBack}

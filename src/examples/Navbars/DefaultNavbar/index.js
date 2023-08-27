@@ -136,7 +136,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                         minWidth="11.25rem"
                         display="block"
                         variant="button"
-                        color="text"
+                        color="dark"
                         textTransform="capitalize"
                         fontWeight="regular"
                         py={0.625}
@@ -198,10 +198,10 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            variant="button"
+            variant="body2"
             textTransform="capitalize"
             minWidth={item.description ? "14rem" : "12rem"}
-            color={item.description ? "dark" : "text"}
+            color={item.description ? "dark" : "dark"}
             fontWeight={item.description ? "bold" : "regular"}
             py={item.description ? 1 : 0.625}
             px={2}
@@ -238,7 +238,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                 <MKTypography
                   display="block"
                   variant="button"
-                  color="text"
+                  color="dark"
                   fontWeight="regular"
                   sx={{ transition: "all 300ms linear" }}
                 >
@@ -345,7 +345,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                   variant="button"
                   textTransform="capitalize"
                   minWidth={item.description ? "14rem" : "12rem"}
-                  color={item.description ? "dark" : "text"}
+                  color={item.description ? "dark" : "dark"}
                   fontWeight={item.description ? "bold" : "regular"}
                   py={item.description ? 1 : 0.625}
                   px={2}
@@ -370,7 +370,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                       <MKTypography
                         display="block"
                         variant="button"
-                        color="text"
+                        color="dark"
                         fontWeight="regular"
                         sx={{ transition: "all 300ms linear" }}
                       >

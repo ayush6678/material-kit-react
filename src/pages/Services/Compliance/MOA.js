@@ -1,116 +1,132 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function MOA() {
+  const documentList = [
+    { name: 'Board Resolution' },
+    { name: 'Amended Memorandum of Association' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the process for changing the objects in the Memorandum of Association (MOA)?',
+      answer: 'A1: The process involves obtaining board approval, shareholder approval, and filing with RoC...'
+    },
+    {
+      question: 'Q2: How long does it take to change the objects in the MOA?',
+      answer: 'A2: The duration varies due to the approvals required and RoC processing time...'
+    },
+    {
+      question: 'Q3: Can the company change its objects to any type of business?',
+      answer: 'A3: The new objects must be aligned with the company\'s existing business and comply with regulations...'
+    },
+    {
+      question: 'Q4: What happens to contracts related to the previous objects after the change?',
+      answer: 'A4: Contracts related to the previous objects remain valid, and the company continues operations...'
+    },
+    {
+      question: 'Q5: Are there any legal implications of changing the objects in the MOA?',
+      answer: 'A5: Changing the objects requires compliance with regulations and approvals, but it doesn\'t affect legal standing...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Change in Objects (MOA)"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "MOA Change" },
-      ]}
-    >
-      <section className="moachange-section">
-        <div className="content">
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <p>
-            Get help with making changes to your company's Memorandum of Association (MOA) to reflect new business activities.
-          </p>
+      <div className="container">
+        <header>
+          <h1>Change in Objects (Memorandum of Association - MOA)</h1>
+          <p className="headline">Modify the primary business activities of your company</p>
+        </header>
 
-          <h3>What We Offer</h3>
+        <div className='list'>
 
-          <ul>
-            <li>Drafting clauses for proposed MOA changes</li>
-            <li>Filing alteration application with ROC</li>
-            <li>Pursuing change in objects with MCA</li>
-            <li>Updating MOA across records</li>
-          </ul>
-
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Change in Objects (MOA)</h2>
+            <p>
+              Changing the objects in the Memorandum of Association (MOA) involves a formal process that includes obtaining
+              board approval, shareholder approval, and filing with the Registrar of Companies (RoC). This change reflects the
+              primary business activities that the company will engage in.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Documents Required</h3>
-
-          <ul>
-            <li>Latest MOA and AOA</li>
-            <li>Board resolution approving changes</li>
-            <li>Shareholder approval/consent documents</li>
-            <li>Justification for objects change</li>
-          </ul>
-
-          <h3>FAQs</h3>
-
-          <div className="faq-section">
-            <h4>What form is required for change in MOA?</h4>
-            <p>Form INC-22 needs to be filed with ROC along with altered MOA as attachment.</p>
-          </div>
-
-          <div className="faq-section">
-            <h4>Is shareholder approval mandatory for MOA change?</h4>
-            <p>Yes, alteration in MOA requires approval of at least 75% shareholders through special resolution.</p>
-          </div>
-
         </div>
-      </section>
 
-      <style jsx>{`
-        
-        .moachange-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
-        
-        h3 {
-          margin-top: 30px;
-        }
-        
-        ul {
-          margin-top: 10px;
-        }
-        
-        li {
-          margin-bottom: 8px;
-        }
-        
-        p {
-          color: #333;
-        }
-        
-        .form-area {
-          border-radius: 5px;  
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-        
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-        
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-        
-      `}</style>
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-    </BaseLayout>
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of Changing Objects in MOA</h2>
+          <ul>
+            <li> Business Adaptation: Changing objects allows the company to adapt to new business opportunities.</li>
+            <li> Regulatory Alignment: New objects must comply with regulatory guidelines and the company's existing operations.</li>
+            <li> Shareholder Approval: Changing objects requires approval from the company's shareholders.</li>
+            <li> Contracts and Agreements: Contracts related to previous objects remain valid after the change.</li>
+            <li> Operational Expansion: The new objects enable the company to expand into new business areas.</li>
+          </ul>
+        </section>
+
+        <section className="change-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Objects Change Process (MOA)</h2>
+          <ul>
+            <li> Board Resolution: Obtain board approval for changing the objects in the MOA.</li>
+            <li> Shareholder Approval: Obtain approval from shareholders through a special resolution.</li>
+            <li> Amended MOA: Prepare the amended Memorandum of Association reflecting the new objects.</li>
+            <li> Filing with RoC: File the amended MOA with the Registrar of Companies.</li>
+            <li> Updated Certificate: Receive an updated Certificate of Incorporation reflecting the changes.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Legal Implications of Objects Change (MOA)</h2>
+          <p>
+            Changing the objects in the MOA requires compliance with regulatory guidelines and approvals, but it doesn't affect
+            the company's legal standing. Contracts related to the previous objects remain valid.
+          </p>
+        </section>
+
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

@@ -1,136 +1,137 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
-function PLC() {
+function PCL() {
+  const documentList = [
+    { name: 'Business Plan' },
+    { name: 'Memorandum of Association' },
+    { name: 'Articles of Association' },
+    { name: 'Shareholder Agreement' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What are the benefits of incorporating a private company?',
+      answer: 'A1: Incorporating a private company offers limited liability protection...'
+    },
+    {
+      question: 'Q2: How long does the incorporation process take?',
+      answer: 'A2: The duration varies, but it typically takes a few weeks to complete...'
+    },
+    {
+      question: 'Q3: Are there any specific requirements for directors?',
+      answer: 'A3: Yes, private companies are required to have at least one director...'
+    },
+    {
+      question: 'Q4: What is the minimum share capital required for incorporation?',
+      answer: 'A4: There is no fixed minimum share capital, but companies usually have a nominal amount...'
+    },
+    {
+      question: 'Q5: Can foreign nationals be directors or shareholders?',
+      answer: 'A5: Yes, foreign nationals can serve as directors and shareholders in private companies...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Private Limited Company Incorporation"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Private Limited Company" },
-      ]}
-    >
-      <section className="private-limited-section">
-        <div className="content">
-          <p>
-            A Private Limited Company is a popular business structure that provides limited liability protection to its shareholders and offers various benefits. It is a separate legal entity that can own assets, enter contracts, and carry out business activities.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>Pricing</h3>
+      <div className="container">
+        <header>
+          <h1>Private Company Limited Incorporation</h1>
+          <p className="headline">Your pathway to business success</p>
+        </header>
 
-          <p>
-            Our Private Limited Company incorporation services come with flexible pricing options. Please contact us for detailed pricing information tailored to your specific requirements.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Private Company Limited Incorporation</h2>
+            <p>
+              Private Company Limited Incorporation is the process of forming a business entity that
+              offers limited liability protection to its owners. This type of incorporation provides a legal
+              separation between the company and its owners, allowing the business to operate as a separate
+              legal entity.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Copy of identity proof (PAN card, Aadhaar card, etc.) for directors and shareholders</li>
-            <li>Copy of address proof (Utility bill, passport, etc.) for directors and shareholders</li>
-            <li>Passport-size photograph of directors and shareholders</li>
-            <li>Memorandum of Association (MoA) and Articles of Association (AoA)</li>
-            <li>Declaration by directors</li>
-            <li>Address proof of the registered office</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. What is a Private Limited Company?</h4>
-            <p>
-              A Private Limited Company is a business structure that offers limited liability protection to its shareholders and has a separate legal existence. It is one of the most common forms of business entities, providing benefits such as limited liability, perpetual succession, and ease of raising capital.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. What are the benefits of forming a Private Limited Company?</h4>
-            <p>
-              Forming a Private Limited Company offers benefits such as limited liability protection, separate legal entity status, credibility, ease of raising funds, and perpetual succession. It provides a structured and professional framework for conducting business activities.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. How many directors and shareholders are required for a Private Limited Company?</h4>
-            <p>
-              A minimum of two directors and two shareholders are required to form a Private Limited Company. However, a director and a shareholder can be the same person, which means a company can be incorporated with a minimum of two individuals.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. Can a Private Limited Company be converted into a Public Limited Company?</h4>
-            <p>
-              Yes, a Private Limited Company can be converted into a Public Limited Company by fulfilling the necessary legal requirements and complying with the regulations specified by the Companies Act. The conversion process involves certain procedures and approvals.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. What is the minimum capital requirement for a Private Limited Company?</h4>
-            <p>
-              The minimum capital requirement for a Private Limited Company has been abolished. It can be incorporated with any amount of capital as per the business requirements and the discretion of the promoters.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .private-limited-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Benefits of Private Company Limited Incorporation</h2>
+          <ul>
+            <li> Limited Liability: Shareholders are not personally liable for company debts.</li>
+            <li> Separate Legal Entity: The company has its own legal identity distinct from owners.</li>
+            <li> Easier Fundraising: Attract investors by issuing shares and raising capital.</li>
+            <li> Perpetual Succession: The company continues to exist even if shareholders change.</li>
+            <li> Tax Advantages: Access to various tax benefits and deductions.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="incorporation-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Incorporation Process</h2>
+          <ul>
+            <li> Name Reservation: Choose a unique name and get it approved by the regulatory authority.</li>
+            <li> Prepare Documents: Prepare necessary documents such as Articles of Association and Memorandum of Association.</li>
+            <li> Filing Application: Submit incorporation forms and required documents to the regulatory authority.</li>
+            <li> Certificate of Incorporation: Once approved, receive the Certificate of Incorporation.</li>
+            <li> Post-Incorporation Tasks: Hold initial meetings, allocate shares, and obtain necessary licenses.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Director Requirements</h2>
+          <p>
+            Private companies are required to have at least one director. Directors must be individuals of legal age,
+            and there are no restrictions on their nationality or residency. It's important to note that directors
+            have fiduciary duties and legal responsibilities to act in the best interests of the company.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 
-export default PLC;
+export default PCL;

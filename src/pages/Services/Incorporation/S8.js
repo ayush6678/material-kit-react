@@ -1,135 +1,134 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function S8() {
+  const documentList = [
+    { name: 'Memorandum of Association' },
+    { name: 'Articles of Association' },
+    { name: 'Income and Expenditure Projections' },
+    { name: 'Proposed Programs and Activities' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What are the benefits of establishing a Section 8 or NGO?',
+      answer: 'A1: Establishing a Section 8 company provides a legal structure for non-profit activities...'
+    },
+    {
+      question: 'Q2: How long does the process of Section 8 or NGO incorporation usually take?',
+      answer: 'A2: The duration varies, but it typically takes a few weeks to formalize the incorporation...'
+    },
+    {
+      question: 'Q3: What is the primary objective of a Section 8 or NGO?',
+      answer: 'A3: The primary objective is to promote charitable, scientific, or artistic endeavors without profit distribution...'
+    },
+    {
+      question: 'Q4: Can a Section 8 or NGO generate profits?',
+      answer: 'A4: While profits can be generated, they must be used for the organization\'s objectives and not distributed to members...'
+    },
+    {
+      question: 'Q5: What is the process for obtaining tax benefits for a Section 8 or NGO?',
+      answer: 'A5: NGOs can apply for tax benefits by registering under Section 12A and Section 80G of the Income Tax Act...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Section 8 or NGO Incorporation"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Section 8 or NGO" },
-      ]}
-    >
-      <section className="section8-ngo-section">
-        <div className="content">
-          <p>
-            Section 8 Company or Non-Governmental Organization (NGO) is a type of organization that is formed for promoting arts, science, commerce, education, charity, social welfare, religion, environment protection, or any other useful objective. It operates for the betterment of society and does not distribute its profits to its members.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>Pricing</h3>
+      <div className="container">
+        <header>
+          <h1>Section 8 or NGO Incorporation</h1>
+          <p className="headline">Empower positive change through non-profit endeavors</p>
+        </header>
 
-          <p>
-            Our Section 8 or NGO incorporation services come with flexible pricing options. Please contact us for detailed pricing information tailored to your specific requirements.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Section 8 or NGO Incorporation</h2>
+            <p>
+              Section 8 or NGO Incorporation involves creating a non-profit organization under Section 8 of the Companies Act.
+              This legal structure is ideal for entities dedicated to promoting charitable, educational, scientific, religious,
+              or artistic activities. The primary focus is on serving the community without profit distribution.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Copy of identity proof (PAN card, Aadhaar card, etc.) for directors and members</li>
-            <li>Copy of address proof (Utility bill, passport, etc.) for directors and members</li>
-            <li>Passport-size photograph of directors and members</li>
-            <li>Memorandum of Association (MoA) and Articles of Association (AoA)</li>
-            <li>Declaration by the directors</li>
-            <li>Address proof of the registered office</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. What is a Section 8 Company or NGO?</h4>
-            <p>
-              A Section 8 Company or NGO is an organization formed for promoting various charitable, social, or other useful objectives. It operates for the welfare of society and does not distribute its profits among its members. These organizations are governed by the provisions of Section 8 of the Companies Act.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. What are the benefits of forming a Section 8 Company or NGO?</h4>
-            <p>
-              Forming a Section 8 Company or NGO offers benefits such as tax exemptions, access to grants and funding, credibility and recognition, limited liability for its members, and the opportunity to make a positive impact on society.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. Can a Section 8 Company or NGO earn profits?</h4>
-            <p>
-              A Section 8 Company or NGO can earn profits, but the profits cannot be distributed among its members. The profits earned must be utilized for promoting the objectives of the organization and cannot be distributed as dividends or personal income.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. What is the minimum number of directors and members required for a Section 8 Company or NGO?</h4>
-            <p>
-              A Section 8 Company or NGO must have a minimum of two directors and a minimum of two members. The directors and members can be the same individuals. However, the maximum number of directors and members may vary based on the provisions of the Companies Act.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. Can a Section 8 Company or NGO be converted into a different type of organization?</h4>
-            <p>
-              Yes, a Section 8 Company or NGO can be converted into a different type of organization, such as a trust or a society, based on the requirements and legal provisions. The conversion process involves certain procedures and compliance with the applicable laws.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .section8-ngo-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Benefits of Section 8 or NGO Incorporation</h2>
+          <ul>
+            <li> Legal Recognition: Section 8 companies receive legal recognition for their non-profit objectives.</li>
+            <li> Credibility: Being registered under a legal framework enhances the organization's credibility.</li>
+            <li> Tax Exemptions: NGOs can enjoy tax benefits on donations received under Section 80G of the Income Tax Act.</li>
+            <li> Perpetual Existence: The organization continues to exist despite changes in members.</li>
+            <li> Community Impact: NGOs play a vital role in driving positive social and community change.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="incorporation-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Incorporation Process</h2>
+          <ul>
+            <li> Name Reservation: Choose a suitable name and obtain approval from the regulatory authority.</li>
+            <li> Draft Memorandum and Articles: Prepare Memorandum of Association and Articles of Association.</li>
+            <li> Income Projections: Present projected income and expenditure for at least three years.</li>
+            <li> Programs and Activities: Outline proposed programs, activities, and their impact.</li>
+            <li> Registration: Submit incorporation forms and required documents for approval.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Primary Objectives and Activities</h2>
+          <p>
+            The primary objective of a Section 8 or NGO is to promote activities such as charity, education, social welfare,
+            religion, culture, and more. These objectives must be exclusively for public interest without profit distribution.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

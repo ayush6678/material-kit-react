@@ -1,116 +1,139 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function TS() {
+  const documentList = [
+    { name: 'Share Transfer Deed' },
+    { name: 'No Objection Certificate (NOC)' },
+    { name: 'Board Resolution' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the process for transferring shares of a company?',
+      answer: 'A1: The process involves obtaining a share transfer deed, obtaining NOC from other shareholders...'
+    },
+    {
+      question: 'Q2: How long does it take to complete the share transfer process?',
+      answer: 'A2: The duration varies due to documentation, approvals required, and RoC processing time...'
+    },
+    {
+      question: 'Q3: Can shares be transferred to anyone without any restrictions?',
+      answer: 'A3: Shares can be transferred, but the company\'s Articles of Association may have transfer restrictions...'
+    },
+    {
+      question: 'Q4: What is the role of the company in the share transfer process?',
+      answer: 'A4: The company ensures that the transfer complies with regulations and updates its records...'
+    },
+    {
+      question: 'Q5: Are there any tax implications of transferring shares?',
+      answer: 'A5: Yes, capital gains tax may apply, and it\'s important to consider tax implications...'
+    },
+    {
+      question: 'Q6: What happens after the successful transfer of shares?',
+      answer: 'A6: After the transfer is completed, the company updates its records and issues new share certificates...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Transfer of Shares"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Share Transfer" },
-      ]}
-    >
-      <section className="sharetransfer-section">
-        <div className="content">
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <p>
-            Get end-to-end assistance with transferring equity shares of your company from one party to another.
-          </p>
+      <div className="container">
+        <header>
+          <h1>Transfer of Shares</h1>
+          <p className="headline">Transfer ownership of company shares with proper documentation</p>
+        </header>
 
-          <h3>What We Offer</h3> 
+        <div className='list'>
 
-          <ul>
-            <li>Examining transfer clauses in AoA</li>
-            <li>Complying with share transfer process</li>
-            <li>Filing SH-4 form with RoC</li>
-            <li>Issuing new share certificates</li>  
-          </ul>
-
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Share Transfer</h2>
+            <p>
+              Transferring shares of a company involves a process that includes obtaining a share transfer deed, obtaining
+              a No Objection Certificate (NOC) from other shareholders, and adhering to regulatory guidelines. This process
+              ensures a proper transfer of ownership while complying with legal requirements.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Documents Required</h3>
-
-          <ul>
-            <li>Transfer request from parties involved</li>
-            <li>Original share certificate(s)</li>
-            <li>Board resolution approving transfer </li>
-            <li>PAN details of parties</li>
-          </ul>
-
-          <h3>FAQs</h3>
-
-          <div className="faq-section">
-            <h4>What form is required for share transfer?</h4>
-            <p>Form SH-4 needs to be filed with RoC along with share transfer deed.</p>
-          </div>
-
-          <div className="faq-section">
-            <h4>When does share transfer come into effect?</h4>
-            <p>Share transfer comes into effect when SH-4 is approved and new share certificate is issued by company.</p>
-          </div>
-
         </div>
-      </section>
 
-      <style jsx>{`
-        
-        .sharetransfer-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
-        
-        h3 {
-          margin-top: 30px;
-        }
-        
-        ul {
-          margin-top: 10px;
-        }
-        
-        li {
-          margin-bottom: 8px;
-        }
-        
-        p {
-          color: #333;
-        }
-        
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-        
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-        
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-        
-      `}</style>
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-    </BaseLayout>
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of Share Transfer</h2>
+          <ul>
+            <li> Ownership Transfer: Share transfer allows the transfer of ownership from one shareholder to another.</li>
+            <li> Regulatory Compliance: The process ensures compliance with legal and regulatory requirements.</li>
+            <li> Shareholder Consent: Transfer requires NOC from other shareholders and adherence to AoA.</li>
+            <li> Company Role: The company verifies and facilitates the transfer while updating records.</li>
+            <li> Tax Considerations: Capital gains tax and other tax implications must be considered.</li>
+            <li> Updated Shareholding: After transfer, the company issues new share certificates to the transferee.</li>
+          </ul>
+        </section>
+
+        <section className="transfer-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Share Transfer Process</h2>
+          <ul>
+            <li> Share Transfer Deed: Prepare a share transfer deed with details of transferor and transferee.</li>
+            <li> NOC from Shareholders: Obtain a No Objection Certificate (NOC) from other shareholders.</li>
+            <li> Board Resolution: Obtain a board resolution approving the share transfer.</li>
+            <li> Document Submission: Submit the share transfer deed and other documents to the company.</li>
+            <li> Approval and Record Update: The company verifies, approves, and updates its records.</li>
+            <li> Issuance of New Certificates: New share certificates are issued to the transferee.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Legal and Tax Implications of Share Transfer</h2>
+          <p>
+            Share transfer involves compliance with regulations, obtaining NOC, and proper documentation. Tax implications,
+            including capital gains tax, must be evaluated. The company ensures the transfer aligns with legal requirements.
+          </p>
+        </section>
+
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

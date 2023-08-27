@@ -1,135 +1,134 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function SP() {
+  const documentList = [
+    { name: 'Business Plan' },
+    { name: 'Owner Details' },
+    { name: 'Financial Projections' },
+    { name: 'Business Licenses' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What are the benefits of starting a Sole Proprietorship?',
+      answer: 'A1: Starting a sole proprietorship offers complete control, simplified management...'
+    },
+    {
+      question: 'Q2: How long does the process of starting a Sole Proprietorship take?',
+      answer: 'A2: The duration varies, but it generally takes a few days to set up...'
+    },
+    {
+      question: 'Q3: Are there any specific legal requirements for a Sole Proprietor?',
+      answer: 'A3: No separate legal entity is formed, so legal requirements are tied to the individual...'
+    },
+    {
+      question: 'Q4: How is taxation handled in a Sole Proprietorship?',
+      answer: 'A4: In a sole proprietorship, the owner reports business income and expenses on their personal tax return...'
+    },
+    {
+      question: 'Q5: Can a Sole Proprietorship be transformed into a different business structure?',
+      answer: 'A5: Yes, a sole proprietorship can be converted into other business structures as the business grows...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Sole Proprietorship Incorporation"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Sole Proprietorship" },
-      ]}
-    >
-      <section className="sole-proprietorship-section">
-        <div className="content">
-          <p>
-            Sole Proprietorship is the simplest form of business structure where an individual runs and operates a business as the sole owner. It offers simplicity in terms of setup, decision-making, and taxation.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>Pricing</h3>
+      <div className="container">
+        <header>
+          <h1>Sole Proprietorship Incorporation</h1>
+          <p className="headline">Embark on your solo entrepreneurial journey</p>
+        </header>
 
-          <p>
-            Our sole proprietorship incorporation services come with flexible pricing options. Please contact us for detailed pricing information tailored to your specific requirements.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Sole Proprietorship Incorporation</h2>
+            <p>
+              Sole Proprietorship Incorporation involves starting and operating a business as an individual owner.
+              In this form of business, you have complete control and responsibility. It's the simplest way to begin
+              a business venture and is suitable for small-scale operations.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Copy of identity proof (PAN card, Aadhaar card, etc.)</li>
-            <li>Copy of address proof (Utility bill, passport, etc.)</li>
-            <li>Passport-size photograph of the proprietor</li>
-            <li>Registration certificate (if applicable)</li>
-            <li>Trade license (if applicable)</li>
-            <li>Other business-specific licenses (if applicable)</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. What is a Sole Proprietorship?</h4>
-            <p>
-              A Sole Proprietorship is a business structure where an individual operates and manages a business as the sole owner. The individual has complete control and responsibility for the business and its operations.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. What are the benefits of a Sole Proprietorship?</h4>
-            <p>
-              A Sole Proprietorship offers benefits such as simplicity in setup, complete control and decision-making authority, minimal compliance requirements, and ease of taxation. It is an ideal choice for small businesses and freelancers.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. Is there a registration requirement for a Sole Proprietorship?</h4>
-            <p>
-              No, there is no specific registration requirement for a Sole Proprietorship. However, depending on the nature of the business, certain licenses and registrations may be necessary at the local or state level.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. Are the proprietor's personal assets protected in a Sole Proprietorship?</h4>
-            <p>
-              No, in a Sole Proprietorship, there is no legal distinction between the business and the owner. The proprietor's personal assets are not protected, and the proprietor is personally liable for the debts and obligations of the business.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. Can a Sole Proprietorship be converted into another business structure?</h4>
-            <p>
-              Yes, a Sole Proprietorship can be converted into a different business structure, such as a Private Limited Company, Partnership, or Limited Liability Partnership (LLP), based on the requirements and eligibility criteria of the desired business structure.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .sole-proprietorship-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Benefits of Sole Proprietorship</h2>
+          <ul>
+            <li> Complete Control: As a sole proprietor, you have full control over business decisions.</li>
+            <li> Simplified Management: You manage all aspects of the business without shared decision-making.</li>
+            <li> Direct Profits: All profits belong to you as the sole owner of the business.</li>
+            <li> Easy Setup: Sole proprietorships have minimal legal and regulatory requirements.</li>
+            <li> Tax Efficiency: Business income and personal taxes are reported together, simplifying taxation.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="incorporation-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Incorporation Process</h2>
+          <ul>
+            <li> Choose Business Name: Select a suitable name for your business.</li>
+            <li> Register: Depending on local regulations, register your business name and obtain necessary licenses.</li>
+            <li> Business Plan: Create a basic business plan outlining your business goals and strategies.</li>
+            <li> Financial Setup: Set up a separate bank account for business transactions.</li>
+            <li> Begin Operations: Start running your business as the sole proprietor.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Owner Responsibilities</h2>
+          <p>
+            As the sole proprietor, you are responsible for all aspects of the business, including operations, decision-making,
+            finances, and legal compliance. You must manage business affairs while ensuring adherence to regulations.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

@@ -1,116 +1,131 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function ARC() {
+  const documentList = [
+    { name: 'Board Resolution' },
+    { name: 'Shareholders\' Approval' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the process for altering the share capital of a company?',
+      answer: 'A1: The process involves obtaining board approval, obtaining approval from shareholders...'
+    },
+    {
+      question: 'Q2: How long does it take to alter the share capital?',
+      answer: 'A2: The duration varies due to approvals required, documents to be filed, and RoC processing time...'
+    },
+    {
+      question: 'Q3: Can the company increase or decrease its share capital as needed?',
+      answer: 'A3: Share capital can be increased or decreased by following the proper legal procedures...'
+    },
+    {
+      question: 'Q4: What are the implications for existing shareholders when altering share capital?',
+      answer: 'A4: Existing shareholders may experience dilution or an increase in their ownership percentage...'
+    },
+    {
+      question: 'Q5: Are there any legal compliance requirements for altering the share capital?',
+      answer: 'A5: Yes, altering share capital requires compliance with regulatory approvals and filing...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Alteration of Share Capital"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" }, 
-        { label: "Share Capital Alteration" },
-      ]}
-    >
-      <section className="sharecapital-section">
-        <div className="content">
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <p>
-            Get end-to-end assistance with altering your company's share capital structure through increase, reduction, etc.
-          </p>
+      <div className="container">
+        <header>
+          <h1>Alteration of Share Capital</h1>
+          <p className="headline">Modify the company's share capital structure</p>
+        </header>
 
-          <h3>What We Offer</h3>
+        <div className='list'>
 
-          <ul>
-            <li>Preparing shareholders resolution</li>
-            <li>Filing of e-forms with ROC</li>
-            <li>Making submissions to RBI (for foreign funds)</li>
-            <li>Updating records and share certificates</li>
-          </ul>
-
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Alteration of Share Capital</h2>
+            <p>
+              Altering the share capital of a company involves obtaining board approval, obtaining approval from shareholders,
+              and adhering to regulatory guidelines. This process allows changes to the company's ownership structure.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Documents Required</h3>
-
-          <ul>
-            <li>Latest MoA and AoA</li>
-            <li>Board resolution approving alterations</li>
-            <li>Shareholder special resolution</li>
-            <li>CA certificate (for capital reduction)</li>
-          </ul>
-
-          <h3>FAQs</h3>
-
-          <div className="faq-section">
-            <h4>What forms are required for alteration of share capital?</h4>
-            <p>Forms SH-7 and PAS-3 need to be filed with RoC for altering share capital.</p>
-          </div>
-
-          <div className="faq-section">
-            <h4>When does alteration of share capital come into effect?</h4>
-            <p>It comes into effect once forms are filed and approved by the RoC.</p>
-          </div>
-
         </div>
-      </section>
 
-      <style jsx>{`
-        
-        .sharecapital-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
-        }
-        
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
-        
-        h3 {
-          margin-top: 30px;
-        }
-        
-        ul {
-          margin-top: 10px;
-        }
-        
-        li {
-          margin-bottom: 8px;
-        }
-        
-        p {
-          color: #333;
-        }
-        
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-        
-        .faq-section {
-          margin-top: 40px;  
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-        
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-        
-      `}</style>
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-    </BaseLayout>
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of Altering Share Capital</h2>
+          <ul>
+            <li> Ownership Structure: Altering share capital allows changes in ownership percentages among shareholders.</li>
+            <li> Regulatory Compliance: The process adheres to regulatory requirements for share capital changes.</li>
+            <li> Shareholder Approval: Changes in share capital require approval from existing shareholders.</li>
+            <li> Dilution and Ownership: Existing shareholders may experience dilution or change in ownership percentage.</li>
+            <li> Investment and Funding: Share capital changes can facilitate new investments and fundraising.</li>
+          </ul>
+        </section>
+
+        <section className="change-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Share Capital Alteration Process</h2>
+          <ul>
+            <li> Board Resolution: Obtain board approval for altering the share capital.</li>
+            <li> Shareholders' Approval: Obtain approval from shareholders through a special resolution.</li>
+            <li> Document Preparation: Prepare necessary documents reflecting the altered share capital.</li>
+            <li> Filing with RoC: File the relevant forms and documents with the Registrar of Companies.</li>
+            <li> Updated Records: Update official records to reflect the changes in share capital.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Legal Compliance for Share Capital Alteration</h2>
+          <p>
+            Altering share capital requires compliance with regulatory approvals, shareholder consents, and proper filings.
+            Existing shareholders' interests must be taken into consideration during the process.
+          </p>
+        </section>
+
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

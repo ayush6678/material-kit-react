@@ -1,132 +1,133 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function COA() {
+  const documentList = [
+    { name: 'Updated Address Proof' },
+    { name: 'Updated Contact Details' },
+    { name: 'Updated Identification Documents' },
+    { name: 'Authorization Letter' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is the procedure for Change in Address/Contact/Other Information?',
+      answer: 'A1: Change in Address/Contact/Other Information requires updating the respective details with the relevant authorities...'
+    },
+    {
+      question: 'Q2: When should the changes be reported?',
+      answer: 'A2: Changes should be reported as soon as they occur or within the specified timeline to ensure accurate records...'
+    },
+    {
+      question: 'Q3: What documents are required for updating information?',
+      answer: 'A3: Documents such as updated address proof, updated contact details, updated identification documents, and authorization letter...'
+    },
+    {
+      question: 'Q4: Are there any consequences of not updating information?',
+      answer: 'A4: Failure to update information may result in outdated records, missed communications, legal or compliance issues, and penalties...'
+    },
+    {
+      question: 'Q5: Who can request changes in information?',
+      answer: 'A5: Authorized individuals, such as company directors, partners, or designated representatives, can initiate the process...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Change in Address/Contact/Other Information"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Change Information" },
-      ]}
-    >
-      <section className="change-section">
-        <div className="content">
-          <p>
-            If you need to update your address, contact details, or any other information provided to a particular organization, you can initiate a request for change in address/contact/other information. This allows you to keep your records up-to-date and ensures that the organization has accurate information for communication and other purposes.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Get Started",
+          color: "success",
+        }}
+        transparent
+        sticky
+      />
 
-          <h3>Change in Address/Contact/Other Information</h3>
+      <div className="container">
+        <header>
+          <h1>Change in Address/Contact/Other Information</h1>
+          <p className="headline">Ensure accurate records by updating your company's information as needed</p>
+        </header>
 
-          <p>
-            To request a change in address, contact details, or other information, you will need to fill out a form or submit a request with the organization. The process may vary depending on the specific organization or entity you are dealing with. It is important to provide accurate and complete information to facilitate the update process smoothly.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Information Update</h2>
+            <p>
+              Information changes such as address, contact details, and other key information should be promptly updated to maintain accurate records
+              and ensure effective communication with authorities and stakeholders.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>₹1000</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Necessary Documents</h3>
-
-          <ul>
-            <li>Identification proof (e.g., Aadhaar card, passport, driver's license)</li>
-            <li>Address proof (e.g., utility bill, rental agreement, bank statement)</li>
-            <li>Any other documents as specified by the organization</li>
-          </ul>
-
-          <h3>Frequently Asked Questions (FAQ)</h3>
-
-          <div className="faq-section">
-            <h4>1. How can I change my address/contact/other information?</h4>
-            <p>
-              The process to change your address, contact details, or other information may vary depending on the organization or entity you are dealing with. Generally, you can initiate the request by filling out a form or submitting a request with the necessary documents. It is advisable to reach out to the organization directly or visit their official website for specific instructions and guidelines.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>2. What documents do I need to provide for a change in information?</h4>
-            <p>
-              Typically, you will need to provide identification proof, such as Aadhaar card, passport, or driver's license, along with address proof, such as a utility bill, rental agreement, or bank statement. The exact documents required may vary depending on the organization and the type of information you are updating. It is recommended to check the organization's requirements or contact their customer service for accurate information.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>3. How long does it take to process a change in information request?</h4>
-            <p>
-              The processing time for a change in information request may vary depending on the organization's internal procedures and workload. In some cases, it may take a few days to weeks for the request to be processed and the updated information to reflect in their records. It is advisable to inquire with the organization about the expected processing time for your specific request.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>4. Are there any fees associated with a change in information request?</h4>
-            <p>
-              Some organizations may charge a nominal fee for processing a change in information request. The fee, if applicable, will vary depending on the organization's policies and the type of change being made. It is recommended to check the organization's website or contact their customer service to inquire about any associated fees.
-            </p>
-          </div>
-
-          <div className="faq-section">
-            <h4>5. Can I make a change in information request online?</h4>
-            <p>
-              Many organizations provide online platforms or portals for submitting change in information requests. These platforms may allow you to fill out an online form, upload the required documents, and track the status of your request. It is advisable to visit the organization's website or contact their customer service to check if online options are available for your specific request.
-            </p>
-          </div>
         </div>
-      </section>
 
-      <style jsx>{`
-        .change-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Importance of Information Update</h2>
+          <ul>
+            <li> Accurate Records: Updating information ensures that company records reflect the most current and accurate details.</li>
+            <li> Compliance: Timely updates help the business comply with legal and regulatory requirements.</li>
+            <li> Effective Communication: Updated contact details enable seamless communication with authorities and stakeholders.</li>
+            <li> Avoid Penalties: Ensuring accurate records can prevent penalties due to non-compliance or outdated information.</li>
+            <li> Transparency: Updated information promotes transparency and trust with partners, customers, and authorities.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="change-info-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Updating Information Process</h2>
+          <ul>
+            <li> Document Preparation: Gather required updated documents such as address proof, contact details, and identification documents.</li>
+            <li> Information Form Filling: Fill the information update form accurately and provide necessary details.</li>
+            <li> Document Submission: Attach the required updated documents along with the information update form.</li>
+            <li> Verification: Verify the information provided before submission.</li>
+            <li> Online Submission: Submit the updated information through the relevant portal or authority.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Consequences of Non-Update</h2>
+          <p>
+            Not updating information may result in outdated records, missed communications, potential legal or compliance issues, and penalties.
+            It's crucial to ensure that company details are accurate and up-to-date.
+          </p>
+        </section>
 
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        .faq-section {
-          margin-top: 40px;
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 20px;
-        }
-
-        .faq-section h4 {
-          color: #1f58c3;
-          margin-bottom: 10px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 

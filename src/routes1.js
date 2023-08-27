@@ -1,15 +1,10 @@
 import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
-// import Alerts from "layouts/sections/attention-catchers/alerts";
-// import Modals from "layouts/sections/attention-catchers/modals";
-// import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
 import Avatars from "layouts/sections/elements/avatars";
 import Badges from "layouts/sections/elements/badges";
 import BreadcrumbsEl from "layouts/sections/elements/breadcrumbs";
 import Buttons from "layouts/sections/elements/buttons";
 import Dropdowns from "layouts/sections/elements/dropdowns";
-// import ProgressBars from "layouts/sections/elements/progress-bars";
-// import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
 import PCL from "pages/Services/Incorporation/PCL";
 import OPC from "pages/Services/Incorporation/OPC";
@@ -41,8 +36,116 @@ import LUT from "pages/Services/Compliance/GST/LUT";
 import COA from "pages/Services/Compliance/GST/COA";
 import CAN from "pages/Services/Compliance/GST/CAN";
 import REVOK from "pages/Services/Compliance/GST/REVOK";
+import MQR from "pages/Services/Compliance/GST/MQR";
+import ITRSI from "pages/Services/Compliance/ITC/ITRSI";
+import RNO from "pages/Services/Compliance/ITC/RNO";
+import FTDS from "pages/Services/Compliance/ITC/FTDS";
+import ITRIP from "pages/Services/Compliance/ITC/ITRIP";
+import ITRLLP from "pages/Services/Compliance/ITC/ITRLLP";
+import ITRCGI from "pages/Services/Compliance/ITC/ITRCGI";
+import ITRBI from "pages/Services/Compliance/ITC/ITRBI";
+import UUMR from "pages/Services/Licensing/UUMR";
+import TA from "pages/Services/Licensing/TA";
+import SERS from "pages/Services/Licensing/SERS";
+import LEI from "pages/Services/Licensing/LEI";
+import IEC from "pages/Services/Licensing/IEC";
+import GSTR1 from "pages/Services/Licensing/GSTR1";
+import FSSAI from "pages/Services/Licensing/FSSAI";
+import DSC from "pages/Services/Licensing/DSC";
+import DSCC from "pages/Services/Licensing/DSCC";
+import DGFT from "pages/Services/Licensing/DGFT";
 
 const routes1 = [
+    {
+        name: "UUMR",
+        route: "pages/Services/Compliance/Licensing/UUMR",
+        component: <UUMR />
+    },
+    {
+        name: "TA",
+        route: "pages/Services/Compliance/Licensing/TA",
+        component: <TA />
+    },
+    {
+        name: "SERS",
+        route: "pages/Services/Compliance/Licensing/SERS",
+        component: < SERS />
+    },
+    {
+        name: "LEI",
+        route: "pages/Services/Compliance/Licensing/LEI",
+        component: <LEI />
+    },
+    {
+        name: "IEC",
+        route: "pages/Services/Compliance/Licensing/IEC",
+        component: <IEC />
+    },
+    {
+        name: "GSTR1",
+        route: "pages/Services/Compliance/Licensing/GSTR1",
+        component: <GSTR1 />
+    },
+    {
+        name: "FSSAI",
+        route: "pages/Services/Compliance/Licensing/FSSAI",
+        component: <FSSAI />
+    },
+    {
+        name: "DSC",
+        route: "pages/Services/Compliance/Licensing/DSC",
+        component: <DSC />
+    },
+    {
+        name: "DSSC",
+        route: "pages/Services/Compliance/Licensing/DSSC",
+        component: <DSCC />
+    },
+    {
+        name: "DGFT",
+        route: "pages/Services/Compliance/Licensing/DGFT",
+        component: <DGFT />
+    },
+    {
+        name: "ITRBI",
+        route: "pages/Services/Compliance/ITC/ITRBI",
+        component: <ITRBI />
+    },
+    {
+        name: "RNO",
+        route: "pages/Services/Compliance/ITC/RNO",
+        component: <RNO />
+    },
+    {
+        name: "FTDS",
+        route: "pages/Services/Compliance/ITC/FTDS",
+        component: <FTDS />
+    },
+    {
+        name: "ITRIP",
+        route: "pages/Services/Compliance/ITC/ITRIP",
+        component: <ITRIP />
+    },
+    {
+        name: "ITRLLP",
+        route: "pages/Services/Compliance/ITC/ITRLLP",
+        component: <ITRLLP />
+    },
+    {
+        name: "ITRCGI",
+        route: "pages/Services/Compliance/ITC/ITRCGI",
+        component: <ITRCGI />
+    },
+    {
+        name: "ITRSI",
+        route: "pages/Services/Compliance/ITC/ITRSI",
+        component: <ITRSI />
+    },
+    {
+        name: "MQR",
+        route: "pages/Services/Compliance/GST/MQR",
+        component: <MQR />
+    },
     {
         name: "REVOK",
         route: "pages/Services/Compliance/GST/REVOK",
