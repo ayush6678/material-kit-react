@@ -29,7 +29,7 @@ import footerRoutes from "footer.routes";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 // import image from "assets/images/AccountWale.png";
 // import { Padding } from "@mui/icons-material";
-import MessageBox from "./mssg";
+// import MessageBox from "./mssg";
 import { useState } from "react";
 function Presentation() {
 
