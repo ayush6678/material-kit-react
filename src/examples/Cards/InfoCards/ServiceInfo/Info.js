@@ -1,10 +1,10 @@
 import React from 'react';
 import './InfoCard.css'; // Create a separate CSS file for styling
-
+import { Link } from 'react-router-dom';
 const Info = ({ imageLink, title, description, price, redirectUrl }) => {
     return (
         <div className='info-cards'>
-            <a href={redirectUrl} target="_self" rel="noopener noreferrer" className="info-card">
+            <Link to={redirectUrl} target="_self" rel="noopener noreferrer" className="info-card">
                 <div className="info-card-image">
                     <img src={imageLink} alt={title} />
                 </div>
@@ -15,7 +15,7 @@ const Info = ({ imageLink, title, description, price, redirectUrl }) => {
                 <div className='pricing'>
                     <span>Starting at ₹{price}</span>
                 </div>
-            </a>
+            </Link>
         </div>
     );
 };
