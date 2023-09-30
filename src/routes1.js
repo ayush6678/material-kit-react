@@ -58,52 +58,52 @@ import DGFT from "pages/Services/Licensing/DGFT";
 const routes1 = [
     {
         name: "UUMR",
-        route: "pages/Services/Compliance/Licensing/UUMR",
+        route: "pages/Services/Licensing/UUMR",
         component: <UUMR />
     },
     {
         name: "TA",
-        route: "pages/Services/Compliance/Licensing/TA",
+        route: "pages/Services/Licensing/TA",
         component: <TA />
     },
     {
         name: "SERS",
-        route: "pages/Services/Compliance/Licensing/SERS",
+        route: "pages/Services/Licensing/SERS",
         component: < SERS />
     },
     {
         name: "LEI",
-        route: "pages/Services/Compliance/Licensing/LEI",
+        route: "pages/Services/Licensing/LEI",
         component: <LEI />
     },
     {
         name: "IEC",
-        route: "pages/Services/Compliance/Licensing/IEC",
+        route: "pages/Services/Licensing/IEC",
         component: <IEC />
     },
     {
         name: "GSTR1",
-        route: "pages/Services/Compliance/Licensing/GSTR1",
+        route: "pages/Services/Licensing/GSTR1",
         component: <GSTR1 />
     },
     {
         name: "FSSAI",
-        route: "pages/Services/Compliance/Licensing/FSSAI",
+        route: "pages/Services/Licensing/FSSAI",
         component: <FSSAI />
     },
     {
         name: "DSC",
-        route: "pages/Services/Compliance/Licensing/DSC",
+        route: "pages/Services/Licensing/DSC",
         component: <DSC />
     },
     {
         name: "DSSC",
-        route: "pages/Services/Compliance/Licensing/DSSC",
+        route: "pages/Services/Licensing/DSSC",
         component: <DSCC />
     },
     {
         name: "DGFT",
-        route: "pages/Services/Compliance/Licensing/DGFT",
+        route: "pages/Services/Licensing/DGFT",
         component: <DGFT />
     },
     {

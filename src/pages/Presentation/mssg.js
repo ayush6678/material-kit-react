@@ -23,12 +23,12 @@ const MessageBox = () => {
     return (
         <div className="message-box-overlay">
             <div className="message-box">
+                <button id="id1" className="close-button" onClick={handleClose}>
+                    X
+                </button>
+                <p>Fill the Form the reach out!</p>
                 <div className="message-box-content">
-                    <button className="close-button" onClick={handleClose}>
-                        {/* <span>&times;</span>
-                         */}
-                         close
-                    </button>
+                    <br />
                     <FormSimple />
                 </div>
             </div>

@@ -1,16 +1,11 @@
 
 import MKBox from "components/MKBox";
-// import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-// Sections components
-// import BaseLayout from "layouts/sections/components/BaseLayout";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
 import Card from "@mui/material/Card";
 import MKTypography from "components/MKTypography";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
-// import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
-// import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
 import Download from "pages/Presentation/sections/Download";
 import Info from "examples/Cards/InfoCards/ServiceInfo/Info";
 function Licensing() {
@@ -71,8 +66,9 @@ function Licensing() {
           title="Udyam Adhaar/ Udyog Adhaar/ MSME Registration"
           description="Get your MSME registration within 5 days and enjoy a tons of subsidies and incentives."
           price="799"
-          redirectUrl="TA"
+          redirectUrl="/pages/Services/Licensing/TA"
         />
+
         <Info
           imageLink=""
           title="Importer Exporter Code (IEC)"
@@ -158,13 +154,6 @@ function Licensing() {
           price="799"
           redirectUrl=""
         />      */}
-
-
-
-
-
-
-
         <MKTypography
           variant="h2"
           textAlign="center"

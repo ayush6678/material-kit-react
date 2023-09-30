@@ -31,6 +31,7 @@ import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 // import { Padding } from "@mui/icons-material";
 // import MessageBox from "./mssg";
 import { useState } from "react";
+import MessageBox from "./mssg";
 function Presentation() {
 
 
@@ -61,9 +62,8 @@ function Presentation() {
               justifyContent: 'center',
               alignItems: 'center',
               cursor: 'pointer',
-              zIndex: '9999',
+              zIndex: '1',
             }}
-            onClick={redirectToWhatsApp}
 
           >
             <div style={{ marginBottom: '10px' }}>
@@ -73,7 +73,7 @@ function Presentation() {
                 style={{ width: '50px', height: '50px' }}
               />
             </div>
-            <div style={{ fontSize: '14px', fontWeight: 'bold' }}>Message Us</div>
+            <button onClick={redirectToWhatsApp} style={{ fontSize: '14px', fontWeight: 'bold', background: 'green', padding:'2px' }} >Message Us</button>
             <div
               style={{
                 position: 'absolute',
@@ -120,7 +120,7 @@ function Presentation() {
         center
         sticky
       />
-      {/* <MessageBox /> */}
+      <MessageBox/>
       {/* <img src={image} alt="AccountWale" width={60} style={{ position: "absolute", margin: "20px", marginLeft: "40px", marginTop: "20px" }} /> */}
       <MKBox
         minHeight="60vh"

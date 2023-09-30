@@ -10,7 +10,7 @@ import ContactUs from "pages/About_Us/ContactUs";
 
 // Sections
 
-import Licensing from "pages/Services/Licensing/Licensing";
+import Licensing1 from "pages/Services/Licensing/Licensing1";
 import Incorporation from "pages/Services/Incorporation/Incorporation";
 import Complaince from "pages/Services/Compliance/Compliance";
 
@@ -37,7 +37,7 @@ const routes = [
       {
         name: "Licensing Services",
         route: "/pages/Services/Licensing/Licensing",
-        component: <Licensing />,
+        component: <Licensing1 />,
       },
     ],
   },
