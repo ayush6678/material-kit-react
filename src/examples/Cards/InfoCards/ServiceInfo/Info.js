@@ -4,7 +4,7 @@ import './InfoCard.css'; // Create a separate CSS file for styling
 const Info = ({ imageLink, title, description, price, redirectUrl }) => {
     return (
         <div className='info-cards'>
-            <a href={redirectUrl} target="_blank" rel="noopener noreferrer" className="info-card">
+            <a href={redirectUrl} target="_self" rel="noopener noreferrer" className="info-card">
                 <div className="info-card-image">
                     <img src={imageLink} alt={title} />
                 </div>

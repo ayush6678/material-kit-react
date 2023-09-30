@@ -13,6 +13,7 @@
 .message-box {
     position: relative;
     /* min-width: 500px; */
+    
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
@@ -68,6 +69,7 @@
 .close-button span {
     color: #000;
 }
+
 /* 
 @media only screen and (max-width: 600px) {
     .message-box {
