@@ -2,8 +2,6 @@ import Icon from "@mui/material/Icon";
 
 // @mui icons
 
-// Pages
-import AboutUs from "pages/About_Us/AboutUs";
 import ContactUs from "pages/About_Us/ContactUs";
 // import Author from "layouts/pages/landing-pages/author";
 // import SignIn from "layouts/pages/authentication/sign-in";
