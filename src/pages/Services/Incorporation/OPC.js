@@ -3,7 +3,6 @@ import 'pages/Services/styles.css';
 import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
 import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
 import routes from 'routes';
-import DescriptionIcon from '@mui/icons-material/Description';
 import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function OPC() {
@@ -75,11 +74,11 @@ function OPC() {
         </div>
 
         <section className="documents-section">
-          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <h2 style={{ marginBottom: "100px" }}>List of Required Documents</h2>
           <div className="document-icons">
             {documentList.map((document, index) => (
               <div className="icon" key={index}>
-                <DescriptionIcon fontSize='large'/>
+                <img src='https://cdn-icons-png.flaticon.com/512/1183/1183931.png' alt='doc' ></img>
                 <p>{document.name}</p>
               </div>
             ))}

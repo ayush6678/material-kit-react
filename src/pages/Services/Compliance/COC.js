@@ -3,8 +3,7 @@ import 'pages/Services/styles.css';
 import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
 import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
 import routes from 'routes';
-import DescriptionIcon from '@mui/icons-material/Description';
-import CenteredFooter from 'examples/Footers/CenteredFooter';
+ import CenteredFooter from 'examples/Footers/CenteredFooter';
 
 function COC() {
   const documentList = [
@@ -78,7 +77,7 @@ function COC() {
           <div className="document-icons">
             {documentList.map((document, index) => (
               <div className="icon" key={index}>
-                <DescriptionIcon fontSize='large'/>
+                  <img src='https://cdn-icons-png.flaticon.com/512/1183/1183931.png' alt='doc' ></img>
                 <p>{document.name}</p>
               </div>
             ))}
