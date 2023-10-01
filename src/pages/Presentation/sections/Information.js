@@ -56,8 +56,8 @@ function Information() {
               color="success"
               action={{
                 type: "internal",
-                route: "/sections/page-sections/page-headers",
-                label: "start with header",
+                route: "/pages/OtherServices/BookKeeping",
+                label: "Explore Now",
               }}
             />
           </RotatingCard>
@@ -87,8 +87,8 @@ function Information() {
                 description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  route: "/pages/OtherServices/BookKeeping",
+                  label: "Explore Now",
                 }}
               />
             </RotatingCard>

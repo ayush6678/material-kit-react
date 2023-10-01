@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./mssg.css"
 import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import MKTypography from "components/MKTypography";
 const MessageBox = () => {
     const [showMessageBox, setShowMessageBox] = useState(false);
 
@@ -26,7 +27,8 @@ const MessageBox = () => {
                 <button id="id1" className="close-button" onClick={handleClose}>
                     X
                 </button>
-                <p>Fill the Form the reach out!</p>
+
+                <MKTypography variant='h2' mt={5}> Fill the Form the reach out!</MKTypography>
                 <div className="message-box-content">
                     <br />
                     <FormSimple />

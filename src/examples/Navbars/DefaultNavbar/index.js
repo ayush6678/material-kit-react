@@ -441,7 +441,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
         px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 3 }}
         // my={relative ? 0 : 2}
         // mx={relative ? 0 : 3}
-        width={relative ? "100%" : "calc(100% - 48px)"}
+        width={relative ? "100%" : "calc(100%)"}
         borderRadius="2px"
         shadow={transparent ? "none" : "md"}
         color={light ? "white" : "dark"}
@@ -474,7 +474,8 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
           >
             {renderNavbarItems}
           </MKBox>
-          <MKBox ml={{ xs: "auto", lg: 0 }}>
+            
+          <MKBox ml={{ xs: "auto", lg: 0 }} display={{xs: 'none', lg:'flex'}} >
             {action &&
               (action.type === "internal" ? (
                 <MKButton

@@ -42,20 +42,21 @@ const routes = [
     ],
   },
   {
-    name: "About Us",
+    name: "Contact Us",
     icon: <Icon>dashboard</Icon>,
-    collapse: [
-      {
-        name: "about us",
-        route: "/pages/landing-pages/about-us",
-        component: <AboutUs />,
-      },
-      {
-        name: "contact us",
-        route: "/pages/landing-pages/contact-us",
-        component: <ContactUs />,
-      },
-    ],
+    route: "/pages/landing-pages/contact-us",
+    component: <ContactUs />,
+    // collapse: [
+    //   {
+    //     name: "about us",
+    //     route: "/pages/landing-pages/about-us",
+    //     component: <AboutUs />,
+    //   },
+    //   {
+    //     name: "contact us",
+    //     route: "/pages/landing-pages/contact-us",
+    //   },
+    // ],
   },
 
   {

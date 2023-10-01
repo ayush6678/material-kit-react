@@ -36,7 +36,7 @@ function Team() {
       component="section"
       variant="gradient"
       bgColor="dark"
-      position="relative"
+      // position="relative"
       py={6}
       px={{ xs: 2, lg: 0 }}
       mx={-2}

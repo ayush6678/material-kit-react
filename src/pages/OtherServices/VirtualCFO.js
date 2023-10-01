@@ -1,108 +1,121 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
-function VirtualCFOServices() {
+function VirtualCFO() {
+  const documentList = [
+    { name: 'Financial Reports' },
+    { name: 'Budget Plans' },
+    { name: 'Financial Projections' },
+    { name: 'Strategic Financial Advice' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What are virtual CFO services, and why does a business need them?',
+      answer: 'A1: Virtual CFO services provide expert financial management and strategic guidance...'
+    },
+    {
+      question: 'Q2: How can virtual CFO services benefit my business?',
+      answer: 'A2: Virtual CFOs offer financial expertise, cost savings, strategic planning, and more...'
+    },
+    {
+      question: 'Q3: What financial documents and services do virtual CFOs provide?',
+      answer: 'A3: Virtual CFOs provide financial reports, budget plans, financial projections, and strategic advice...'
+    },
+    {
+      question: 'Q4: Can virtual CFOs help with fundraising and investment strategies?',
+      answer: 'A4: Yes, virtual CFOs can assist in fundraising, investor relations, and financial strategy development...'
+    },
+    {
+      question: 'Q5: How can I get started with virtual CFO services?',
+      answer: 'A5: You can start by filling out the form below or contacting our team for more information...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Virtual CFO Services"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Virtual CFO Services" },
-      ]}
-    >
-      <section className="virtual-cfo-section">
-        <div className="content">
-          <p>
-            Virtual CFO (Chief Financial Officer) services offer businesses access to financial expertise and strategic financial management without the need for a full-time CFO. A virtual CFO serves as an essential partner, providing financial insights, budgeting, forecasting, and strategic planning to help businesses achieve their financial goals.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        transparent
+        sticky
+      />
 
-          <h3>Virtual CFO Services</h3>
+      <div className="container">
+        <header>
+          <h1>Virtual CFO Services</h1>
+          <p className="headline">Expert financial management without the full-time cost</p>
+        </header>
 
-          <p>
-            Our virtual CFO services are designed to support businesses in making informed financial decisions and optimizing their financial performance. Our team of experienced financial experts will work closely with you to understand your business's financial needs and provide tailored solutions to improve profitability, cash flow, and overall financial efficiency.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Virtual CFO Services</h2>
+            <p>
+              Our virtual CFO services offer businesses access to experienced financial professionals who can provide
+              strategic financial guidance, budget planning, financial reporting, and more. Get the expertise of a CFO
+              without the cost of a full-time hire.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>Affordable Rates</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Key Services Offered</h3>
-
-          <ul>
-            <li>Financial Analysis and Reporting: Regular analysis of financial data to provide insights into your business's financial health and performance.</li>
-            <li>Budgeting and Forecasting: Developing comprehensive budgets and financial forecasts to assist with business planning and decision-making.</li>
-            <li>Cash Flow Management: Implementing strategies to optimize cash flow and working capital management.</li>
-            <li>Financial Strategy: Assisting with long-term financial strategy, including growth planning and risk management.</li>
-            <li>Profitability Improvement: Identifying opportunities to enhance profitability and cost optimization.</li>
-            <li>Financial Process Improvement: Streamlining financial processes and implementing best practices.</li>
-            <li>Investment Analysis: Evaluating investment opportunities and capital allocation.</li>
-            <li>Financial Compliance: Ensuring compliance with accounting standards and regulatory requirements.</li>
-          </ul>
-
-          <h3>Benefits of Virtual CFO Services</h3>
-
-          <ul>
-            <li>Cost-Effective: Access professional financial expertise without the costs associated with a full-time CFO.</li>
-            <li>Strategic Insights: Make data-driven financial decisions with the guidance of experienced financial experts.</li>
-            <li>Focus on Core Business: Delegate financial management tasks and concentrate on core business operations.</li>
-            <li>Flexible Support: Choose services based on your specific needs, scaling up or down as required.</li>
-            <li>Growth Support: Receive valuable financial guidance to support business growth and expansion.</li>
-            <li>Customized Solutions: Get personalized financial solutions tailored to your business's unique requirements.</li>
-            <li>Confidentiality: Ensure the confidentiality and security of your financial information.</li>
-          </ul>
-
-          <h3>Get Started with Virtual CFO Services</h3>
-
-          <p>
-            To get started with our virtual CFO services, simply fill out the form below, and our team will get in touch with you to discuss your specific financial needs and provide a customized virtual CFO solution for your business.
-          </p>
         </div>
-      </section>
 
-      <style jsx>{`
-        .virtual-cfo-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>Documents and Services</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Benefits of Virtual CFO Services</h2>
+          <ul>
+            <li> Financial Expertise: Access to seasoned financial professionals.</li>
+            <li> Cost Savings: Affordable alternative to a full-time CFO hire.</li>
+            <li> Strategic Planning: Guidance for long-term financial strategies.</li>
+            <li> Fundraising Support: Assistance with fundraising and investor relations.</li>
+            <li> Financial Reports: Accurate and timely financial reports and projections.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="incorporation-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>How Our Virtual CFO Services Work</h2>
+          <ul>
+            <li> Initial Consultation: We assess your financial needs and goals.</li>
+            <li> Financial Analysis: Our virtual CFO reviews your financial data and develops a strategy.</li>
+            <li> Ongoing Support: Access to your virtual CFO for regular updates and guidance.</li>
+            <li> Fundraising Assistance: If needed, we help with fundraising strategies.</li>
+            <li> Financial Reports: Receive accurate and insightful financial reports and plans.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
-
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 
-export default VirtualCFOServices;
+export default VirtualCFO;

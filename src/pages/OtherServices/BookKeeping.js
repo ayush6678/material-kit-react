@@ -1,106 +1,121 @@
-import BaseLayout from "layouts/sections/components/BaseLayout";
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
+import React from 'react';
+import 'pages/Services/styles.css';
+import FormSimple from 'layouts/sections/input-areas/forms/components/FormSimple';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import routes from 'routes';
+import DescriptionIcon from '@mui/icons-material/Description';
+import CenteredFooter from 'examples/Footers/CenteredFooter';
 
-function BookkeepingService() {
+function BookKeepingServices() {
+  const documentList = [
+    { name: 'Financial Statements' },
+    { name: 'Income and Expense Records' },
+    { name: 'Bank Statements' },
+    { name: 'Tax Documents' },
+  ];
+  const faqList = [
+    {
+      question: 'Q1: What is bookkeeping, and why is it important for businesses?',
+      answer: 'A1: Bookkeeping is the systematic recording and organizing of financial transactions...'
+    },
+    {
+      question: 'Q2: How can professional bookkeeping services benefit my business?',
+      answer: 'A2: Professional bookkeepers ensure accurate financial records, help with tax compliance...'
+    },
+    {
+      question: 'Q3: What are the key financial documents that bookkeepers maintain?',
+      answer: 'A3: Bookkeepers manage financial statements, income and expense records, bank statements, and tax documents...'
+    },
+    {
+      question: 'Q4: Do I need to hire a bookkeeper or can I use software for bookkeeping?',
+      answer: 'A4: It depends on your business size and complexity. Small businesses may use software, while larger ones often employ bookkeepers...'
+    },
+    {
+      question: 'Q5: How can I get started with professional bookkeeping services?',
+      answer: 'A5: You can start by filling out the form below or contacting our team for more information...'
+    },
+  ];
+
   return (
-    <BaseLayout
-      title="Bookkeeping Service"
-      breadcrumb={[
-        { label: "Services", route: "/sections/input-areas/forms" },
-        { label: "Bookkeeping Service" },
-      ]}
-    >
-      <section className="bookkeeping-section">
-        <div className="content">
-          <p>
-            Bookkeeping is an essential aspect of maintaining accurate financial records for your business. It involves recording and organizing financial transactions, which provides a clear and comprehensive view of your business's financial health. Bookkeeping services are designed to help businesses manage their financial data efficiently and ensure compliance with relevant regulations.
-          </p>
+    <div>
+      <DefaultNavbar
+        routes={routes}
+        transparent
+        sticky
+      />
 
-          <h3>Bookkeeping Service</h3>
+      <div className="container">
+        <header>
+          <h1>Professional Bookkeeping Services</h1>
+          <p className="headline">Keeping your finances in order</p>
+        </header>
 
-          <p>
-            Our professional bookkeeping service offers comprehensive assistance in managing your financial records. Our experienced team will handle various bookkeeping tasks, including recording income and expenses, managing accounts payable and receivable, reconciling bank statements, and generating financial reports. With our reliable bookkeeping service, you can focus on core business operations while ensuring your financial data is accurate and up-to-date.
-          </p>
+        <div className='list'>
 
-          <div className="form-area">
+          <section className="description-section">
+            <h2 style={{ marginBottom: "50px" }}>About Bookkeeping Services</h2>
+            <p>
+              Our professional bookkeeping services ensure that your financial records are accurate,
+              organized, and compliant with regulations. We help businesses of all sizes maintain their financial
+              health, so you can focus on growing your business.
+            </p><br />
+            <h3>Starting at</h3>
+            <h1 style={{ color: "#00cc00" }}>Affordable Rates</h1>
+          </section>
+          <div className='form'>
             <FormSimple />
           </div>
-
-          <h3>Key Features of Our Bookkeeping Service</h3>
-
-          <ul>
-            <li>Recording and categorizing financial transactions</li>
-            <li>Managing accounts payable and accounts receivable</li>
-            <li>Bank and credit card reconciliation</li>
-            <li>Preparation of financial statements (income statement, balance sheet, cash flow statement)</li>
-            <li>Monitoring and tracking expenses</li>
-            <li>Generating customized financial reports</li>
-            <li>Ensuring compliance with accounting standards and regulations</li>
-            <li>Accurate and timely record-keeping</li>
-          </ul>
-
-          <h3>Benefits of Our Bookkeeping Service</h3>
-
-          <ul>
-            <li>Time and Cost Savings: Outsource your bookkeeping tasks to us and save time and money spent on hiring and training in-house bookkeeping staff.</li>
-            <li>Financial Visibility: Get a clear and real-time view of your business's financial performance, allowing you to make informed decisions.</li>
-            <li>Compliance and Accuracy: Stay compliant with financial reporting regulations and ensure accurate and error-free financial records.</li>
-            <li>Focus on Core Business: Free up your time and resources to focus on growing your business while we take care of bookkeeping.</li>
-            <li>Expert Guidance: Our team of experienced professionals can provide financial insights and guidance to improve your business's financial health.</li>
-          </ul>
-
-          <h3>Get Started with Our Bookkeeping Service</h3>
-
-          <p>
-            To get started with our bookkeeping service, simply fill out the form below, and our team will get in touch with you to discuss your specific requirements and provide a customized bookkeeping solution for your business.
-          </p>
         </div>
-      </section>
 
-      <style jsx>{`
-        .bookkeeping-section {
-          background-color: #f0f4ff;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+        <section className="documents-section">
+          <h2 style={{ marginBottom: "100px"}}>List of Required Documents</h2>
+          <div className="document-icons">
+            {documentList.map((document, index) => (
+              <div className="icon" key={index}>
+                <DescriptionIcon fontSize='large'/>
+                <p>{document.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        .content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
+        <section>
+          <h2 style={{ marginBottom: "50px" }}>Key Benefits of Professional Bookkeeping</h2>
+          <ul>
+            <li> Financial Accuracy: Ensure your financial records are error-free and up-to-date.</li>
+            <li> Compliance: Stay compliant with tax regulations and reporting requirements.</li>
+            <li> Time Savings: Free up your time to focus on core business activities.</li>
+            <li> Financial Insights: Gain valuable insights into your business's financial health.</li>
+            <li> Peace of Mind: Rest assured that your finances are in expert hands.</li>
+          </ul>
+        </section>
 
-        h2,
-        h3,
-        h4 {
-          color: #1f58c3;
-        }
+        <section className="incorporation-process">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Our Bookkeeping Process</h2>
+          <ul>
+            <li> Initial Assessment: We assess your business's bookkeeping needs and tailor our services accordingly.</li>
+            <li> Data Collection: Gather relevant financial documents and records for analysis.</li>
+            <li> Data Entry and Organization: Accurately record and organize financial transactions.</li>
+            <li> Regular Reporting: Provide regular financial reports to help you make informed decisions.</li>
+            <li> Ongoing Support: Our team is here to answer your questions and address your financial concerns.</li>
+          </ul>
+        </section>
 
-        h3 {
-          margin-top: 30px;
-        }
-
-        ul {
-          margin-top: 10px;
-        }
-
-        ul li {
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: #333;
-        }
-
-        .form-area {
-          border-radius: 5px;
-          margin-top: 30px;
-          background-color: white;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-      `}</style>
-    </BaseLayout>
+        <section className="faq-section">
+          <h2 style={{ marginBottom: "50px", marginTop: "50px" }}>Frequently Asked Questions</h2>
+          <div className="faq">
+            {faqList.map((faq, index) => (
+              <div className="question" key={index}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <CenteredFooter />
+    </div >
   );
 }
 
-export default BookkeepingService;
+export default BookKeepingServices;

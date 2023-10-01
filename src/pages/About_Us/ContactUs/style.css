@@ -1,0 +1,31 @@
+.media {
+    padding: 10px;
+    margin-top: 100px;
+}
+.first{
+    max-width: 50%;
+}
+.second{
+    width: 50%;
+}
+.section{
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .media {
+        flex-direction: column;
+        margin-top:0px;
+        text-align: center;
+    }
+    .first {
+        margin-top: -50px;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+    .second{
+    width: 100%;
+
+
+    }
+}

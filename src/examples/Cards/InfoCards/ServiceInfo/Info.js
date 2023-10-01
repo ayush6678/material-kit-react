@@ -1,6 +1,7 @@
 import React from 'react';
 import './InfoCard.css'; // Create a separate CSS file for styling
 import { Link } from 'react-router-dom';
+import MKTypography from 'components/MKTypography';
 const Info = ({ imageLink, title, description, price, redirectUrl }) => {
     return (
         <div className='info-cards'>
@@ -9,7 +10,7 @@ const Info = ({ imageLink, title, description, price, redirectUrl }) => {
                     <img src={imageLink} alt={title} />
                 </div>
                 <div className="info-card-content">
-                    <h2>{title}</h2>
+                <MKTypography variant="h2" >{title}</MKTypography>
                     <p>{description}</p>
                 </div>
                 <div className='pricing'>
