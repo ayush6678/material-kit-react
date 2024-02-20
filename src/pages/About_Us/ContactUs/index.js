@@ -73,7 +73,6 @@ function ContactUs() {
         <section className="section">
           <div className="media" style={{
             display: 'flex',
-            marginTop: '100px'
           }}>
             <div className="first">
               <MKTypography variant="h2" py={3}>Who are We</MKTypography>
